@@ -10,10 +10,7 @@
 
 @interface DPZAppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (strong, nonatomic) UIWindow *window;
-
-@property (strong, nonatomic) UIViewController *viewController;
-
-@property (readonly, nonatomic) BOOL isReachable;
+@property (nonatomic, strong) UIWindow *window;
+@property (nonatomic, readonly) BOOL isCloudReachable;
 
 @end

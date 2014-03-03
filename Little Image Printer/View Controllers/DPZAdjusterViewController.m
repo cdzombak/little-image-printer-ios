@@ -128,7 +128,7 @@
 - (IBAction)print
 {
     DPZAppDelegate *appDelegate = (DPZAppDelegate *)[UIApplication sharedApplication].delegate;
-    if (!appDelegate.isReachable)
+    if (!appDelegate.isCloudReachable)
     {
         [self unreachable];
         return;
