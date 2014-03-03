@@ -1,16 +1,16 @@
 //
-//  UIView+FirstResponder.m
+//  UIView+DPZFirstResponder.m
 //  go
 //
 //  Created by David Wilkinson on 08/07/2012.
 //  Copyright (c) 2012 Lumen Services Limited. All rights reserved.
 //
 
-#import "UIView+FirstResponder.h"
+#import "UIView+DPZFirstResponder.h"
 
-@implementation UIView (FirstResponder)
+@implementation UIView (DPZFirstResponder)
 
--(BOOL)findAndResignFirstResponder
+- (BOOL)dpz_findAndResignFirstResponder
 {
     if (self.isFirstResponder) 
     {
@@ -19,13 +19,13 @@
     }
     for (UIView *subView in self.subviews) 
     {
-        if ([subView findAndResignFirstResponder])
+        if ([subView dpz_findAndResignFirstResponder])
         return YES; 
     }
     return NO;
 }
 
--(UIView *)findFirstResponder
+- (UIView *)dpz_findFirstResponder
 {
     UIView *firstResponder = nil;
     if (self.isFirstResponder)
@@ -36,7 +36,7 @@
     {
         for (UIView *subView in self.subviews)
         {
-            firstResponder = [subView findFirstResponder];
+            firstResponder = [subView dpz_findFirstResponder];
             if (firstResponder)
             {
                 break;

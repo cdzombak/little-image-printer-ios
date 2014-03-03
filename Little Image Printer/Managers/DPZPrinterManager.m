@@ -10,7 +10,7 @@
 #import "DPZDataManager.h"
 #import "DPZImageProcessor.h"
 #import "DPZPrinter.h"
-#import "NSString+URLEncode.h"
+#import "NSString+DPZURLEncode.h"
 
 @interface DPZPrinterManager ()
 
@@ -166,7 +166,7 @@
         
         NSString *finalHTML = [[html stringByReplacingOccurrencesOfString:@"_IMAGECLASS_" withString:ditherClass]
                                stringByReplacingOccurrencesOfString:@"_IMAGEURL_" withString:dataUri];
-        NSString *urlEncodedHtml = [finalHTML urlEncode];
+        NSString *urlEncodedHtml = [finalHTML dpz_urlEncode];
         
         NSString *body = [NSString stringWithFormat:@"html=%@", urlEncodedHtml];
         NSString *urlString = [NSString stringWithFormat:@"http://remote.bergcloud.com/playground/direct_print/%@",

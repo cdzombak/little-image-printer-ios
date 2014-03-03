@@ -11,7 +11,7 @@
 #import "DPZPrinterManager.h"
 #import "DPZPrinter.h"
 #import "DPZPrintCodeViewController.h"
-#import "UIView+FirstResponder.h"
+#import "UIView+DPZFirstResponder.h"
 
 @interface DPZEditPrinterViewController ()
 
@@ -219,7 +219,7 @@
 // Hide the keyboard when the user taps outside of the controls
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    [self.view findAndResignFirstResponder];
+    [self.view dpz_findAndResignFirstResponder];
 }
 
 @end

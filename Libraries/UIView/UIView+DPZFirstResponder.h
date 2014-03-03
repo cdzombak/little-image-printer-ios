@@ -1,5 +1,5 @@
 //
-//  UIView+FirstResponder.h
+//  UIView+DPZFirstResponder.h
 //  go
 //
 //  Created by David Wilkinson on 08/07/2012.
@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIView (FirstResponder)
+@interface UIView (DPZFirstResponder)
 
--(BOOL)findAndResignFirstResponder;
--(UIView *)findFirstResponder;
+- (BOOL)dpz_findAndResignFirstResponder;
+- (UIView *)dpz_findFirstResponder;
 
 @end

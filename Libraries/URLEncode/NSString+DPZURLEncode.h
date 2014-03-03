@@ -1,5 +1,5 @@
 //
-//  NSString+URLEncode.h
+//  NSString+DPZURLEncode.h
 //
 //  Created by David Wilkinson on 26/08/2012.
 //  Copyright (c) 2012 David Wilkinson. All rights reserved.
@@ -7,9 +7,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSString (URLEncode)
+@interface NSString (DPZURLEncode)
 
--(NSString *)urlEncode;
--(NSString *)urlDecode;
+- (NSString *)dpz_urlEncode;
+- (NSString *)dpz_urlDecode;
 
 @end
