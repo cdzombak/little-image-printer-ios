@@ -759,6 +759,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 01452B570E1D457980E455D4 /* Pods.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Little Image Printer/Little Image Printer-Prefix.pch";
 				INFOPLIST_FILE = "Little Image Printer/Little Image Printer-Info.plist";
@@ -834,6 +835,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 01452B570E1D457980E455D4 /* Pods.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Little Image Printer/Little Image Printer-Prefix.pch";
 				INFOPLIST_FILE = "Little Image Printer/Little Image Printer-Info.plist";
@@ -849,6 +851,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 01452B570E1D457980E455D4 /* Pods.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Little Image Printer/Little Image Printer-Prefix.pch";
 				INFOPLIST_FILE = "Little Image Printer/Little Image Printer-Info.plist";
