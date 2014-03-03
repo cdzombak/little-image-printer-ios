@@ -9,7 +9,7 @@
 #import "DPZManagePrinterViewController.h"
 #import "DPZPrinterManager.h"
 #import "DPZEditPrinterViewController.h"
-#import "Printer.h"
+#import "DPZPrinter.h"
 
 @interface DPZManagePrinterViewController ()
 
@@ -65,7 +65,7 @@
 
 -(void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
-    Printer *printer = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    DPZPrinter *printer = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
     cell.textLabel.text = printer.name;
     cell.detailTextLabel.text = printer.code;
@@ -74,7 +74,7 @@
 
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
 {
-    Printer *printer = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    DPZPrinter *printer = [self.fetchedResultsController objectAtIndexPath:indexPath];
     DPZEditPrinterViewController *vc = [[DPZEditPrinterViewController alloc] initWithNibName:@"DPZEditPrinterViewController" bundle:nil];
     vc.printer = printer;
     [self.navigationController pushViewController:vc animated:YES];    
@@ -82,7 +82,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    Printer *printer = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    DPZPrinter *printer = [self.fetchedResultsController objectAtIndexPath:indexPath];
     [DPZPrinterManager sharedPrinterManager].activePrinter = printer;
     [self.navigationController popViewControllerAnimated:YES];
 }

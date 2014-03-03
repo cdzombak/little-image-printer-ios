@@ -12,7 +12,7 @@
 #import "DPZAdjusterViewController.h"
 #import "DPZManagePrinterViewController.h"
 #import "DPZAboutViewController.h"
-#import "Printer.h"
+#import "DPZPrinter.h"
 
 @interface DPZViewController ()
 
@@ -74,7 +74,7 @@
 {
     BOOL hasCamera = [UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera];
 
-    Printer *printer = [DPZPrinterManager sharedPrinterManager].activePrinter;
+    DPZPrinter *printer = [DPZPrinterManager sharedPrinterManager].activePrinter;
     BOOL printerChosen = (printer != nil);
     
     self.printerNameLabel.text = printerChosen ? [NSString stringWithFormat:@"Printing to %@", printer.name] : @"Please tap on the button above to select a printer";

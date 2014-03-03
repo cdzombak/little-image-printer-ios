@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Printer.h"
+#import "DPZPrinter.h"
 
 typedef void (^DPZPrinterManagerCallback)(BOOL);
 
@@ -16,14 +16,14 @@ typedef void (^DPZPrinterManagerCallback)(BOOL);
 
 + (DPZPrinterManager *)sharedPrinterManager;
 
-- (Printer *)createPrinter;
-- (void)deletePrinter:(Printer *)printer;
+- (DPZPrinter *)createPrinter;
+- (void)deletePrinter:(DPZPrinter *)printer;
 
 
 - (void)printImageForURL:(NSURL *)imageURL withCompletionBlock:(DPZPrinterManagerCallback)completionBlock;
 - (void)printImage:(UIImage *)image withCompletionBlock:(DPZPrinterManagerCallback)completionBlock;
 
-@property (nonatomic, strong) Printer *activePrinter;
+@property (nonatomic, strong) DPZPrinter *activePrinter;
 
 @property (nonatomic, retain, readonly) NSFetchedResultsController *printersFetchedResultsController;
 @property (nonatomic, readonly) NSArray *printers;

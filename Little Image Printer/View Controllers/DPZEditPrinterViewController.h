@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Printer.h"
+#import "DPZPrinter.h"
 
 @interface DPZEditPrinterViewController : UIViewController
 
@@ -23,7 +23,7 @@
 
 @property (nonatomic, strong) IBOutlet UIView *containerView;
 
-@property (nonatomic, strong) Printer *printer;
+@property (nonatomic, strong) DPZPrinter *printer;
 
 @end
 

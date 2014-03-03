@@ -72,7 +72,7 @@
 		4F788BA316E760640062BB89 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F788BA216E760640062BB89 /* OpenGLES.framework */; };
 		4F788BA516E7606A0062BB89 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F788BA416E7606A0062BB89 /* AVFoundation.framework */; };
 		4F9E777716E55E0E0036803A /* LittleImagePrinter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4F9E777216E55E0E0036803A /* LittleImagePrinter.xcdatamodeld */; };
-		4F9E777B16E55E650036803A /* Printer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9E777A16E55E650036803A /* Printer.m */; };
+		4F9E777B16E55E650036803A /* DPZPrinter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9E777A16E55E650036803A /* DPZPrinter.m */; };
 		4FA1225716E3C71F00FE27C2 /* DPZEditPrinterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA1225516E3C71F00FE27C2 /* DPZEditPrinterViewController.m */; };
 		4FA1225816E3C71F00FE27C2 /* DPZEditPrinterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FA1225616E3C71F00FE27C2 /* DPZEditPrinterViewController.xib */; };
 		4FA26A2016E56B2C00C08B5A /* DPZFetchedResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA26A1A16E56B2C00C08B5A /* DPZFetchedResultsTableViewController.m */; };
@@ -181,8 +181,8 @@
 		4F788BA416E7606A0062BB89 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		4F9E777316E55E0E0036803A /* LittleImagePrinter 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "LittleImagePrinter 2.xcdatamodel"; sourceTree = "<group>"; };
 		4F9E777416E55E0E0036803A /* LittleImagePrinter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LittleImagePrinter.xcdatamodel; sourceTree = "<group>"; };
-		4F9E777916E55E650036803A /* Printer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Printer.h; path = Model/Printer.h; sourceTree = "<group>"; };
-		4F9E777A16E55E650036803A /* Printer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Printer.m; path = Model/Printer.m; sourceTree = "<group>"; };
+		4F9E777916E55E650036803A /* DPZPrinter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DPZPrinter.h; path = Model/DPZPrinter.h; sourceTree = "<group>"; };
+		4F9E777A16E55E650036803A /* DPZPrinter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DPZPrinter.m; path = Model/DPZPrinter.m; sourceTree = "<group>"; };
 		4FA1225416E3C71F00FE27C2 /* DPZEditPrinterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DPZEditPrinterViewController.h; path = "View Controllers/DPZEditPrinterViewController.h"; sourceTree = "<group>"; };
 		4FA1225516E3C71F00FE27C2 /* DPZEditPrinterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DPZEditPrinterViewController.m; path = "View Controllers/DPZEditPrinterViewController.m"; sourceTree = "<group>"; };
 		4FA1225616E3C71F00FE27C2 /* DPZEditPrinterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DPZEditPrinterViewController.xib; path = "View Controllers/DPZEditPrinterViewController.xib"; sourceTree = "<group>"; };
@@ -371,8 +371,8 @@
 			isa = PBXGroup;
 			children = (
 				4F9E777216E55E0E0036803A /* LittleImagePrinter.xcdatamodeld */,
-				4F9E777916E55E650036803A /* Printer.h */,
-				4F9E777A16E55E650036803A /* Printer.m */,
+				4F9E777916E55E650036803A /* DPZPrinter.h */,
+				4F9E777A16E55E650036803A /* DPZPrinter.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -682,7 +682,7 @@
 				4F5FB00C16E22B68007797D1 /* NSString+URLEncode.m in Sources */,
 				4FA1225716E3C71F00FE27C2 /* DPZEditPrinterViewController.m in Sources */,
 				4F9E777716E55E0E0036803A /* LittleImagePrinter.xcdatamodeld in Sources */,
-				4F9E777B16E55E650036803A /* Printer.m in Sources */,
+				4F9E777B16E55E650036803A /* DPZPrinter.m in Sources */,
 				4FA26A2016E56B2C00C08B5A /* DPZFetchedResultsTableViewController.m in Sources */,
 				4FA26A2116E56B2C00C08B5A /* DPZAdjusterViewController.m in Sources */,
 				4FA26A2316E56B2C00C08B5A /* DPZViewController.m in Sources */,

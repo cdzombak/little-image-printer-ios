@@ -11,7 +11,7 @@
 #import "DPZImageProcessor.h"
 #import "NSData+Base64.h"
 #import "NSString+URLEncode.h"
-#import "Printer.h"
+#import "DPZPrinter.h"
 
 static DPZPrinterManager *_sharedPrinterManager;
 
@@ -48,7 +48,7 @@ static DPZPrinterManager *_sharedPrinterManager;
         NSArray *printers = self.printers;
         if ([printers count] > 0)
         {
-            for (Printer *p in printers)
+            for (DPZPrinter *p in printers)
             {
                 if ([p.active boolValue])
                 {
@@ -67,11 +67,11 @@ static DPZPrinterManager *_sharedPrinterManager;
     return self;
 }
 
-- (void)setActivePrinter:(Printer *)activePrinter
+- (void)setActivePrinter:(DPZPrinter *)activePrinter
 {
     _activePrinter = activePrinter;
     NSArray *printers = self.printers;
-    for (Printer *p in printers)
+    for (DPZPrinter *p in printers)
     {
         p.active = @NO;
     }
@@ -82,13 +82,13 @@ static DPZPrinterManager *_sharedPrinterManager;
 }
 
 
-- (Printer *)createPrinter
+- (DPZPrinter *)createPrinter
 {
     DPZDataManager *dm = [DPZDataManager sharedManager];
     return [dm insertNewObjectForEntityForName:@"Printer"];
 }
 
-- (void)deletePrinter:(Printer *)printer
+- (void)deletePrinter:(DPZPrinter *)printer
 {
     DPZDataManager *dm = [DPZDataManager sharedManager];
     if ([printer.active boolValue])
