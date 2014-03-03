@@ -9,6 +9,8 @@
 #import "DPZRootViewController.h"
 #import "DPZAdjusterViewController.h"
 #import "DPZManagePrinterViewController.h"
+#import "DPZAboutViewController.h"
+#import "DTCustomColoredAccessory.h"
 
 @interface DPZRootViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
@@ -63,6 +65,7 @@
             
             cell.textLabel.text = NSLocalizedString(@"Choose Photo", nil);
             cell.imageView.image = [UIImage imageNamed:@"Photo Library"];
+            cell.accessoryView = [DTCustomColoredAccessory accessory];
         } whenSelected:^(NSIndexPath *indexPath) {
             [wSelf pickPhoto];
         }];
@@ -74,6 +77,7 @@
                 
                 cell.textLabel.text = NSLocalizedString(@"Take Photo", nil);
                 cell.imageView.image = [UIImage imageNamed:@"Camera"];
+                cell.accessoryView = [DTCustomColoredAccessory accessory];
             } whenSelected:^(NSIndexPath *indexPath) {
                 [wSelf takePhoto];
             }];
@@ -87,6 +91,7 @@
             
             cell.textLabel.text = NSLocalizedString(@"Printers", nil);
             cell.imageView.image = [UIImage imageNamed:@"Settings"];
+            cell.accessoryView = [DTCustomColoredAccessory accessory];
         } whenSelected:^(NSIndexPath *indexPath) {
             [wSelf managePrinters];
         }];
@@ -97,8 +102,9 @@
             
             cell.textLabel.text = NSLocalizedString(@"About", nil);
             cell.imageView.image = [UIImage imageNamed:@"About"];
+            cell.accessoryView = [DTCustomColoredAccessory accessory];
         } whenSelected:^(NSIndexPath *indexPath) {
-            // TODO
+            [wSelf about];
         }];
     }];
 }
@@ -135,6 +141,11 @@
 - (void)managePrinters
 {
     [self.navigationController pushViewController:[[DPZManagePrinterViewController alloc] init] animated:YES];
+}
+
+- (void)about
+{
+    [self.navigationController pushViewController:[[DPZAboutViewController alloc] init] animated:YES];
 }
 
 - (void)pushAdjusterViewControllerForImage:(UIImage *)image

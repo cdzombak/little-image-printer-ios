@@ -51,6 +51,7 @@
 		A28656CF18C446E100198130 /* DPZPrintCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A28656CB18C446E100198130 /* DPZPrintCodeViewController.xib */; };
 		A28656D118C4471400198130 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A28656D018C4471400198130 /* Podfile */; };
 		A28656F318C4474000198130 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A28656F218C4474000198130 /* Images.xcassets */; };
+		A28656F618C44A7800198130 /* DTCustomColoredAccessory.m in Sources */ = {isa = PBXBuildFile; fileRef = A28656F518C44A7800198130 /* DTCustomColoredAccessory.m */; };
 		DDC1C54A4E0A4ADD8B68A98F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F292AA2A8FCA41789B3DCD9B /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -120,6 +121,8 @@
 		A28656CB18C446E100198130 /* DPZPrintCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DPZPrintCodeViewController.xib; path = Views/DPZPrintCodeViewController.xib; sourceTree = "<group>"; };
 		A28656D018C4471400198130 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		A28656F218C4474000198130 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A28656F418C44A7800198130 /* DTCustomColoredAccessory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTCustomColoredAccessory.h; path = Views/DTCustomColoredAccessory.h; sourceTree = "<group>"; };
+		A28656F518C44A7800198130 /* DTCustomColoredAccessory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTCustomColoredAccessory.m; path = Views/DTCustomColoredAccessory.m; sourceTree = "<group>"; };
 		F292AA2A8FCA41789B3DCD9B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -326,6 +329,8 @@
 				A28656C918C446E100198130 /* DPZAdjusterViewController.xib */,
 				A28656CA18C446E100198130 /* DPZEditPrinterViewController.xib */,
 				A28656CB18C446E100198130 /* DPZPrintCodeViewController.xib */,
+				A28656F418C44A7800198130 /* DTCustomColoredAccessory.h */,
+				A28656F518C44A7800198130 /* DTCustomColoredAccessory.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -459,6 +464,7 @@
 			files = (
 				4F5FAFC616E217C5007797D1 /* main.m in Sources */,
 				4F5FAFCA16E217C5007797D1 /* DPZAppDelegate.m in Sources */,
+				A28656F618C44A7800198130 /* DTCustomColoredAccessory.m in Sources */,
 				4F5FAFF216E21C7D007797D1 /* DPZManagePrinterViewController.m in Sources */,
 				4F5FB00C16E22B68007797D1 /* NSString+URLEncode.m in Sources */,
 				4FA1225716E3C71F00FE27C2 /* DPZEditPrinterViewController.m in Sources */,
