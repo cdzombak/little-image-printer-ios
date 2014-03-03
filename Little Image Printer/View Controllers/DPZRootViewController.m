@@ -95,7 +95,9 @@
         } whenSelected:^(NSIndexPath *indexPath) {
             [wSelf managePrinters];
         }];
-        
+    }];
+    
+    [self addSection:^(JMStaticContentTableViewSection *section, NSUInteger sectionIndex) {
         [section addCell:^(JMStaticContentTableViewCell *staticContentCell, UITableViewCell *cell, NSIndexPath *indexPath) {
             staticContentCell.cellStyle = UITableViewCellStyleDefault;
             staticContentCell.reuseIdentifier = defaultStyleReuseIdentifier;
