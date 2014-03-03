@@ -109,8 +109,8 @@
     
     CGFloat w = imageSize.width * scale;
     CGFloat h = imageSize.height * scale;
-    CGFloat x = MAX((imageViewHolderFrame.size.width - w)/2, 0.0);
-    CGFloat y = MAX((imageViewHolderFrame.size.height - h)/2, 0.0);
+    CGFloat x = (CGFloat) MAX((imageViewHolderFrame.size.width - w)/2, 0.0);
+    CGFloat y = (CGFloat) MAX((imageViewHolderFrame.size.height - h)/2, 0.0);
     CGRect imageViewFrame = CGRectMake(x, y, w, h);
     
     return imageViewFrame;
@@ -183,15 +183,15 @@
             break;
             
         case UIImageOrientationDown:
-            angle = M_PI;
+            angle = (CGFloat) M_PI;
             break;
             
         case UIImageOrientationLeft:
-            angle = M_PI_2;
+            angle = (CGFloat) M_PI_2;
             break;
             
         case UIImageOrientationRight:
-            angle = -M_PI_2;
+            angle = (CGFloat) -M_PI_2;
             break;
             
         default:
@@ -200,7 +200,7 @@
     }
 
     CGSize originalSize = [self.sourceImage size];
-    CGFloat scale = MIN(LPWIDTH/originalSize.width, 1.0); // Don't scale small images up
+    CGFloat scale = (CGFloat) MIN(LPWIDTH/originalSize.width, 1.0); // Don't scale small images up
     
     CIImage *img = [[CIImage alloc] initWithCGImage:[image CGImage]];;
     CGAffineTransform t = CGAffineTransformMakeScale(scale, scale);

@@ -17,7 +17,7 @@
 - (NSData *)generatePNG;
 - (NSData *)generateJPG;
 
-@property (assign) CGFloat brightness;
-@property (assign) CGFloat contrast;
+@property (nonatomic, assign) CGFloat brightness;
+@property (nonatomic, assign) CGFloat contrast;
 
 @end

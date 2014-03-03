@@ -40,9 +40,9 @@
 
 - (void)setupStyles
 {
-    [[UIView appearance] setTintColor:[UIColor colorWithRed:0.824 green:0.337 blue:0.071 alpha:1]];
+    [[UIView appearance] setTintColor:[UIColor colorWithRed:0.824f green:0.337f blue:0.071f alpha:1.0]];
     [[UINavigationBar appearance] setBarStyle:UIBarStyleBlack];
-    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithWhite:0.0 alpha:0.9]];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithWhite:0.0 alpha:0.9f]];
 }
 
 #pragma mark - Reachability

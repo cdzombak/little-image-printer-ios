@@ -14,16 +14,16 @@
 
 @interface DPZImageProcessor ()
 
-@property (strong) NSURL *imageURL;
+@property (nonatomic, strong) NSURL *imageURL;
 
-@property (strong) UIImage *sourceImage;
-@property (strong) UIImage *adjustedImage;
-@property (strong) CIImage *baseImage;
-@property (strong) CIFilter *colorControls;
-@property (strong) CIFilter *monochromeFilter;
+@property (nonatomic, strong) UIImage *sourceImage;
+@property (nonatomic, strong) UIImage *adjustedImage;
+@property (nonatomic, strong) CIImage *baseImage;
+@property (nonatomic, strong) CIFilter *colorControls;
+@property (nonatomic, strong) CIFilter *monochromeFilter;
 
-@property (assign) CGSize originalSize;
-@property (assign) CGSize baseSize;
+@property (nonatomic, assign) CGSize originalSize;
+@property (nonatomic, assign) CGSize baseSize;
 
 @end
 
@@ -80,15 +80,15 @@
             break;
             
         case UIImageOrientationDown:
-            angle = M_PI;
+            angle = (CGFloat) M_PI;
             break;
             
         case UIImageOrientationLeft:
-            angle = M_PI_2;
+            angle = (CGFloat) M_PI_2;
             break;
             
         case UIImageOrientationRight:
-            angle = -M_PI_2;
+            angle = (CGFloat) -M_PI_2;
             break;
             
         default:
@@ -97,7 +97,7 @@
     }
     
     self.originalSize = [self.sourceImage size];
-    CGFloat scale = LPWIDTH/self.originalSize.width;
+    CGFloat scale = (CGFloat) LPWIDTH/self.originalSize.width;
     self.baseSize = CGSizeMake(LPWIDTH, self.originalSize.height * scale);
     
     CIImage *img = [[CIImage alloc] initWithCGImage:[self.sourceImage CGImage]];;
@@ -149,7 +149,7 @@
 
 - (NSData *)generateJPG
 {
-    NSData *jpgData = [NSData dataWithData:UIImageJPEGRepresentation(self.adjustedImage, 0.9)];
+    NSData *jpgData = [NSData dataWithData:UIImageJPEGRepresentation(self.adjustedImage, 0.9f)];
     
     //BOOL ok = [pngData writeToFile:@"/Users/davidw/Desktop/image.png" atomically:NO];
     
