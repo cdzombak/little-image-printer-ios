@@ -9,9 +9,8 @@
 #import "DPZPrinterManager.h"
 #import "DPZDataManager.h"
 #import "DPZImageProcessor.h"
-#import "NSData+Base64.h"
-#import "NSString+URLEncode.h"
 #import "DPZPrinter.h"
+#import "NSString+URLEncode.h"
 
 static DPZPrinterManager *_sharedPrinterManager;
 
@@ -176,7 +175,7 @@ static DPZPrinterManager *_sharedPrinterManager;
             contentType = @"image/jpg";
         }
         
-        NSString *dataUri = [NSString stringWithFormat:@"data:%@;base64,%@", contentType, [imageData base64EncodedString]];
+        NSString *dataUri = [NSString stringWithFormat:@"data:%@;base64,%@", contentType, [imageData base64EncodedDataWithOptions:(NSDataBase64EncodingOptions)0]];
         NSString *ditherClass = @"dither";
         
         NSString *finalHTML = [[html stringByReplacingOccurrencesOfString:@"_IMAGECLASS_" withString:ditherClass]

@@ -60,8 +60,6 @@
 		4F5FAFF216E21C7D007797D1 /* DPZManagePrinterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5FAFF016E21C7D007797D1 /* DPZManagePrinterViewController.m */; };
 		4F5FAFF316E21C7D007797D1 /* DPZManagePrinterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F5FAFF116E21C7D007797D1 /* DPZManagePrinterViewController.xib */; };
 		4F5FAFFD16E22637007797D1 /* print.html in Resources */ = {isa = PBXBuildFile; fileRef = 4F5FAFFC16E22637007797D1 /* print.html */; };
-		4F5FB00A16E22B68007797D1 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5FB00416E22B68007797D1 /* NSData+Base64.m */; };
-		4F5FB00B16E22B68007797D1 /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5FB00616E22B68007797D1 /* NSString+Base64.m */; };
 		4F5FB00C16E22B68007797D1 /* NSString+URLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5FB00916E22B68007797D1 /* NSString+URLEncode.m */; };
 		4F5FB00E16E22EC9007797D1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F5FB00D16E22EC8007797D1 /* QuartzCore.framework */; };
 		4F5FB01016E22EF0007797D1 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F5FB00F16E22EF0007797D1 /* CoreImage.framework */; };
@@ -122,10 +120,10 @@
 		4F06496816E91611007DE41B /* Delete-down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Delete-down@2x.png"; sourceTree = "<group>"; };
 		4F06496916E91611007DE41B /* Delete-up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Delete-up.png"; sourceTree = "<group>"; };
 		4F06496A16E91611007DE41B /* Delete-up@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Delete-up@2x.png"; sourceTree = "<group>"; };
-		4F06497316E9F9A5007DE41B /* UIView+Explorer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Explorer.h"; sourceTree = "<group>"; };
-		4F06497416E9F9A5007DE41B /* UIView+Explorer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Explorer.m"; sourceTree = "<group>"; };
-		4F06497616E9FD81007DE41B /* UIView+FirstResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FirstResponder.h"; sourceTree = "<group>"; };
-		4F06497716E9FD81007DE41B /* UIView+FirstResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FirstResponder.m"; sourceTree = "<group>"; };
+		4F06497316E9F9A5007DE41B /* UIView+Explorer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Explorer.h"; path = "../Libraries/UIView/UIView+Explorer.h"; sourceTree = "<group>"; };
+		4F06497416E9F9A5007DE41B /* UIView+Explorer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Explorer.m"; path = "../Libraries/UIView/UIView+Explorer.m"; sourceTree = "<group>"; };
+		4F06497616E9FD81007DE41B /* UIView+FirstResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+FirstResponder.h"; path = "../Libraries/UIView/UIView+FirstResponder.h"; sourceTree = "<group>"; };
+		4F06497716E9FD81007DE41B /* UIView+FirstResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+FirstResponder.m"; path = "../Libraries/UIView/UIView+FirstResponder.m"; sourceTree = "<group>"; };
 		4F1CBA4B16E603500023C118 /* increment-build.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "increment-build.sh"; sourceTree = "<group>"; };
 		4F2E95D516EB8B79004CA9B3 /* HISTORY.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HISTORY.md; sourceTree = "<group>"; };
 		4F2E95D616EB8B79004CA9B3 /* LICENCE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENCE.md; sourceTree = "<group>"; };
@@ -165,12 +163,8 @@
 		4F5FAFF016E21C7D007797D1 /* DPZManagePrinterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DPZManagePrinterViewController.m; path = "View Controllers/DPZManagePrinterViewController.m"; sourceTree = "<group>"; };
 		4F5FAFF116E21C7D007797D1 /* DPZManagePrinterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DPZManagePrinterViewController.xib; path = "View Controllers/DPZManagePrinterViewController.xib"; sourceTree = "<group>"; };
 		4F5FAFFC16E22637007797D1 /* print.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = print.html; sourceTree = "<group>"; };
-		4F5FB00316E22B68007797D1 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
-		4F5FB00416E22B68007797D1 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
-		4F5FB00516E22B68007797D1 /* NSString+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Base64.h"; sourceTree = "<group>"; };
-		4F5FB00616E22B68007797D1 /* NSString+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Base64.m"; sourceTree = "<group>"; };
-		4F5FB00816E22B68007797D1 /* NSString+URLEncode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncode.h"; sourceTree = "<group>"; };
-		4F5FB00916E22B68007797D1 /* NSString+URLEncode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEncode.m"; sourceTree = "<group>"; };
+		4F5FB00816E22B68007797D1 /* NSString+URLEncode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+URLEncode.h"; path = "../Libraries/URLEncode/NSString+URLEncode.h"; sourceTree = "<group>"; };
+		4F5FB00916E22B68007797D1 /* NSString+URLEncode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+URLEncode.m"; path = "../Libraries/URLEncode/NSString+URLEncode.m"; sourceTree = "<group>"; };
 		4F5FB00D16E22EC8007797D1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4F5FB00F16E22EF0007797D1 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		4F62159116E8DA1A005A0C12 /* Little Printer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Little Printer.png"; sourceTree = "<group>"; };
@@ -240,17 +234,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4F06497216E9F9A5007DE41B /* UIView */ = {
-			isa = PBXGroup;
-			children = (
-				4F06497616E9FD81007DE41B /* UIView+FirstResponder.h */,
-				4F06497716E9FD81007DE41B /* UIView+FirstResponder.m */,
-				4F06497316E9F9A5007DE41B /* UIView+Explorer.h */,
-				4F06497416E9F9A5007DE41B /* UIView+Explorer.m */,
-			);
-			path = UIView;
-			sourceTree = "<group>";
-		};
 		4F1CBA4816E603130023C118 /* Docs */ = {
 			isa = PBXGroup;
 			children = (
@@ -293,7 +276,8 @@
 				4F4C3F7916EC9DBF00765DE1 /* Reachability.h */,
 				4F4C3F7A16EC9DBF00765DE1 /* Reachability.m */,
 			);
-			path = Reachability;
+			name = Reachability;
+			path = ../Libraries/Reachability;
 			sourceTree = "<group>";
 		};
 		4F5FAFAD16E217C5007797D1 = {
@@ -307,7 +291,6 @@
 				4F1CBA4A16E603500023C118 /* Scripts */,
 				4F1CBA4816E603130023C118 /* Docs */,
 				4F5FAFB716E217C5007797D1 /* Products */,
-				4F5FB00116E22B68007797D1 /* Libraries */,
 				01452B570E1D457980E455D4 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
@@ -342,8 +325,10 @@
 		4F5FAFBF16E217C5007797D1 /* Little Image Printer */ = {
 			isa = PBXGroup;
 			children = (
+				A28656AE18C415F300198130 /* Categories */,
 				4FA26A2416E56B5800C08B5A /* Image Processing */,
 				4FA26A3116E5806700C08B5A /* Images */,
+				4F4C3F7716EC9DBF00765DE1 /* Reachability */,
 				4FA26A2716E56B5800C08B5A /* Managers */,
 				4F5FAFE016E2180F007797D1 /* Model */,
 				4F5FAFFB16E22637007797D1 /* Resources */,
@@ -415,37 +400,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		4F5FB00116E22B68007797D1 /* Libraries */ = {
-			isa = PBXGroup;
-			children = (
-				4F4C3F7716EC9DBF00765DE1 /* Reachability */,
-				4F06497216E9F9A5007DE41B /* UIView */,
-				4F5FB00216E22B68007797D1 /* Base64 */,
-				4F5FB00716E22B68007797D1 /* URLEncode */,
-			);
-			path = Libraries;
-			sourceTree = "<group>";
-		};
-		4F5FB00216E22B68007797D1 /* Base64 */ = {
-			isa = PBXGroup;
-			children = (
-				4F5FB00316E22B68007797D1 /* NSData+Base64.h */,
-				4F5FB00416E22B68007797D1 /* NSData+Base64.m */,
-				4F5FB00516E22B68007797D1 /* NSString+Base64.h */,
-				4F5FB00616E22B68007797D1 /* NSString+Base64.m */,
-			);
-			path = Base64;
-			sourceTree = "<group>";
-		};
-		4F5FB00716E22B68007797D1 /* URLEncode */ = {
-			isa = PBXGroup;
-			children = (
-				4F5FB00816E22B68007797D1 /* NSString+URLEncode.h */,
-				4F5FB00916E22B68007797D1 /* NSString+URLEncode.m */,
-			);
-			path = URLEncode;
-			sourceTree = "<group>";
-		};
 		4FA26A2416E56B5800C08B5A /* Image Processing */ = {
 			isa = PBXGroup;
 			children = (
@@ -501,6 +455,19 @@
 				4FA26A3516E5806700C08B5A /* Contrast@2x.png */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		A28656AE18C415F300198130 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				4F5FB00816E22B68007797D1 /* NSString+URLEncode.h */,
+				4F5FB00916E22B68007797D1 /* NSString+URLEncode.m */,
+				4F06497616E9FD81007DE41B /* UIView+FirstResponder.h */,
+				4F06497716E9FD81007DE41B /* UIView+FirstResponder.m */,
+				4F06497316E9F9A5007DE41B /* UIView+Explorer.h */,
+				4F06497416E9F9A5007DE41B /* UIView+Explorer.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -677,8 +644,6 @@
 				4F5FAFC616E217C5007797D1 /* main.m in Sources */,
 				4F5FAFCA16E217C5007797D1 /* DPZAppDelegate.m in Sources */,
 				4F5FAFF216E21C7D007797D1 /* DPZManagePrinterViewController.m in Sources */,
-				4F5FB00A16E22B68007797D1 /* NSData+Base64.m in Sources */,
-				4F5FB00B16E22B68007797D1 /* NSString+Base64.m in Sources */,
 				4F5FB00C16E22B68007797D1 /* NSString+URLEncode.m in Sources */,
 				4FA1225716E3C71F00FE27C2 /* DPZEditPrinterViewController.m in Sources */,
 				4F9E777716E55E0E0036803A /* LittleImagePrinter.xcdatamodeld in Sources */,
