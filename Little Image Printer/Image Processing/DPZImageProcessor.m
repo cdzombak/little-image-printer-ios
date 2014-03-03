@@ -131,7 +131,9 @@
     
     CIContext *context = [CIContext contextWithOptions:nil];
     
-    self.adjustedImage = [UIImage imageWithCGImage:[context createCGImage:outputImage fromRect:outputImage.extent]];
+    CGImageRef cgAdjustedImage = [context createCGImage:outputImage fromRect:outputImage.extent];
+    self.adjustedImage = [UIImage imageWithCGImage:cgAdjustedImage];
+    CGImageRelease(cgAdjustedImage);
     
     return self.adjustedImage;
 }
