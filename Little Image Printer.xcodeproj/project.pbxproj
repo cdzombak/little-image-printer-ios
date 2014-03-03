@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4F06497816E9FD81007DE41B /* UIView+DPZFirstResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F06497716E9FD81007DE41B /* UIView+DPZFirstResponder.m */; };
 		4F1CBA4C16E603500023C118 /* increment-build.sh in Resources */ = {isa = PBXBuildFile; fileRef = 4F1CBA4B16E603500023C118 /* increment-build.sh */; };
 		4F2E95D716EB8B79004CA9B3 /* HISTORY.md in Resources */ = {isa = PBXBuildFile; fileRef = 4F2E95D516EB8B79004CA9B3 /* HISTORY.md */; };
 		4F2E95D816EB8B79004CA9B3 /* LICENCE.md in Resources */ = {isa = PBXBuildFile; fileRef = 4F2E95D616EB8B79004CA9B3 /* LICENCE.md */; };
@@ -15,8 +14,6 @@
 		4F2E95E216EB9319004CA9B3 /* DPZAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F2E95E016EB9319004CA9B3 /* DPZAboutViewController.m */; };
 		4F2E95E716EB9CF0004CA9B3 /* DPZPrintCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F2E95E516EB9CF0004CA9B3 /* DPZPrintCodeViewController.m */; };
 		4F2E95EA16EB9D99004CA9B3 /* print-code.html in Resources */ = {isa = PBXBuildFile; fileRef = 4F2E95E916EB9D99004CA9B3 /* print-code.html */; };
-		4F4C3F7B16EC9DBF00765DE1 /* LICENCE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4F4C3F7816EC9DBF00765DE1 /* LICENCE.txt */; };
-		4F4C3F7C16EC9DBF00765DE1 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F4C3F7A16EC9DBF00765DE1 /* Reachability.m */; };
 		4F4C3F7E16ECA11900765DE1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F4C3F7D16ECA11900765DE1 /* SystemConfiguration.framework */; };
 		4F5FAFBA16E217C5007797D1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F5FAFB916E217C5007797D1 /* UIKit.framework */; };
 		4F5FAFBC16E217C5007797D1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F5FAFBB16E217C5007797D1 /* Foundation.framework */; };
@@ -27,7 +24,6 @@
 		4F5FAFEB16E21B5B007797D1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F5FAFEA16E21B5B007797D1 /* CoreData.framework */; };
 		4F5FAFF216E21C7D007797D1 /* DPZManagePrinterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5FAFF016E21C7D007797D1 /* DPZManagePrinterViewController.m */; };
 		4F5FAFFD16E22637007797D1 /* print.html in Resources */ = {isa = PBXBuildFile; fileRef = 4F5FAFFC16E22637007797D1 /* print.html */; };
-		4F5FB00C16E22B68007797D1 /* NSString+DPZURLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5FB00916E22B68007797D1 /* NSString+DPZURLEncode.m */; };
 		4F5FB00E16E22EC9007797D1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F5FB00D16E22EC8007797D1 /* QuartzCore.framework */; };
 		4F5FB01016E22EF0007797D1 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F5FB00F16E22EF0007797D1 /* CoreImage.framework */; };
 		4F788B9F16E760520062BB89 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F788B9E16E760520062BB89 /* CoreMedia.framework */; };
@@ -51,13 +47,14 @@
 		A28656D118C4471400198130 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A28656D018C4471400198130 /* Podfile */; };
 		A28656F318C4474000198130 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A28656F218C4474000198130 /* Images.xcassets */; };
 		A28656F618C44A7800198130 /* DTCustomColoredAccessory.m in Sources */ = {isa = PBXBuildFile; fileRef = A28656F518C44A7800198130 /* DTCustomColoredAccessory.m */; };
+		A28656FB18C451B900198130 /* NSString+DPZURLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = A28656F818C451B900198130 /* NSString+DPZURLEncode.m */; };
+		A28656FC18C451B900198130 /* UIView+DPZFirstResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = A28656FA18C451B900198130 /* UIView+DPZFirstResponder.m */; };
+		A28656FF18C451D500198130 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = A28656FE18C451D500198130 /* Reachability.m */; };
 		DDC1C54A4E0A4ADD8B68A98F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F292AA2A8FCA41789B3DCD9B /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		01452B570E1D457980E455D4 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
-		4F06497616E9FD81007DE41B /* UIView+DPZFirstResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+DPZFirstResponder.h"; path = "../Libraries/UIView/UIView+DPZFirstResponder.h"; sourceTree = "<group>"; };
-		4F06497716E9FD81007DE41B /* UIView+DPZFirstResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+DPZFirstResponder.m"; path = "../Libraries/UIView/UIView+DPZFirstResponder.m"; sourceTree = "<group>"; };
 		4F1CBA4B16E603500023C118 /* increment-build.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = "increment-build.sh"; sourceTree = "<group>"; };
 		4F2E95D516EB8B79004CA9B3 /* HISTORY.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HISTORY.md; sourceTree = "<group>"; };
 		4F2E95D616EB8B79004CA9B3 /* LICENCE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENCE.md; sourceTree = "<group>"; };
@@ -67,9 +64,6 @@
 		4F2E95E416EB9CF0004CA9B3 /* DPZPrintCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DPZPrintCodeViewController.h; path = "View Controllers/DPZPrintCodeViewController.h"; sourceTree = "<group>"; };
 		4F2E95E516EB9CF0004CA9B3 /* DPZPrintCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DPZPrintCodeViewController.m; path = "View Controllers/DPZPrintCodeViewController.m"; sourceTree = "<group>"; };
 		4F2E95E916EB9D99004CA9B3 /* print-code.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "print-code.html"; sourceTree = "<group>"; };
-		4F4C3F7816EC9DBF00765DE1 /* LICENCE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENCE.txt; sourceTree = "<group>"; };
-		4F4C3F7916EC9DBF00765DE1 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
-		4F4C3F7A16EC9DBF00765DE1 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		4F4C3F7D16ECA11900765DE1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		4F5FAFB616E217C5007797D1 /* Little Image Printer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Little Image Printer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F5FAFB916E217C5007797D1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -85,8 +79,6 @@
 		4F5FAFEF16E21C7D007797D1 /* DPZManagePrinterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DPZManagePrinterViewController.h; path = "View Controllers/DPZManagePrinterViewController.h"; sourceTree = "<group>"; };
 		4F5FAFF016E21C7D007797D1 /* DPZManagePrinterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DPZManagePrinterViewController.m; path = "View Controllers/DPZManagePrinterViewController.m"; sourceTree = "<group>"; };
 		4F5FAFFC16E22637007797D1 /* print.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = print.html; sourceTree = "<group>"; };
-		4F5FB00816E22B68007797D1 /* NSString+DPZURLEncode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+DPZURLEncode.h"; path = "../Libraries/URLEncode/NSString+DPZURLEncode.h"; sourceTree = "<group>"; };
-		4F5FB00916E22B68007797D1 /* NSString+DPZURLEncode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+DPZURLEncode.m"; path = "../Libraries/URLEncode/NSString+DPZURLEncode.m"; sourceTree = "<group>"; };
 		4F5FB00D16E22EC8007797D1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4F5FB00F16E22EF0007797D1 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		4F788B9E16E760520062BB89 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
@@ -120,6 +112,12 @@
 		A28656F218C4474000198130 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A28656F418C44A7800198130 /* DTCustomColoredAccessory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTCustomColoredAccessory.h; path = Views/DTCustomColoredAccessory.h; sourceTree = "<group>"; };
 		A28656F518C44A7800198130 /* DTCustomColoredAccessory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTCustomColoredAccessory.m; path = Views/DTCustomColoredAccessory.m; sourceTree = "<group>"; };
+		A28656F718C451B900198130 /* NSString+DPZURLEncode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+DPZURLEncode.h"; path = "Categories/NSString+DPZURLEncode.h"; sourceTree = "<group>"; };
+		A28656F818C451B900198130 /* NSString+DPZURLEncode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+DPZURLEncode.m"; path = "Categories/NSString+DPZURLEncode.m"; sourceTree = "<group>"; };
+		A28656F918C451B900198130 /* UIView+DPZFirstResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+DPZFirstResponder.h"; path = "Categories/UIView+DPZFirstResponder.h"; sourceTree = "<group>"; };
+		A28656FA18C451B900198130 /* UIView+DPZFirstResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+DPZFirstResponder.m"; path = "Categories/UIView+DPZFirstResponder.m"; sourceTree = "<group>"; };
+		A28656FD18C451D500198130 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = "Little Image Printer/Reachability/Reachability.h"; sourceTree = SOURCE_ROOT; };
+		A28656FE18C451D500198130 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = "Little Image Printer/Reachability/Reachability.m"; sourceTree = SOURCE_ROOT; };
 		F292AA2A8FCA41789B3DCD9B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -167,9 +165,8 @@
 		4F4C3F7716EC9DBF00765DE1 /* Reachability */ = {
 			isa = PBXGroup;
 			children = (
-				4F4C3F7816EC9DBF00765DE1 /* LICENCE.txt */,
-				4F4C3F7916EC9DBF00765DE1 /* Reachability.h */,
-				4F4C3F7A16EC9DBF00765DE1 /* Reachability.m */,
+				A28656FD18C451D500198130 /* Reachability.h */,
+				A28656FE18C451D500198130 /* Reachability.m */,
 			);
 			name = Reachability;
 			path = ../Libraries/Reachability;
@@ -309,10 +306,10 @@
 		A28656AE18C415F300198130 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				4F5FB00816E22B68007797D1 /* NSString+DPZURLEncode.h */,
-				4F5FB00916E22B68007797D1 /* NSString+DPZURLEncode.m */,
-				4F06497616E9FD81007DE41B /* UIView+DPZFirstResponder.h */,
-				4F06497716E9FD81007DE41B /* UIView+DPZFirstResponder.m */,
+				A28656F718C451B900198130 /* NSString+DPZURLEncode.h */,
+				A28656F818C451B900198130 /* NSString+DPZURLEncode.m */,
+				A28656F918C451B900198130 /* UIView+DPZFirstResponder.h */,
+				A28656FA18C451B900198130 /* UIView+DPZFirstResponder.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -399,7 +396,6 @@
 				4F2E95DA16EB8BA7004CA9B3 /* about.html in Resources */,
 				A28656CD18C446E100198130 /* DPZAdjusterViewController.xib in Resources */,
 				4F2E95EA16EB9D99004CA9B3 /* print-code.html in Resources */,
-				4F4C3F7B16EC9DBF00765DE1 /* LICENCE.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,7 +457,6 @@
 				4F5FAFCA16E217C5007797D1 /* DPZAppDelegate.m in Sources */,
 				A28656F618C44A7800198130 /* DTCustomColoredAccessory.m in Sources */,
 				4F5FAFF216E21C7D007797D1 /* DPZManagePrinterViewController.m in Sources */,
-				4F5FB00C16E22B68007797D1 /* NSString+DPZURLEncode.m in Sources */,
 				4FA1225716E3C71F00FE27C2 /* DPZEditPrinterViewController.m in Sources */,
 				4F9E777716E55E0E0036803A /* LittleImagePrinter.xcdatamodeld in Sources */,
 				4F9E777B16E55E650036803A /* DPZPrinter.m in Sources */,
@@ -471,10 +466,11 @@
 				4FA26A2D16E56B5800C08B5A /* DPZDataManager.m in Sources */,
 				A28656C718C446BB00198130 /* DPZRootViewController.m in Sources */,
 				4FA26A2E16E56B5800C08B5A /* DPZPrinterManager.m in Sources */,
-				4F06497816E9FD81007DE41B /* UIView+DPZFirstResponder.m in Sources */,
+				A28656FC18C451B900198130 /* UIView+DPZFirstResponder.m in Sources */,
 				4F2E95E216EB9319004CA9B3 /* DPZAboutViewController.m in Sources */,
+				A28656FB18C451B900198130 /* NSString+DPZURLEncode.m in Sources */,
+				A28656FF18C451D500198130 /* Reachability.m in Sources */,
 				4F2E95E716EB9CF0004CA9B3 /* DPZPrintCodeViewController.m in Sources */,
-				4F4C3F7C16EC9DBF00765DE1 /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
