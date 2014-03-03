@@ -153,8 +153,8 @@
 		4F5FAFC316E217C5007797D1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4F5FAFC516E217C5007797D1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4F5FAFC716E217C5007797D1 /* Little Image Printer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Little Image Printer-Prefix.pch"; sourceTree = "<group>"; };
-		4F5FAFC816E217C5007797D1 /* DPZAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DPZAppDelegate.h; sourceTree = "<group>"; };
-		4F5FAFC916E217C5007797D1 /* DPZAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DPZAppDelegate.m; sourceTree = "<group>"; };
+		4F5FAFC816E217C5007797D1 /* DPZAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DPZAppDelegate.h; path = "Little Image Printer/DPZAppDelegate.h"; sourceTree = "<group>"; };
+		4F5FAFC916E217C5007797D1 /* DPZAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DPZAppDelegate.m; path = "Little Image Printer/DPZAppDelegate.m"; sourceTree = "<group>"; };
 		4F5FAFCB16E217C5007797D1 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		4F5FAFCD16E217C5007797D1 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		4F5FAFCF16E217C5007797D1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -299,13 +299,15 @@
 		4F5FAFAD16E217C5007797D1 = {
 			isa = PBXGroup;
 			children = (
+				4F5FAFBF16E217C5007797D1 /* Little Image Printer */,
+				4F5FAFC816E217C5007797D1 /* DPZAppDelegate.h */,
+				4F5FAFC916E217C5007797D1 /* DPZAppDelegate.m */,
+				4F1CBA4916E603210023C118 /* Icons */,
+				4F5FAFB816E217C5007797D1 /* Frameworks */,
 				4F1CBA4A16E603500023C118 /* Scripts */,
 				4F1CBA4816E603130023C118 /* Docs */,
-				4F1CBA4916E603210023C118 /* Icons */,
-				4F5FB00116E22B68007797D1 /* Libraries */,
-				4F5FAFBF16E217C5007797D1 /* Little Image Printer */,
-				4F5FAFB816E217C5007797D1 /* Frameworks */,
 				4F5FAFB716E217C5007797D1 /* Products */,
+				4F5FB00116E22B68007797D1 /* Libraries */,
 				01452B570E1D457980E455D4 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
@@ -340,15 +342,13 @@
 		4F5FAFBF16E217C5007797D1 /* Little Image Printer */ = {
 			isa = PBXGroup;
 			children = (
-				4F5FAFC816E217C5007797D1 /* DPZAppDelegate.h */,
-				4F5FAFC916E217C5007797D1 /* DPZAppDelegate.m */,
-				4F5FAFF416E21C84007797D1 /* View Controllers */,
 				4FA26A2416E56B5800C08B5A /* Image Processing */,
-				4FA26A2716E56B5800C08B5A /* Managers */,
-				4F5FAFFB16E22637007797D1 /* Resources */,
-				4F5FAFE016E2180F007797D1 /* Model */,
 				4FA26A3116E5806700C08B5A /* Images */,
+				4FA26A2716E56B5800C08B5A /* Managers */,
+				4F5FAFE016E2180F007797D1 /* Model */,
+				4F5FAFFB16E22637007797D1 /* Resources */,
 				4F5FAFC016E217C5007797D1 /* Supporting Files */,
+				4F5FAFF416E21C84007797D1 /* View Controllers */,
 			);
 			path = "Little Image Printer";
 			sourceTree = "<group>";
