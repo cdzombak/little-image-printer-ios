@@ -12,8 +12,6 @@
 #import "DPZPrinter.h"
 #import "NSString+URLEncode.h"
 
-static DPZPrinterManager *_sharedPrinterManager;
-
 @interface DPZPrinterManager ()
 
 @property (nonatomic, strong) DPZImageProcessor *imageProcessor;
@@ -30,14 +28,13 @@ static DPZPrinterManager *_sharedPrinterManager;
 
 + (DPZPrinterManager *)sharedPrinterManager
 {
-    if (_sharedPrinterManager == nil)
-    {
-        _sharedPrinterManager = [[DPZPrinterManager alloc] init];
-    }
-    
-    return _sharedPrinterManager;
+    static DPZPrinterManager *pm;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        pm = [[self alloc] init];
+    });
+    return pm;
 }
-
 
 - (id)init
 {

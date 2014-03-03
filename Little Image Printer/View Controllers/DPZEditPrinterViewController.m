@@ -9,6 +9,7 @@
 #import "DPZEditPrinterViewController.h"
 #import "DPZDataManager.h"
 #import "DPZPrinterManager.h"
+#import "DPZPrinter.h"
 #import "DPZPrintCodeViewController.h"
 #import "UIView+FirstResponder.h"
 

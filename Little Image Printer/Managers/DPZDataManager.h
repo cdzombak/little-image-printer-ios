@@ -6,8 +6,6 @@
 //  Copyright (c) 2013 David Wilkinson. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
 @interface DPZDataManager : NSObject
 
 + (DPZDataManager *)sharedManager;

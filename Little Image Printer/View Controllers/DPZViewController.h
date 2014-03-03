@@ -6,10 +6,7 @@
 //  Copyright (c) 2013 David Wilkinson. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
-@interface DPZViewController : UIViewController
-<UINavigationControllerDelegate,UIImagePickerControllerDelegate>
+@interface DPZViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 - (IBAction)managePrinters:(id)sender;
 - (IBAction)takePhoto:(id)sender;

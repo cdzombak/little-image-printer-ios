@@ -7,6 +7,7 @@
 //
 
 #import <QuartzCore/QuartzCore.h>
+#import <GPUImage/GPUImage.h>
 
 #import "DPZAdjusterViewController.h"
 #import "DPZImageProcessor.h"

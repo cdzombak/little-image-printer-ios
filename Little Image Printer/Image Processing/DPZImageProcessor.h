@@ -6,8 +6,7 @@
 //  Copyright (c) 2013 David Wilkinson. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import "GPUImage.h"
+#import <GPUImage/GPUImage.h>
 
 @interface DPZImageProcessor : NSObject
 

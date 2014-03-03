@@ -6,10 +6,7 @@
 //  Copyright (c) 2013 David Wilkinson. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
-@interface DPZPrintCodeViewController : UIViewController
-<UIWebViewDelegate>
+@interface DPZPrintCodeViewController : UIViewController <UIWebViewDelegate>
 
 @property (nonatomic, strong) IBOutlet UIWebView *webView;
 

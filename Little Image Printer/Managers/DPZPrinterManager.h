@@ -6,26 +6,23 @@
 //  Copyright (c) 2013 David Wilkinson. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import "DPZPrinter.h"
 
 typedef void (^DPZPrinterManagerCallback)(BOOL);
 
-@interface DPZPrinterManager : NSObject
-<NSURLConnectionDataDelegate, NSURLConnectionDelegate>
+@interface DPZPrinterManager : NSObject <NSURLConnectionDataDelegate, NSURLConnectionDelegate>
 
 + (DPZPrinterManager *)sharedPrinterManager;
 
 - (DPZPrinter *)createPrinter;
 - (void)deletePrinter:(DPZPrinter *)printer;
 
-
 - (void)printImageForURL:(NSURL *)imageURL withCompletionBlock:(DPZPrinterManagerCallback)completionBlock;
 - (void)printImage:(UIImage *)image withCompletionBlock:(DPZPrinterManagerCallback)completionBlock;
 
 @property (nonatomic, strong) DPZPrinter *activePrinter;
 
-@property (nonatomic, retain, readonly) NSFetchedResultsController *printersFetchedResultsController;
+@property (nonatomic, readonly) NSFetchedResultsController *printersFetchedResultsController;
 @property (nonatomic, readonly) NSArray *printers;
 
 @property (nonatomic, readonly) NSError *error;

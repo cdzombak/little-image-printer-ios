@@ -6,8 +6,7 @@
 //  Copyright (c) 2013 David Wilkinson. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "DPZPrinter.h"
+@class DPZPrinter;
 
 @interface DPZEditPrinterViewController : UIViewController
 

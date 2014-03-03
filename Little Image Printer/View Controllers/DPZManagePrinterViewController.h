@@ -6,7 +6,6 @@
 //  Copyright (c) 2013 David Wilkinson. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import "DPZFetchedResultsTableViewController.h"
 
 @interface DPZManagePrinterViewController : DPZFetchedResultsTableViewController

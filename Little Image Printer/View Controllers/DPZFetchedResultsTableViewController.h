@@ -6,10 +6,7 @@
 //  Copyright (c) 2013 David Wilkinson. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
-@interface DPZFetchedResultsTableViewController : UIViewController
-<NSFetchedResultsControllerDelegate, UITableViewDelegate, UITableViewDataSource>
+@interface DPZFetchedResultsTableViewController : UIViewController <NSFetchedResultsControllerDelegate, UITableViewDelegate, UITableViewDataSource>
 
 -(UITableViewCell *)newCellWithReuseIdentifier:(NSString *)cellIdentifier;
 -(void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;

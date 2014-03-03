@@ -8,7 +8,6 @@
 
 #import "DPZPrinter.h"
 
-
 @implementation DPZPrinter
 
 @dynamic code;
