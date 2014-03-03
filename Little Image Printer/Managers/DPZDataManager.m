@@ -38,7 +38,7 @@ static DPZDataManager *_sharedManager = nil;
 {
     NSArray *matches = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
     
-    return ([matches count] >= 1) ? [matches objectAtIndex:0] : nil;
+    return ([matches count] >= 1) ? matches[0] : nil;
 }
 
 - (id)insertNewObjectForEntityForName:(NSString *)name
@@ -102,10 +102,8 @@ static DPZDataManager *_sharedManager = nil;
     
     NSError *error = nil;
     
-    NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:
-                             [NSNumber numberWithBool:YES], NSMigratePersistentStoresAutomaticallyOption,
-                             [NSNumber numberWithBool:YES], NSInferMappingModelAutomaticallyOption,
-                             nil];
+    NSDictionary *options = @{NSMigratePersistentStoresAutomaticallyOption: @YES,
+                             NSInferMappingModelAutomaticallyOption: @YES};
     
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:[self managedObjectModel]];
     

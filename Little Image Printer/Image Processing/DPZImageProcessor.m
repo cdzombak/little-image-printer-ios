@@ -59,9 +59,9 @@
 
 - (void)setColorControls
 {
-    [self.colorControls setValue:[NSNumber numberWithFloat:0.0] forKey:@"inputSaturation"];
-    [self.colorControls setValue:[NSNumber numberWithFloat:self.brightness]forKey:@"inputBrightness"];
-    [self.colorControls setValue:[NSNumber numberWithFloat:self.contrast] forKey:@"inputContrast"];
+    [self.colorControls setValue:@0.0f forKey:@"inputSaturation"];
+    [self.colorControls setValue:@(self.brightness)forKey:@"inputBrightness"];
+    [self.colorControls setValue:@(self.contrast) forKey:@"inputContrast"];
 }
 
 - (void)initialiseImage

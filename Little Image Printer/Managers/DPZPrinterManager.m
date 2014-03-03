@@ -60,7 +60,7 @@ static DPZPrinterManager *_sharedPrinterManager;
             // No default set, just use the first in the list
             if (!_activePrinter)
             {
-                _activePrinter = [printers objectAtIndex:0];
+                _activePrinter = printers[0];
             }
         }
     }
@@ -73,9 +73,9 @@ static DPZPrinterManager *_sharedPrinterManager;
     NSArray *printers = self.printers;
     for (Printer *p in printers)
     {
-        p.active = [NSNumber numberWithBool:NO];
+        p.active = @NO;
     }
-    activePrinter.active = [NSNumber numberWithBool:YES];
+    activePrinter.active = @YES;
 
     DPZDataManager *dm = [DPZDataManager sharedManager];
     [dm saveContext];
@@ -106,7 +106,7 @@ static DPZPrinterManager *_sharedPrinterManager;
 
     NSFetchRequest *fr = [dm newFetchRequestForEntityNamed:@"Printer"];
     NSSortDescriptor *nameSort = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
-    fr.sortDescriptors = [NSArray arrayWithObject:nameSort];
+    fr.sortDescriptors = @[nameSort];
     
     return [dm getAllFromFetchRequest:fr];
 }
@@ -118,7 +118,7 @@ static DPZPrinterManager *_sharedPrinterManager;
         DPZDataManager *dm = [DPZDataManager sharedManager];
         NSFetchRequest *fr = [dm newFetchRequestForEntityNamed:@"Printer"];
         NSSortDescriptor *nameSort = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
-        fr.sortDescriptors = [NSArray arrayWithObject:nameSort];
+        fr.sortDescriptors = @[nameSort];
         
         _printersFetchedResultsController = [[NSFetchedResultsController alloc]
                                              initWithFetchRequest:fr

@@ -123,10 +123,10 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    self.image = [info objectForKey:UIImagePickerControllerEditedImage];
+    self.image = info[UIImagePickerControllerEditedImage];
     if (self.image == nil)
     {
-        self.image = [info objectForKey:UIImagePickerControllerOriginalImage];
+        self.image = info[UIImagePickerControllerOriginalImage];
     }
     
     if (self.image)

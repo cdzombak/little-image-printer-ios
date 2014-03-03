@@ -178,7 +178,7 @@
         self.keyboardIsShowing = YES;
         
         NSDictionary* info = [notification userInfo];
-        CGSize kbSize = [[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
+        CGSize kbSize = [info[UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
         CGRect f = self.containerView.frame;
         f.origin.y = f.origin.y - kbSize.height;
         NSTimeInterval duration = [self keyboardAnimationDurationForNotification:notification];
@@ -195,7 +195,7 @@
     self.keyboardIsShowing = NO;
     
     NSDictionary* info = [notification userInfo];
-    CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    CGSize kbSize = [info[UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
     
     CGRect f = self.containerView.frame;
     f.origin.y = f.origin.y + kbSize.height;
@@ -209,7 +209,7 @@
 - (NSTimeInterval)keyboardAnimationDurationForNotification:(NSNotification*)notification
 {
     NSDictionary* info = [notification userInfo];
-    NSValue* value = [info objectForKey:UIKeyboardAnimationDurationUserInfoKey];
+    NSValue* value = info[UIKeyboardAnimationDurationUserInfoKey];
     NSTimeInterval duration = 0;
     [value getValue:&duration];
     return duration;
