@@ -1,0 +1,10 @@
+#!/bin/sh
+# Usage: scripts/bootstrap
+# Initializes a self-contained CocoaPods environment for development
+# Warning: this script assumes it's contained in the scripts/ folder within a project.
+
+SCRIPT_DIR=$(dirname "$0")
+cd "$SCRIPT_DIR/.."
+
+bundle install --path Vendor/bundle
+# bundle exec pod install

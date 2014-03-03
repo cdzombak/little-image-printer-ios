@@ -1,0 +1,9 @@
+#!/bin/sh
+# Usage: scripts/nuke-pods
+# Removes all pod-related files, allowing you to start completely fresh when necessary
+
+# Change to the directory above this script's location:
+SCRIPT_DIR=$(dirname "$0")
+cd "$SCRIPT_DIR/.."
+
+rm -rf .bundle Pods Podfile.lock Vendor/bundle

@@ -87,7 +87,6 @@
 		4FA26A3716E5806700C08B5A /* Brightness@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FA26A3316E5806700C08B5A /* Brightness@2x.png */; };
 		4FA26A3816E5806700C08B5A /* Contrast.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FA26A3416E5806700C08B5A /* Contrast.png */; };
 		4FA26A3916E5806700C08B5A /* Contrast@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FA26A3516E5806700C08B5A /* Contrast@2x.png */; };
-		4FD56A5316E6804D00E96D23 /* libGPUImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FD56A5216E6804D00E96D23 /* libGPUImage.a */; };
 		4FDC159716E252470047D0A1 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FDC158D16E252470047D0A1 /* Icon-72.png */; };
 		4FDC159816E252470047D0A1 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FDC158E16E252470047D0A1 /* Icon-72@2x.png */; };
 		4FDC159916E252470047D0A1 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FDC158F16E252470047D0A1 /* Icon-Small-50.png */; };
@@ -98,9 +97,11 @@
 		4FDC159E16E252470047D0A1 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FDC159416E252470047D0A1 /* Icon@2x.png */; };
 		4FDC159F16E252470047D0A1 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 4FDC159516E252470047D0A1 /* iTunesArtwork */; };
 		4FDC15A016E252470047D0A1 /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = 4FDC159616E252470047D0A1 /* iTunesArtwork@2x */; };
+		DDC1C54A4E0A4ADD8B68A98F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F292AA2A8FCA41789B3DCD9B /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		01452B570E1D457980E455D4 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		4F06494716E8DE04007DE41B /* Brightness-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Brightness-white.png"; sourceTree = "<group>"; };
 		4F06494816E8DE04007DE41B /* Brightness-white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Brightness-white@2x.png"; sourceTree = "<group>"; };
 		4F06494916E8DE04007DE41B /* Contrast-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Contrast-white.png"; sourceTree = "<group>"; };
@@ -203,7 +204,6 @@
 		4FA26A3316E5806700C08B5A /* Brightness@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Brightness@2x.png"; sourceTree = "<group>"; };
 		4FA26A3416E5806700C08B5A /* Contrast.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Contrast.png; sourceTree = "<group>"; };
 		4FA26A3516E5806700C08B5A /* Contrast@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Contrast@2x.png"; sourceTree = "<group>"; };
-		4FD56A5216E6804D00E96D23 /* libGPUImage.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGPUImage.a; path = "../../../Library/Developer/Xcode/DerivedData/Little_Image_Printer-fgjeusrighnqjqcgmxujwpuszggp/Build/Products/Debug-iphoneos/libGPUImage.a"; sourceTree = "<group>"; };
 		4FDC158D16E252470047D0A1 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "Little Image Printer/Icon-72.png"; sourceTree = "<group>"; };
 		4FDC158E16E252470047D0A1 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72@2x.png"; path = "Little Image Printer/Icon-72@2x.png"; sourceTree = "<group>"; };
 		4FDC158F16E252470047D0A1 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50.png"; path = "Little Image Printer/Icon-Small-50.png"; sourceTree = "<group>"; };
@@ -214,6 +214,7 @@
 		4FDC159416E252470047D0A1 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "Little Image Printer/Icon@2x.png"; sourceTree = "<group>"; };
 		4FDC159516E252470047D0A1 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; name = iTunesArtwork; path = "Little Image Printer/iTunesArtwork"; sourceTree = "<group>"; };
 		4FDC159616E252470047D0A1 /* iTunesArtwork@2x */ = {isa = PBXFileReference; lastKnownFileType = file; name = "iTunesArtwork@2x"; path = "Little Image Printer/iTunesArtwork@2x"; sourceTree = "<group>"; };
+		F292AA2A8FCA41789B3DCD9B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,7 +222,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FD56A5316E6804D00E96D23 /* libGPUImage.a in Frameworks */,
 				4F788BA516E7606A0062BB89 /* AVFoundation.framework in Frameworks */,
 				4F788BA316E760640062BB89 /* OpenGLES.framework in Frameworks */,
 				4F788BA116E760590062BB89 /* CoreVideo.framework in Frameworks */,
@@ -233,6 +233,7 @@
 				4F5FAFBC16E217C5007797D1 /* Foundation.framework in Frameworks */,
 				4F5FAFBE16E217C5007797D1 /* CoreGraphics.framework in Frameworks */,
 				4F4C3F7E16ECA11900765DE1 /* SystemConfiguration.framework in Frameworks */,
+				DDC1C54A4E0A4ADD8B68A98F /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,12 +299,6 @@
 		4F5FAFAD16E217C5007797D1 = {
 			isa = PBXGroup;
 			children = (
-				4F4C3F7D16ECA11900765DE1 /* SystemConfiguration.framework */,
-				4F788BA416E7606A0062BB89 /* AVFoundation.framework */,
-				4F788BA216E760640062BB89 /* OpenGLES.framework */,
-				4F788BA016E760590062BB89 /* CoreVideo.framework */,
-				4F788B9E16E760520062BB89 /* CoreMedia.framework */,
-				4FD56A5216E6804D00E96D23 /* libGPUImage.a */,
 				4F1CBA4A16E603500023C118 /* Scripts */,
 				4F1CBA4816E603130023C118 /* Docs */,
 				4F1CBA4916E603210023C118 /* Icons */,
@@ -311,6 +306,7 @@
 				4F5FAFBF16E217C5007797D1 /* Little Image Printer */,
 				4F5FAFB816E217C5007797D1 /* Frameworks */,
 				4F5FAFB716E217C5007797D1 /* Products */,
+				01452B570E1D457980E455D4 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -325,12 +321,18 @@
 		4F5FAFB816E217C5007797D1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4F4C3F7D16ECA11900765DE1 /* SystemConfiguration.framework */,
+				4F788BA416E7606A0062BB89 /* AVFoundation.framework */,
+				4F788BA216E760640062BB89 /* OpenGLES.framework */,
+				4F788BA016E760590062BB89 /* CoreVideo.framework */,
+				4F788B9E16E760520062BB89 /* CoreMedia.framework */,
 				4F5FB00F16E22EF0007797D1 /* CoreImage.framework */,
 				4F5FB00D16E22EC8007797D1 /* QuartzCore.framework */,
 				4F5FAFB916E217C5007797D1 /* UIKit.framework */,
 				4F5FAFBB16E217C5007797D1 /* Foundation.framework */,
 				4F5FAFBD16E217C5007797D1 /* CoreGraphics.framework */,
 				4F5FAFEA16E21B5B007797D1 /* CoreData.framework */,
+				F292AA2A8FCA41789B3DCD9B /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -508,10 +510,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4F5FAFDC16E217C5007797D1 /* Build configuration list for PBXNativeTarget "Little Image Printer" */;
 			buildPhases = (
+				A814F3B568AD4CD2ADC94367 /* Check Pods Manifest.lock */,
 				4F5FAFB216E217C5007797D1 /* Sources */,
 				4F5FAFB316E217C5007797D1 /* Frameworks */,
-				4F5FAFE916E21A38007797D1 /* ShellScript */,
+				4F5FAFE916E21A38007797D1 /* Increment Build Number */,
 				4F5FAFB416E217C5007797D1 /* Resources */,
+				0161E9DA895047B6A05724CA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -619,18 +623,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4F5FAFE916E21A38007797D1 /* ShellScript */ = {
+		0161E9DA895047B6A05724CA /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F5FAFE916E21A38007797D1 /* Increment Build Number */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Increment Build Number";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PROJECT_DIR}/Scripts/increment-build.sh\"";
+		};
+		A814F3B568AD4CD2ADC94367 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -722,6 +757,7 @@
 		};
 		4F4C3F8016ECB0D800765DE1 /* Distribution */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01452B570E1D457980E455D4 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Little Image Printer/Little Image Printer-Prefix.pch";
@@ -796,6 +832,7 @@
 		};
 		4F5FAFDD16E217C5007797D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01452B570E1D457980E455D4 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Little Image Printer/Little Image Printer-Prefix.pch";
@@ -810,6 +847,7 @@
 		};
 		4F5FAFDE16E217C5007797D1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01452B570E1D457980E455D4 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Little Image Printer/Little Image Printer-Prefix.pch";
