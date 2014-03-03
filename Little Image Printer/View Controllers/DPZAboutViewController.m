@@ -8,7 +8,18 @@
 
 #import "DPZAboutViewController.h"
 
+@interface DPZAboutViewController () <UIWebViewDelegate>
+
+@property (nonatomic, strong) IBOutlet UIWebView *webView;
+
+@end
+
 @implementation DPZAboutViewController
+
+- (instancetype)init {
+    self = [self initWithNibName:@"DPZAboutViewController" bundle:nil];
+    return self;
+}
 
 - (void)viewDidLoad
 {

@@ -1,10 +1,13 @@
 PODS:
   - GPUImage (0.1.2)
+  - JMStaticContentTableViewController (0.3.1)
 
 DEPENDENCIES:
   - GPUImage (~> 0.1.2)
+  - JMStaticContentTableViewController (~> 0.3.1)
 
 SPEC CHECKSUMS:
   GPUImage: 007145faa0e27f1ddbcab93e07f026c9776e2fa2
+  JMStaticContentTableViewController: 6d477d7c4b900bedb29937090c1473672feff95a
 
 COCOAPODS: 0.29.0

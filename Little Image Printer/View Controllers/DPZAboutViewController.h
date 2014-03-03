@@ -6,8 +6,6 @@
 //  Copyright (c) 2013 David Wilkinson. All rights reserved.
 //
 
-@interface DPZAboutViewController : UIViewController <UIWebViewDelegate>
-
-@property (nonatomic, strong) IBOutlet UIWebView *webView;
+@interface DPZAboutViewController : UIViewController
 
 @end

@@ -10,6 +10,4 @@
 
 @interface DPZManagePrinterViewController : DPZFetchedResultsTableViewController
 
-@property (nonatomic, strong) IBOutlet UIBarButtonItem *addButton;
-
 @end

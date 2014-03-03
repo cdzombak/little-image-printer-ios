@@ -38,24 +38,18 @@
 
 - (id)init
 {
-    self = [super init];
-    if (self)
-    {
+    if (self = [super init]) {
         NSArray *printers = self.printers;
-        if ([printers count] > 0)
-        {
-            for (DPZPrinter *p in printers)
-            {
-                if ([p.active boolValue])
-                {
+        if ([printers count] > 0) {
+            for (DPZPrinter *p in printers) {
+                if ([p.active boolValue]) {
                     _activePrinter = p;
                     break;
                 }
             }
             
             // No default set, just use the first in the list
-            if (!_activePrinter)
-            {
+            if (!_activePrinter) {
                 _activePrinter = printers[0];
             }
         }
@@ -67,16 +61,12 @@
 {
     _activePrinter = activePrinter;
     NSArray *printers = self.printers;
-    for (DPZPrinter *p in printers)
-    {
-        p.active = @NO;
-    }
+    [printers makeObjectsPerformSelector:@selector(setActive:) withObject:@NO];
     activePrinter.active = @YES;
 
     DPZDataManager *dm = [DPZDataManager sharedManager];
     [dm saveContext];
 }
-
 
 - (DPZPrinter *)createPrinter
 {
@@ -89,7 +79,6 @@
     DPZDataManager *dm = [DPZDataManager sharedManager];
     if ([printer.active boolValue])
     {
-        // This is the active printer,
         [DPZPrinterManager sharedPrinterManager].activePrinter = nil;
     }
     [dm deleteObject:printer];

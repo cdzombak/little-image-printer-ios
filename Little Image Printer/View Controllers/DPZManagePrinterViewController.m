@@ -7,22 +7,24 @@
 //
 
 #import "DPZManagePrinterViewController.h"
-#import "DPZPrinterManager.h"
 #import "DPZEditPrinterViewController.h"
+#import "DPZPrinterManager.h"
 #import "DPZPrinter.h"
 
 @interface DPZManagePrinterViewController ()
+
+@property (nonatomic, readonly) UIBarButtonItem *addButton;
 
 @end
 
 @implementation DPZManagePrinterViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+@synthesize addButton = _addButton;
+
+- (id)init
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self)
-    {
-        // Custom initialization
+    if (self = [super initWithStyle:UITableViewStylePlain]) {
+        self.title = NSLocalizedString(@"Printers", nil);
     }
     return self;
 }
@@ -31,26 +33,19 @@
 {
     [super viewDidLoad];
 
-    self.title = @"Printers";
-
     self.fetchedResultsController = [DPZPrinterManager sharedPrinterManager].printersFetchedResultsController;
-    
-    self.addButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
-                                                                  target:self
-                                                                  action:@selector(addPrinter:)];
     self.navigationItem.rightBarButtonItem = self.addButton;
 }
 
-- (void)didReceiveMemoryWarning
+- (UIBarButtonItem *)addButton
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    if (!_addButton) {
+        _addButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addPrinter:)];
+    }
+    return _addButton;
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
+#pragma mark - UI Actions
 
 - (void)addPrinter:(id)sender
 {
@@ -58,32 +53,36 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
--(UITableViewCell *)newCellWithReuseIdentifier:(NSString *)cellIdentifier
+#pragma mark - DPZFetchedResultsTableViewController
+
+- (UITableViewCell *)newCellWithReuseIdentifier:(NSString *)cellIdentifier
 {
     return [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
 }
 
--(void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
+- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     DPZPrinter *printer = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
     cell.textLabel.text = printer.name;
     cell.detailTextLabel.text = printer.code;
-    cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
-}
-
-- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
-{
-    DPZPrinter *printer = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    DPZEditPrinterViewController *vc = [[DPZEditPrinterViewController alloc] initWithNibName:@"DPZEditPrinterViewController" bundle:nil];
-    vc.printer = printer;
-    [self.navigationController pushViewController:vc animated:YES];    
+    cell.accessoryType = printer.active ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     DPZPrinter *printer = [self.fetchedResultsController objectAtIndexPath:indexPath];
     [DPZPrinterManager sharedPrinterManager].activePrinter = printer;
+    
+    UITableViewCell *thisCell = [tableView cellForRowAtIndexPath:indexPath];
+    thisCell.accessoryType = UITableViewCellAccessoryCheckmark;
+    
+    for (UITableViewCell *cell in tableView.visibleCells) {
+        if (cell != thisCell) {
+            cell.accessoryType = UITableViewCellAccessoryNone;
+        }
+    }
+    
     [self.navigationController popViewControllerAnimated:YES];
 }
 

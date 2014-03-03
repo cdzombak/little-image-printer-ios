@@ -7,41 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4F06494B16E8DE04007DE41B /* Brightness-white.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F06494716E8DE04007DE41B /* Brightness-white.png */; };
-		4F06494C16E8DE04007DE41B /* Brightness-white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F06494816E8DE04007DE41B /* Brightness-white@2x.png */; };
-		4F06494D16E8DE04007DE41B /* Contrast-white.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F06494916E8DE04007DE41B /* Contrast-white.png */; };
-		4F06494E16E8DE04007DE41B /* Contrast-white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F06494A16E8DE04007DE41B /* Contrast-white@2x.png */; };
-		4F06495B16E90449007DE41B /* Camera-down.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F06494F16E90449007DE41B /* Camera-down.png */; };
-		4F06495C16E90449007DE41B /* Camera-down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F06495016E90449007DE41B /* Camera-down@2x.png */; };
-		4F06495D16E90449007DE41B /* Camera-up.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F06495116E90449007DE41B /* Camera-up.png */; };
-		4F06495E16E90449007DE41B /* Camera-up@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F06495216E90449007DE41B /* Camera-up@2x.png */; };
-		4F06495F16E90449007DE41B /* Photos-down.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F06495316E90449007DE41B /* Photos-down.png */; };
-		4F06496016E90449007DE41B /* Photos-down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F06495416E90449007DE41B /* Photos-down@2x.png */; };
-		4F06496116E90449007DE41B /* Photos-up.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F06495516E90449007DE41B /* Photos-up.png */; };
-		4F06496216E90449007DE41B /* Photos-up@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F06495616E90449007DE41B /* Photos-up@2x.png */; };
-		4F06496316E90449007DE41B /* Printers-down.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F06495716E90449007DE41B /* Printers-down.png */; };
-		4F06496416E90449007DE41B /* Printers-down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F06495816E90449007DE41B /* Printers-down@2x.png */; };
-		4F06496516E90449007DE41B /* Printers-up.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F06495916E90449007DE41B /* Printers-up.png */; };
-		4F06496616E90449007DE41B /* Printers-up@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F06495A16E90449007DE41B /* Printers-up@2x.png */; };
-		4F06496B16E91611007DE41B /* Delete-down.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F06496716E91611007DE41B /* Delete-down.png */; };
-		4F06496C16E91611007DE41B /* Delete-down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F06496816E91611007DE41B /* Delete-down@2x.png */; };
-		4F06496D16E91611007DE41B /* Delete-up.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F06496916E91611007DE41B /* Delete-up.png */; };
-		4F06496E16E91611007DE41B /* Delete-up@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F06496A16E91611007DE41B /* Delete-up@2x.png */; };
 		4F06497516E9F9A5007DE41B /* UIView+Explorer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F06497416E9F9A5007DE41B /* UIView+Explorer.m */; };
 		4F06497816E9FD81007DE41B /* UIView+FirstResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F06497716E9FD81007DE41B /* UIView+FirstResponder.m */; };
 		4F1CBA4C16E603500023C118 /* increment-build.sh in Resources */ = {isa = PBXBuildFile; fileRef = 4F1CBA4B16E603500023C118 /* increment-build.sh */; };
 		4F2E95D716EB8B79004CA9B3 /* HISTORY.md in Resources */ = {isa = PBXBuildFile; fileRef = 4F2E95D516EB8B79004CA9B3 /* HISTORY.md */; };
 		4F2E95D816EB8B79004CA9B3 /* LICENCE.md in Resources */ = {isa = PBXBuildFile; fileRef = 4F2E95D616EB8B79004CA9B3 /* LICENCE.md */; };
 		4F2E95DA16EB8BA7004CA9B3 /* about.html in Resources */ = {isa = PBXBuildFile; fileRef = 4F2E95D916EB8BA7004CA9B3 /* about.html */; };
-		4F2E95DD16EB929D004CA9B3 /* Info.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F2E95DB16EB929D004CA9B3 /* Info.png */; };
-		4F2E95DE16EB929D004CA9B3 /* Info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F2E95DC16EB929D004CA9B3 /* Info@2x.png */; };
 		4F2E95E216EB9319004CA9B3 /* DPZAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F2E95E016EB9319004CA9B3 /* DPZAboutViewController.m */; };
-		4F2E95E316EB9319004CA9B3 /* DPZAboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F2E95E116EB9319004CA9B3 /* DPZAboutViewController.xib */; };
 		4F2E95E716EB9CF0004CA9B3 /* DPZPrintCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F2E95E516EB9CF0004CA9B3 /* DPZPrintCodeViewController.m */; };
-		4F2E95E816EB9CF0004CA9B3 /* DPZPrintCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F2E95E616EB9CF0004CA9B3 /* DPZPrintCodeViewController.xib */; };
 		4F2E95EA16EB9D99004CA9B3 /* print-code.html in Resources */ = {isa = PBXBuildFile; fileRef = 4F2E95E916EB9D99004CA9B3 /* print-code.html */; };
-		4F2E95ED16EBA019004CA9B3 /* Printer-code.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F2E95EB16EBA019004CA9B3 /* Printer-code.png */; };
-		4F2E95EE16EBA019004CA9B3 /* Printer-code@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F2E95EC16EBA019004CA9B3 /* Printer-code@2x.png */; };
 		4F4C3F7B16EC9DBF00765DE1 /* LICENCE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4F4C3F7816EC9DBF00765DE1 /* LICENCE.txt */; };
 		4F4C3F7C16EC9DBF00765DE1 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F4C3F7A16EC9DBF00765DE1 /* Reachability.m */; };
 		4F4C3F7E16ECA11900765DE1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F4C3F7D16ECA11900765DE1 /* SystemConfiguration.framework */; };
@@ -51,19 +25,12 @@
 		4F5FAFC416E217C5007797D1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4F5FAFC216E217C5007797D1 /* InfoPlist.strings */; };
 		4F5FAFC616E217C5007797D1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5FAFC516E217C5007797D1 /* main.m */; };
 		4F5FAFCA16E217C5007797D1 /* DPZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5FAFC916E217C5007797D1 /* DPZAppDelegate.m */; };
-		4F5FAFCC16E217C5007797D1 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F5FAFCB16E217C5007797D1 /* Default.png */; };
-		4F5FAFCE16E217C5007797D1 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F5FAFCD16E217C5007797D1 /* Default@2x.png */; };
-		4F5FAFD016E217C5007797D1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F5FAFCF16E217C5007797D1 /* Default-568h@2x.png */; };
-		4F5FAFD616E217C5007797D1 /* DPZViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F5FAFD416E217C5007797D1 /* DPZViewController_iPhone.xib */; };
 		4F5FAFEB16E21B5B007797D1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F5FAFEA16E21B5B007797D1 /* CoreData.framework */; };
 		4F5FAFF216E21C7D007797D1 /* DPZManagePrinterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5FAFF016E21C7D007797D1 /* DPZManagePrinterViewController.m */; };
-		4F5FAFF316E21C7D007797D1 /* DPZManagePrinterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F5FAFF116E21C7D007797D1 /* DPZManagePrinterViewController.xib */; };
 		4F5FAFFD16E22637007797D1 /* print.html in Resources */ = {isa = PBXBuildFile; fileRef = 4F5FAFFC16E22637007797D1 /* print.html */; };
 		4F5FB00C16E22B68007797D1 /* NSString+URLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F5FB00916E22B68007797D1 /* NSString+URLEncode.m */; };
 		4F5FB00E16E22EC9007797D1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F5FB00D16E22EC8007797D1 /* QuartzCore.framework */; };
 		4F5FB01016E22EF0007797D1 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F5FB00F16E22EF0007797D1 /* CoreImage.framework */; };
-		4F62159316E8DA1A005A0C12 /* Little Printer.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F62159116E8DA1A005A0C12 /* Little Printer.png */; };
-		4F62159416E8DA1A005A0C12 /* Little Printer@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F62159216E8DA1A005A0C12 /* Little Printer@2x.png */; };
 		4F788B9F16E760520062BB89 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F788B9E16E760520062BB89 /* CoreMedia.framework */; };
 		4F788BA116E760590062BB89 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F788BA016E760590062BB89 /* CoreVideo.framework */; };
 		4F788BA316E760640062BB89 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F788BA216E760640062BB89 /* OpenGLES.framework */; };
@@ -71,54 +38,24 @@
 		4F9E777716E55E0E0036803A /* LittleImagePrinter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4F9E777216E55E0E0036803A /* LittleImagePrinter.xcdatamodeld */; };
 		4F9E777B16E55E650036803A /* DPZPrinter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F9E777A16E55E650036803A /* DPZPrinter.m */; };
 		4FA1225716E3C71F00FE27C2 /* DPZEditPrinterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA1225516E3C71F00FE27C2 /* DPZEditPrinterViewController.m */; };
-		4FA1225816E3C71F00FE27C2 /* DPZEditPrinterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FA1225616E3C71F00FE27C2 /* DPZEditPrinterViewController.xib */; };
 		4FA26A2016E56B2C00C08B5A /* DPZFetchedResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA26A1A16E56B2C00C08B5A /* DPZFetchedResultsTableViewController.m */; };
 		4FA26A2116E56B2C00C08B5A /* DPZAdjusterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA26A1C16E56B2C00C08B5A /* DPZAdjusterViewController.m */; };
-		4FA26A2216E56B2C00C08B5A /* DPZAdjusterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FA26A1D16E56B2C00C08B5A /* DPZAdjusterViewController.xib */; };
-		4FA26A2316E56B2C00C08B5A /* DPZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA26A1F16E56B2C00C08B5A /* DPZViewController.m */; };
 		4FA26A2C16E56B5800C08B5A /* DPZImageProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA26A2616E56B5800C08B5A /* DPZImageProcessor.m */; };
 		4FA26A2D16E56B5800C08B5A /* DPZDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA26A2916E56B5800C08B5A /* DPZDataManager.m */; };
 		4FA26A2E16E56B5800C08B5A /* DPZPrinterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA26A2B16E56B5800C08B5A /* DPZPrinterManager.m */; };
 		4FA26A3016E5733700C08B5A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4FA26A2F16E5733700C08B5A /* README.md */; };
-		4FA26A3616E5806700C08B5A /* Brightness.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FA26A3216E5806700C08B5A /* Brightness.png */; };
-		4FA26A3716E5806700C08B5A /* Brightness@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FA26A3316E5806700C08B5A /* Brightness@2x.png */; };
-		4FA26A3816E5806700C08B5A /* Contrast.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FA26A3416E5806700C08B5A /* Contrast.png */; };
-		4FA26A3916E5806700C08B5A /* Contrast@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FA26A3516E5806700C08B5A /* Contrast@2x.png */; };
-		4FDC159716E252470047D0A1 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FDC158D16E252470047D0A1 /* Icon-72.png */; };
-		4FDC159816E252470047D0A1 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FDC158E16E252470047D0A1 /* Icon-72@2x.png */; };
-		4FDC159916E252470047D0A1 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FDC158F16E252470047D0A1 /* Icon-Small-50.png */; };
-		4FDC159A16E252470047D0A1 /* Icon-Small-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FDC159016E252470047D0A1 /* Icon-Small-50@2x.png */; };
-		4FDC159B16E252470047D0A1 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FDC159116E252470047D0A1 /* Icon-Small.png */; };
-		4FDC159C16E252470047D0A1 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FDC159216E252470047D0A1 /* Icon-Small@2x.png */; };
-		4FDC159D16E252470047D0A1 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FDC159316E252470047D0A1 /* Icon.png */; };
-		4FDC159E16E252470047D0A1 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FDC159416E252470047D0A1 /* Icon@2x.png */; };
-		4FDC159F16E252470047D0A1 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 4FDC159516E252470047D0A1 /* iTunesArtwork */; };
-		4FDC15A016E252470047D0A1 /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = 4FDC159616E252470047D0A1 /* iTunesArtwork@2x */; };
+		A28656C718C446BB00198130 /* DPZRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A28656C618C446BB00198130 /* DPZRootViewController.m */; };
+		A28656CC18C446E100198130 /* DPZAboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A28656C818C446E100198130 /* DPZAboutViewController.xib */; };
+		A28656CD18C446E100198130 /* DPZAdjusterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A28656C918C446E100198130 /* DPZAdjusterViewController.xib */; };
+		A28656CE18C446E100198130 /* DPZEditPrinterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A28656CA18C446E100198130 /* DPZEditPrinterViewController.xib */; };
+		A28656CF18C446E100198130 /* DPZPrintCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A28656CB18C446E100198130 /* DPZPrintCodeViewController.xib */; };
+		A28656D118C4471400198130 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A28656D018C4471400198130 /* Podfile */; };
+		A28656F318C4474000198130 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A28656F218C4474000198130 /* Images.xcassets */; };
 		DDC1C54A4E0A4ADD8B68A98F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F292AA2A8FCA41789B3DCD9B /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		01452B570E1D457980E455D4 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
-		4F06494716E8DE04007DE41B /* Brightness-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Brightness-white.png"; sourceTree = "<group>"; };
-		4F06494816E8DE04007DE41B /* Brightness-white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Brightness-white@2x.png"; sourceTree = "<group>"; };
-		4F06494916E8DE04007DE41B /* Contrast-white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Contrast-white.png"; sourceTree = "<group>"; };
-		4F06494A16E8DE04007DE41B /* Contrast-white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Contrast-white@2x.png"; sourceTree = "<group>"; };
-		4F06494F16E90449007DE41B /* Camera-down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Camera-down.png"; sourceTree = "<group>"; };
-		4F06495016E90449007DE41B /* Camera-down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Camera-down@2x.png"; sourceTree = "<group>"; };
-		4F06495116E90449007DE41B /* Camera-up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Camera-up.png"; sourceTree = "<group>"; };
-		4F06495216E90449007DE41B /* Camera-up@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Camera-up@2x.png"; sourceTree = "<group>"; };
-		4F06495316E90449007DE41B /* Photos-down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Photos-down.png"; sourceTree = "<group>"; };
-		4F06495416E90449007DE41B /* Photos-down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Photos-down@2x.png"; sourceTree = "<group>"; };
-		4F06495516E90449007DE41B /* Photos-up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Photos-up.png"; sourceTree = "<group>"; };
-		4F06495616E90449007DE41B /* Photos-up@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Photos-up@2x.png"; sourceTree = "<group>"; };
-		4F06495716E90449007DE41B /* Printers-down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Printers-down.png"; sourceTree = "<group>"; };
-		4F06495816E90449007DE41B /* Printers-down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Printers-down@2x.png"; sourceTree = "<group>"; };
-		4F06495916E90449007DE41B /* Printers-up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Printers-up.png"; sourceTree = "<group>"; };
-		4F06495A16E90449007DE41B /* Printers-up@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Printers-up@2x.png"; sourceTree = "<group>"; };
-		4F06496716E91611007DE41B /* Delete-down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Delete-down.png"; sourceTree = "<group>"; };
-		4F06496816E91611007DE41B /* Delete-down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Delete-down@2x.png"; sourceTree = "<group>"; };
-		4F06496916E91611007DE41B /* Delete-up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Delete-up.png"; sourceTree = "<group>"; };
-		4F06496A16E91611007DE41B /* Delete-up@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Delete-up@2x.png"; sourceTree = "<group>"; };
 		4F06497316E9F9A5007DE41B /* UIView+Explorer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Explorer.h"; path = "../Libraries/UIView/UIView+Explorer.h"; sourceTree = "<group>"; };
 		4F06497416E9F9A5007DE41B /* UIView+Explorer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Explorer.m"; path = "../Libraries/UIView/UIView+Explorer.m"; sourceTree = "<group>"; };
 		4F06497616E9FD81007DE41B /* UIView+FirstResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+FirstResponder.h"; path = "../Libraries/UIView/UIView+FirstResponder.h"; sourceTree = "<group>"; };
@@ -127,17 +64,11 @@
 		4F2E95D516EB8B79004CA9B3 /* HISTORY.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HISTORY.md; sourceTree = "<group>"; };
 		4F2E95D616EB8B79004CA9B3 /* LICENCE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENCE.md; sourceTree = "<group>"; };
 		4F2E95D916EB8BA7004CA9B3 /* about.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = about.html; sourceTree = "<group>"; };
-		4F2E95DB16EB929D004CA9B3 /* Info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Info.png; sourceTree = "<group>"; };
-		4F2E95DC16EB929D004CA9B3 /* Info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Info@2x.png"; sourceTree = "<group>"; };
 		4F2E95DF16EB9319004CA9B3 /* DPZAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DPZAboutViewController.h; path = "View Controllers/DPZAboutViewController.h"; sourceTree = "<group>"; };
 		4F2E95E016EB9319004CA9B3 /* DPZAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DPZAboutViewController.m; path = "View Controllers/DPZAboutViewController.m"; sourceTree = "<group>"; };
-		4F2E95E116EB9319004CA9B3 /* DPZAboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DPZAboutViewController.xib; path = "View Controllers/DPZAboutViewController.xib"; sourceTree = "<group>"; };
 		4F2E95E416EB9CF0004CA9B3 /* DPZPrintCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DPZPrintCodeViewController.h; path = "View Controllers/DPZPrintCodeViewController.h"; sourceTree = "<group>"; };
 		4F2E95E516EB9CF0004CA9B3 /* DPZPrintCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DPZPrintCodeViewController.m; path = "View Controllers/DPZPrintCodeViewController.m"; sourceTree = "<group>"; };
-		4F2E95E616EB9CF0004CA9B3 /* DPZPrintCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DPZPrintCodeViewController.xib; path = "View Controllers/DPZPrintCodeViewController.xib"; sourceTree = "<group>"; };
 		4F2E95E916EB9D99004CA9B3 /* print-code.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "print-code.html"; sourceTree = "<group>"; };
-		4F2E95EB16EBA019004CA9B3 /* Printer-code.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Printer-code.png"; sourceTree = "<group>"; };
-		4F2E95EC16EBA019004CA9B3 /* Printer-code@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Printer-code@2x.png"; sourceTree = "<group>"; };
 		4F4C3F7816EC9DBF00765DE1 /* LICENCE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENCE.txt; sourceTree = "<group>"; };
 		4F4C3F7916EC9DBF00765DE1 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		4F4C3F7A16EC9DBF00765DE1 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
@@ -150,23 +81,16 @@
 		4F5FAFC316E217C5007797D1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4F5FAFC516E217C5007797D1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4F5FAFC716E217C5007797D1 /* Little Image Printer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Little Image Printer-Prefix.pch"; sourceTree = "<group>"; };
-		4F5FAFC816E217C5007797D1 /* DPZAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DPZAppDelegate.h; path = "Little Image Printer/DPZAppDelegate.h"; sourceTree = "<group>"; };
-		4F5FAFC916E217C5007797D1 /* DPZAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DPZAppDelegate.m; path = "Little Image Printer/DPZAppDelegate.m"; sourceTree = "<group>"; };
-		4F5FAFCB16E217C5007797D1 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		4F5FAFCD16E217C5007797D1 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		4F5FAFCF16E217C5007797D1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		4F5FAFD516E217C5007797D1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DPZViewController_iPhone.xib; sourceTree = "<group>"; };
+		4F5FAFC816E217C5007797D1 /* DPZAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DPZAppDelegate.h; sourceTree = "<group>"; };
+		4F5FAFC916E217C5007797D1 /* DPZAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DPZAppDelegate.m; sourceTree = "<group>"; };
 		4F5FAFEA16E21B5B007797D1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		4F5FAFEF16E21C7D007797D1 /* DPZManagePrinterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DPZManagePrinterViewController.h; path = "View Controllers/DPZManagePrinterViewController.h"; sourceTree = "<group>"; };
 		4F5FAFF016E21C7D007797D1 /* DPZManagePrinterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DPZManagePrinterViewController.m; path = "View Controllers/DPZManagePrinterViewController.m"; sourceTree = "<group>"; };
-		4F5FAFF116E21C7D007797D1 /* DPZManagePrinterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DPZManagePrinterViewController.xib; path = "View Controllers/DPZManagePrinterViewController.xib"; sourceTree = "<group>"; };
 		4F5FAFFC16E22637007797D1 /* print.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = print.html; sourceTree = "<group>"; };
 		4F5FB00816E22B68007797D1 /* NSString+URLEncode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+URLEncode.h"; path = "../Libraries/URLEncode/NSString+URLEncode.h"; sourceTree = "<group>"; };
 		4F5FB00916E22B68007797D1 /* NSString+URLEncode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+URLEncode.m"; path = "../Libraries/URLEncode/NSString+URLEncode.m"; sourceTree = "<group>"; };
 		4F5FB00D16E22EC8007797D1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4F5FB00F16E22EF0007797D1 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
-		4F62159116E8DA1A005A0C12 /* Little Printer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Little Printer.png"; sourceTree = "<group>"; };
-		4F62159216E8DA1A005A0C12 /* Little Printer@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Little Printer@2x.png"; sourceTree = "<group>"; };
 		4F788B9E16E760520062BB89 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		4F788BA016E760590062BB89 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		4F788BA216E760640062BB89 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -177,14 +101,10 @@
 		4F9E777A16E55E650036803A /* DPZPrinter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DPZPrinter.m; path = Model/DPZPrinter.m; sourceTree = "<group>"; };
 		4FA1225416E3C71F00FE27C2 /* DPZEditPrinterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DPZEditPrinterViewController.h; path = "View Controllers/DPZEditPrinterViewController.h"; sourceTree = "<group>"; };
 		4FA1225516E3C71F00FE27C2 /* DPZEditPrinterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DPZEditPrinterViewController.m; path = "View Controllers/DPZEditPrinterViewController.m"; sourceTree = "<group>"; };
-		4FA1225616E3C71F00FE27C2 /* DPZEditPrinterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DPZEditPrinterViewController.xib; path = "View Controllers/DPZEditPrinterViewController.xib"; sourceTree = "<group>"; };
 		4FA26A1916E56B2C00C08B5A /* DPZFetchedResultsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DPZFetchedResultsTableViewController.h; path = "View Controllers/DPZFetchedResultsTableViewController.h"; sourceTree = "<group>"; };
 		4FA26A1A16E56B2C00C08B5A /* DPZFetchedResultsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DPZFetchedResultsTableViewController.m; path = "View Controllers/DPZFetchedResultsTableViewController.m"; sourceTree = "<group>"; };
 		4FA26A1B16E56B2C00C08B5A /* DPZAdjusterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DPZAdjusterViewController.h; path = "View Controllers/DPZAdjusterViewController.h"; sourceTree = "<group>"; };
 		4FA26A1C16E56B2C00C08B5A /* DPZAdjusterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DPZAdjusterViewController.m; path = "View Controllers/DPZAdjusterViewController.m"; sourceTree = "<group>"; };
-		4FA26A1D16E56B2C00C08B5A /* DPZAdjusterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DPZAdjusterViewController.xib; path = "View Controllers/DPZAdjusterViewController.xib"; sourceTree = "<group>"; };
-		4FA26A1E16E56B2C00C08B5A /* DPZViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DPZViewController.h; path = "View Controllers/DPZViewController.h"; sourceTree = "<group>"; };
-		4FA26A1F16E56B2C00C08B5A /* DPZViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DPZViewController.m; path = "View Controllers/DPZViewController.m"; sourceTree = "<group>"; };
 		4FA26A2516E56B5800C08B5A /* DPZImageProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPZImageProcessor.h; sourceTree = "<group>"; };
 		4FA26A2616E56B5800C08B5A /* DPZImageProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPZImageProcessor.m; sourceTree = "<group>"; };
 		4FA26A2816E56B5800C08B5A /* DPZDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPZDataManager.h; sourceTree = "<group>"; };
@@ -192,20 +112,14 @@
 		4FA26A2A16E56B5800C08B5A /* DPZPrinterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPZPrinterManager.h; sourceTree = "<group>"; };
 		4FA26A2B16E56B5800C08B5A /* DPZPrinterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPZPrinterManager.m; sourceTree = "<group>"; };
 		4FA26A2F16E5733700C08B5A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
-		4FA26A3216E5806700C08B5A /* Brightness.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Brightness.png; sourceTree = "<group>"; };
-		4FA26A3316E5806700C08B5A /* Brightness@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Brightness@2x.png"; sourceTree = "<group>"; };
-		4FA26A3416E5806700C08B5A /* Contrast.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Contrast.png; sourceTree = "<group>"; };
-		4FA26A3516E5806700C08B5A /* Contrast@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Contrast@2x.png"; sourceTree = "<group>"; };
-		4FDC158D16E252470047D0A1 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "Little Image Printer/Icon-72.png"; sourceTree = "<group>"; };
-		4FDC158E16E252470047D0A1 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72@2x.png"; path = "Little Image Printer/Icon-72@2x.png"; sourceTree = "<group>"; };
-		4FDC158F16E252470047D0A1 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50.png"; path = "Little Image Printer/Icon-Small-50.png"; sourceTree = "<group>"; };
-		4FDC159016E252470047D0A1 /* Icon-Small-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50@2x.png"; path = "Little Image Printer/Icon-Small-50@2x.png"; sourceTree = "<group>"; };
-		4FDC159116E252470047D0A1 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small.png"; path = "Little Image Printer/Icon-Small.png"; sourceTree = "<group>"; };
-		4FDC159216E252470047D0A1 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small@2x.png"; path = "Little Image Printer/Icon-Small@2x.png"; sourceTree = "<group>"; };
-		4FDC159316E252470047D0A1 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = "Little Image Printer/Icon.png"; sourceTree = "<group>"; };
-		4FDC159416E252470047D0A1 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "Little Image Printer/Icon@2x.png"; sourceTree = "<group>"; };
-		4FDC159516E252470047D0A1 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; name = iTunesArtwork; path = "Little Image Printer/iTunesArtwork"; sourceTree = "<group>"; };
-		4FDC159616E252470047D0A1 /* iTunesArtwork@2x */ = {isa = PBXFileReference; lastKnownFileType = file; name = "iTunesArtwork@2x"; path = "Little Image Printer/iTunesArtwork@2x"; sourceTree = "<group>"; };
+		A28656C518C446BB00198130 /* DPZRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DPZRootViewController.h; path = "View Controllers/DPZRootViewController.h"; sourceTree = "<group>"; };
+		A28656C618C446BB00198130 /* DPZRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DPZRootViewController.m; path = "View Controllers/DPZRootViewController.m"; sourceTree = "<group>"; };
+		A28656C818C446E100198130 /* DPZAboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DPZAboutViewController.xib; path = Views/DPZAboutViewController.xib; sourceTree = "<group>"; };
+		A28656C918C446E100198130 /* DPZAdjusterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DPZAdjusterViewController.xib; path = Views/DPZAdjusterViewController.xib; sourceTree = "<group>"; };
+		A28656CA18C446E100198130 /* DPZEditPrinterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DPZEditPrinterViewController.xib; path = Views/DPZEditPrinterViewController.xib; sourceTree = "<group>"; };
+		A28656CB18C446E100198130 /* DPZPrintCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DPZPrintCodeViewController.xib; path = Views/DPZPrintCodeViewController.xib; sourceTree = "<group>"; };
+		A28656D018C4471400198130 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		A28656F218C4474000198130 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F292AA2A8FCA41789B3DCD9B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -242,23 +156,6 @@
 			name = Docs;
 			sourceTree = "<group>";
 		};
-		4F1CBA4916E603210023C118 /* Icons */ = {
-			isa = PBXGroup;
-			children = (
-				4FDC158D16E252470047D0A1 /* Icon-72.png */,
-				4FDC158E16E252470047D0A1 /* Icon-72@2x.png */,
-				4FDC158F16E252470047D0A1 /* Icon-Small-50.png */,
-				4FDC159016E252470047D0A1 /* Icon-Small-50@2x.png */,
-				4FDC159116E252470047D0A1 /* Icon-Small.png */,
-				4FDC159216E252470047D0A1 /* Icon-Small@2x.png */,
-				4FDC159316E252470047D0A1 /* Icon.png */,
-				4FDC159416E252470047D0A1 /* Icon@2x.png */,
-				4FDC159516E252470047D0A1 /* iTunesArtwork */,
-				4FDC159616E252470047D0A1 /* iTunesArtwork@2x */,
-			);
-			name = Icons;
-			sourceTree = "<group>";
-		};
 		4F1CBA4A16E603500023C118 /* Scripts */ = {
 			isa = PBXGroup;
 			children = (
@@ -282,13 +179,11 @@
 			isa = PBXGroup;
 			children = (
 				4F5FAFBF16E217C5007797D1 /* Little Image Printer */,
-				4F5FAFC816E217C5007797D1 /* DPZAppDelegate.h */,
-				4F5FAFC916E217C5007797D1 /* DPZAppDelegate.m */,
-				4F1CBA4916E603210023C118 /* Icons */,
 				4F5FAFB816E217C5007797D1 /* Frameworks */,
 				4F1CBA4A16E603500023C118 /* Scripts */,
 				4F1CBA4816E603130023C118 /* Docs */,
 				4F5FAFB716E217C5007797D1 /* Products */,
+				A28656D018C4471400198130 /* Podfile */,
 				01452B570E1D457980E455D4 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
@@ -323,15 +218,17 @@
 		4F5FAFBF16E217C5007797D1 /* Little Image Printer */ = {
 			isa = PBXGroup;
 			children = (
+				4F5FAFC816E217C5007797D1 /* DPZAppDelegate.h */,
+				4F5FAFC916E217C5007797D1 /* DPZAppDelegate.m */,
 				A28656AE18C415F300198130 /* Categories */,
 				4FA26A2416E56B5800C08B5A /* Image Processing */,
-				4FA26A3116E5806700C08B5A /* Images */,
-				4F4C3F7716EC9DBF00765DE1 /* Reachability */,
 				4FA26A2716E56B5800C08B5A /* Managers */,
 				4F5FAFE016E2180F007797D1 /* Model */,
+				A28656C218C445FB00198130 /* Views */,
+				4F5FAFF416E21C84007797D1 /* View Controllers */,
+				4F4C3F7716EC9DBF00765DE1 /* Reachability */,
 				4F5FAFFB16E22637007797D1 /* Resources */,
 				4F5FAFC016E217C5007797D1 /* Supporting Files */,
-				4F5FAFF416E21C84007797D1 /* View Controllers */,
 			);
 			path = "Little Image Printer";
 			sourceTree = "<group>";
@@ -343,9 +240,6 @@
 				4F5FAFC216E217C5007797D1 /* InfoPlist.strings */,
 				4F5FAFC516E217C5007797D1 /* main.m */,
 				4F5FAFC716E217C5007797D1 /* Little Image Printer-Prefix.pch */,
-				4F5FAFCB16E217C5007797D1 /* Default.png */,
-				4F5FAFCD16E217C5007797D1 /* Default@2x.png */,
-				4F5FAFCF16E217C5007797D1 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -363,26 +257,20 @@
 		4F5FAFF416E21C84007797D1 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				4FA26A1E16E56B2C00C08B5A /* DPZViewController.h */,
-				4FA26A1F16E56B2C00C08B5A /* DPZViewController.m */,
-				4F5FAFD416E217C5007797D1 /* DPZViewController_iPhone.xib */,
-				4FA26A1916E56B2C00C08B5A /* DPZFetchedResultsTableViewController.h */,
-				4FA26A1A16E56B2C00C08B5A /* DPZFetchedResultsTableViewController.m */,
-				4FA26A1B16E56B2C00C08B5A /* DPZAdjusterViewController.h */,
-				4FA26A1C16E56B2C00C08B5A /* DPZAdjusterViewController.m */,
-				4FA26A1D16E56B2C00C08B5A /* DPZAdjusterViewController.xib */,
-				4F5FAFEF16E21C7D007797D1 /* DPZManagePrinterViewController.h */,
-				4F5FAFF016E21C7D007797D1 /* DPZManagePrinterViewController.m */,
-				4F5FAFF116E21C7D007797D1 /* DPZManagePrinterViewController.xib */,
-				4FA1225416E3C71F00FE27C2 /* DPZEditPrinterViewController.h */,
-				4FA1225516E3C71F00FE27C2 /* DPZEditPrinterViewController.m */,
-				4FA1225616E3C71F00FE27C2 /* DPZEditPrinterViewController.xib */,
 				4F2E95DF16EB9319004CA9B3 /* DPZAboutViewController.h */,
 				4F2E95E016EB9319004CA9B3 /* DPZAboutViewController.m */,
-				4F2E95E116EB9319004CA9B3 /* DPZAboutViewController.xib */,
+				4FA26A1B16E56B2C00C08B5A /* DPZAdjusterViewController.h */,
+				4FA26A1C16E56B2C00C08B5A /* DPZAdjusterViewController.m */,
+				4FA1225416E3C71F00FE27C2 /* DPZEditPrinterViewController.h */,
+				4FA1225516E3C71F00FE27C2 /* DPZEditPrinterViewController.m */,
+				4FA26A1916E56B2C00C08B5A /* DPZFetchedResultsTableViewController.h */,
+				4FA26A1A16E56B2C00C08B5A /* DPZFetchedResultsTableViewController.m */,
+				4F5FAFEF16E21C7D007797D1 /* DPZManagePrinterViewController.h */,
+				4F5FAFF016E21C7D007797D1 /* DPZManagePrinterViewController.m */,
 				4F2E95E416EB9CF0004CA9B3 /* DPZPrintCodeViewController.h */,
 				4F2E95E516EB9CF0004CA9B3 /* DPZPrintCodeViewController.m */,
-				4F2E95E616EB9CF0004CA9B3 /* DPZPrintCodeViewController.xib */,
+				A28656C518C446BB00198130 /* DPZRootViewController.h */,
+				A28656C618C446BB00198130 /* DPZRootViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -390,6 +278,7 @@
 		4F5FAFFB16E22637007797D1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A28656F218C4474000198130 /* Images.xcassets */,
 				4F5FAFFC16E22637007797D1 /* print.html */,
 				4F2E95D916EB8BA7004CA9B3 /* about.html */,
 				4F2E95E916EB9D99004CA9B3 /* print-code.html */,
@@ -417,43 +306,6 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
-		4FA26A3116E5806700C08B5A /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				4F2E95EB16EBA019004CA9B3 /* Printer-code.png */,
-				4F2E95EC16EBA019004CA9B3 /* Printer-code@2x.png */,
-				4F2E95DB16EB929D004CA9B3 /* Info.png */,
-				4F2E95DC16EB929D004CA9B3 /* Info@2x.png */,
-				4F06496716E91611007DE41B /* Delete-down.png */,
-				4F06496816E91611007DE41B /* Delete-down@2x.png */,
-				4F06496916E91611007DE41B /* Delete-up.png */,
-				4F06496A16E91611007DE41B /* Delete-up@2x.png */,
-				4F06494F16E90449007DE41B /* Camera-down.png */,
-				4F06495016E90449007DE41B /* Camera-down@2x.png */,
-				4F06495116E90449007DE41B /* Camera-up.png */,
-				4F06495216E90449007DE41B /* Camera-up@2x.png */,
-				4F06495316E90449007DE41B /* Photos-down.png */,
-				4F06495416E90449007DE41B /* Photos-down@2x.png */,
-				4F06495516E90449007DE41B /* Photos-up.png */,
-				4F06495616E90449007DE41B /* Photos-up@2x.png */,
-				4F06495716E90449007DE41B /* Printers-down.png */,
-				4F06495816E90449007DE41B /* Printers-down@2x.png */,
-				4F06495916E90449007DE41B /* Printers-up.png */,
-				4F06495A16E90449007DE41B /* Printers-up@2x.png */,
-				4F06494716E8DE04007DE41B /* Brightness-white.png */,
-				4F06494816E8DE04007DE41B /* Brightness-white@2x.png */,
-				4F06494916E8DE04007DE41B /* Contrast-white.png */,
-				4F06494A16E8DE04007DE41B /* Contrast-white@2x.png */,
-				4F62159116E8DA1A005A0C12 /* Little Printer.png */,
-				4F62159216E8DA1A005A0C12 /* Little Printer@2x.png */,
-				4FA26A3216E5806700C08B5A /* Brightness.png */,
-				4FA26A3316E5806700C08B5A /* Brightness@2x.png */,
-				4FA26A3416E5806700C08B5A /* Contrast.png */,
-				4FA26A3516E5806700C08B5A /* Contrast@2x.png */,
-			);
-			path = Images;
-			sourceTree = "<group>";
-		};
 		A28656AE18C415F300198130 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
@@ -465,6 +317,17 @@
 				4F06497416E9F9A5007DE41B /* UIView+Explorer.m */,
 			);
 			name = Categories;
+			sourceTree = "<group>";
+		};
+		A28656C218C445FB00198130 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A28656C818C446E100198130 /* DPZAboutViewController.xib */,
+				A28656C918C446E100198130 /* DPZAdjusterViewController.xib */,
+				A28656CA18C446E100198130 /* DPZEditPrinterViewController.xib */,
+				A28656CB18C446E100198130 /* DPZPrintCodeViewController.xib */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -523,62 +386,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F5FAFC416E217C5007797D1 /* InfoPlist.strings in Resources */,
-				4F5FAFCC16E217C5007797D1 /* Default.png in Resources */,
-				4F5FAFCE16E217C5007797D1 /* Default@2x.png in Resources */,
-				4F5FAFD016E217C5007797D1 /* Default-568h@2x.png in Resources */,
-				4F5FAFD616E217C5007797D1 /* DPZViewController_iPhone.xib in Resources */,
-				4F5FAFF316E21C7D007797D1 /* DPZManagePrinterViewController.xib in Resources */,
 				4F5FAFFD16E22637007797D1 /* print.html in Resources */,
-				4FDC159716E252470047D0A1 /* Icon-72.png in Resources */,
-				4FDC159816E252470047D0A1 /* Icon-72@2x.png in Resources */,
-				4FDC159916E252470047D0A1 /* Icon-Small-50.png in Resources */,
-				4FDC159A16E252470047D0A1 /* Icon-Small-50@2x.png in Resources */,
-				4FDC159B16E252470047D0A1 /* Icon-Small.png in Resources */,
-				4FDC159C16E252470047D0A1 /* Icon-Small@2x.png in Resources */,
-				4FDC159D16E252470047D0A1 /* Icon.png in Resources */,
-				4FDC159E16E252470047D0A1 /* Icon@2x.png in Resources */,
-				4FDC159F16E252470047D0A1 /* iTunesArtwork in Resources */,
-				4FDC15A016E252470047D0A1 /* iTunesArtwork@2x in Resources */,
-				4FA1225816E3C71F00FE27C2 /* DPZEditPrinterViewController.xib in Resources */,
-				4FA26A2216E56B2C00C08B5A /* DPZAdjusterViewController.xib in Resources */,
+				A28656CE18C446E100198130 /* DPZEditPrinterViewController.xib in Resources */,
+				A28656F318C4474000198130 /* Images.xcassets in Resources */,
+				A28656CC18C446E100198130 /* DPZAboutViewController.xib in Resources */,
 				4FA26A3016E5733700C08B5A /* README.md in Resources */,
-				4FA26A3616E5806700C08B5A /* Brightness.png in Resources */,
-				4FA26A3716E5806700C08B5A /* Brightness@2x.png in Resources */,
-				4FA26A3816E5806700C08B5A /* Contrast.png in Resources */,
-				4FA26A3916E5806700C08B5A /* Contrast@2x.png in Resources */,
 				4F1CBA4C16E603500023C118 /* increment-build.sh in Resources */,
-				4F62159316E8DA1A005A0C12 /* Little Printer.png in Resources */,
-				4F62159416E8DA1A005A0C12 /* Little Printer@2x.png in Resources */,
-				4F06494B16E8DE04007DE41B /* Brightness-white.png in Resources */,
-				4F06494C16E8DE04007DE41B /* Brightness-white@2x.png in Resources */,
-				4F06494D16E8DE04007DE41B /* Contrast-white.png in Resources */,
-				4F06494E16E8DE04007DE41B /* Contrast-white@2x.png in Resources */,
-				4F06495B16E90449007DE41B /* Camera-down.png in Resources */,
-				4F06495C16E90449007DE41B /* Camera-down@2x.png in Resources */,
-				4F06495D16E90449007DE41B /* Camera-up.png in Resources */,
-				4F06495E16E90449007DE41B /* Camera-up@2x.png in Resources */,
-				4F06495F16E90449007DE41B /* Photos-down.png in Resources */,
-				4F06496016E90449007DE41B /* Photos-down@2x.png in Resources */,
-				4F06496116E90449007DE41B /* Photos-up.png in Resources */,
-				4F06496216E90449007DE41B /* Photos-up@2x.png in Resources */,
-				4F06496316E90449007DE41B /* Printers-down.png in Resources */,
-				4F06496416E90449007DE41B /* Printers-down@2x.png in Resources */,
-				4F06496516E90449007DE41B /* Printers-up.png in Resources */,
-				4F06496616E90449007DE41B /* Printers-up@2x.png in Resources */,
-				4F06496B16E91611007DE41B /* Delete-down.png in Resources */,
-				4F06496C16E91611007DE41B /* Delete-down@2x.png in Resources */,
-				4F06496D16E91611007DE41B /* Delete-up.png in Resources */,
-				4F06496E16E91611007DE41B /* Delete-up@2x.png in Resources */,
+				A28656D118C4471400198130 /* Podfile in Resources */,
+				A28656CF18C446E100198130 /* DPZPrintCodeViewController.xib in Resources */,
 				4F2E95D716EB8B79004CA9B3 /* HISTORY.md in Resources */,
 				4F2E95D816EB8B79004CA9B3 /* LICENCE.md in Resources */,
 				4F2E95DA16EB8BA7004CA9B3 /* about.html in Resources */,
-				4F2E95DD16EB929D004CA9B3 /* Info.png in Resources */,
-				4F2E95DE16EB929D004CA9B3 /* Info@2x.png in Resources */,
-				4F2E95E316EB9319004CA9B3 /* DPZAboutViewController.xib in Resources */,
-				4F2E95E816EB9CF0004CA9B3 /* DPZPrintCodeViewController.xib in Resources */,
+				A28656CD18C446E100198130 /* DPZAdjusterViewController.xib in Resources */,
 				4F2E95EA16EB9D99004CA9B3 /* print-code.html in Resources */,
-				4F2E95ED16EBA019004CA9B3 /* Printer-code.png in Resources */,
-				4F2E95EE16EBA019004CA9B3 /* Printer-code@2x.png in Resources */,
 				4F4C3F7B16EC9DBF00765DE1 /* LICENCE.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -646,9 +466,9 @@
 				4F9E777B16E55E650036803A /* DPZPrinter.m in Sources */,
 				4FA26A2016E56B2C00C08B5A /* DPZFetchedResultsTableViewController.m in Sources */,
 				4FA26A2116E56B2C00C08B5A /* DPZAdjusterViewController.m in Sources */,
-				4FA26A2316E56B2C00C08B5A /* DPZViewController.m in Sources */,
 				4FA26A2C16E56B5800C08B5A /* DPZImageProcessor.m in Sources */,
 				4FA26A2D16E56B5800C08B5A /* DPZDataManager.m in Sources */,
+				A28656C718C446BB00198130 /* DPZRootViewController.m in Sources */,
 				4FA26A2E16E56B5800C08B5A /* DPZPrinterManager.m in Sources */,
 				4F06497516E9F9A5007DE41B /* UIView+Explorer.m in Sources */,
 				4F06497816E9FD81007DE41B /* UIView+FirstResponder.m in Sources */,
@@ -667,14 +487,6 @@
 				4F5FAFC316E217C5007797D1 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		4F5FAFD416E217C5007797D1 /* DPZViewController_iPhone.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4F5FAFD516E217C5007797D1 /* en */,
-			);
-			name = DPZViewController_iPhone.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -713,6 +525,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 01452B570E1D457980E455D4 /* Pods.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Little Image Printer/Little Image Printer-Prefix.pch";
@@ -791,6 +605,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 01452B570E1D457980E455D4 /* Pods.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Little Image Printer/Little Image Printer-Prefix.pch";
@@ -807,6 +623,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 01452B570E1D457980E455D4 /* Pods.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Little Image Printer/Little Image Printer-Prefix.pch";

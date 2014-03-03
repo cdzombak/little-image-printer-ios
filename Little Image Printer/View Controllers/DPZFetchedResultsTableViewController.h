@@ -6,12 +6,11 @@
 //  Copyright (c) 2013 David Wilkinson. All rights reserved.
 //
 
-@interface DPZFetchedResultsTableViewController : UIViewController <NSFetchedResultsControllerDelegate, UITableViewDelegate, UITableViewDataSource>
+@interface DPZFetchedResultsTableViewController : UITableViewController <NSFetchedResultsControllerDelegate, UITableViewDelegate, UITableViewDataSource>
 
--(UITableViewCell *)newCellWithReuseIdentifier:(NSString *)cellIdentifier;
--(void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
+- (UITableViewCell *)newCellWithReuseIdentifier:(NSString *)cellIdentifier;
+- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
 
-@property (nonatomic, retain) IBOutlet UITableView *tableView;
-@property (nonatomic, retain) IBOutlet NSFetchedResultsController *fetchedResultsController;
+@property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 
 @end

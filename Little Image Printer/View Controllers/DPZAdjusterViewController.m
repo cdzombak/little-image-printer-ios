@@ -20,6 +20,11 @@
 
 @property (nonatomic, strong) DPZImageProcessor *imageProcessor;
 
+@property (nonatomic, strong) IBOutlet UISlider *brightness;
+@property (nonatomic, strong) IBOutlet UISlider *contrast;
+@property (nonatomic, strong) IBOutlet UIView *imageViewHolder;
+@property (nonatomic, strong) IBOutlet UIView *adjustmentsViewHolder;
+
 @property (nonatomic, strong) GPUImageView *imageView;
 @property (nonatomic, strong) GPUImageBrightnessFilter *brightnessFilter;
 @property (nonatomic, strong) GPUImageContrastFilter *contrastFilter;
@@ -27,21 +32,24 @@
 
 @property (nonatomic, strong) GPUImagePicture *sourcePicture;
 
-@property (nonatomic, strong) UIImage *adjustedImage; // The image after rotation and scaling for LP
+@property (nonatomic, readonly) UIImage *sourceImage;
+@property (nonatomic, strong) UIImage *adjustedImage;
 
-@property (nonatomic, strong) UIView *busyView; // Activity indicator shown whilst printing
+@property (nonatomic, strong) UIView *busyView;
 @property (nonatomic, strong) UIBarButtonItem *printButton;
+
+- (IBAction)print;
+- (IBAction)adjusted;
+- (IBAction)cancel;
 
 @end
 
 @implementation DPZAdjusterViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self)
-    {
-        // Custom initialization
+- (instancetype)initWithSourceImage:(UIImage *)image {
+    if (self = [super initWithNibName:@"DPZAdjusterViewController" bundle:nil]) {
+        _sourceImage = image;
+        self.title = @"Adjust Image";
     }
     return self;
 }
@@ -49,10 +57,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    self.title = @"Adjust Image";
     
-    self.printButton = [[UIBarButtonItem alloc] initWithTitle:@"Print" style:UIBarButtonItemStyleBordered target:self action:@selector(print)];
     self.navigationItem.rightBarButtonItem = self.printButton;
     
     self.adjustedImage = [self rotateAndScaleImage:self.sourceImage];
@@ -83,20 +88,20 @@
 {
     [super viewWillAppear:animated];
 
-    // We need to adjust the frame for the image view - the correct size for the imageViewHolder isn't
-    // set until viewWillAppear
+    // We need to adjust the frame for the image view - the correct size for the imageViewHolder isn't set until viewWillAppear
     self.imageView.frame = [self frameForImageView];
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+- (UIBarButtonItem *)printButton {
+    if (!_printButton) {
+        _printButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Print", nil) style:UIBarButtonItemStyleBordered target:self action:@selector(print)];
+    }
+    return _printButton;
 }
 
 - (CGRect)frameForImageView
 {
     CGRect imageViewHolderFrame = self.imageViewHolder.frame;
-    
     CGSize imageSize = self.adjustedImage.size;
     
     // Scale to fit on screen
@@ -110,13 +115,6 @@
     
     return imageViewFrame;
 }
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 
 - (IBAction)adjusted
 {

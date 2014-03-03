@@ -7,25 +7,7 @@
 
 #import "DPZFetchedResultsTableViewController.h"
 
-@interface DPZFetchedResultsTableViewController ()
-
-@end
-
 @implementation DPZFetchedResultsTableViewController
-
-@synthesize fetchedResultsController = _fetchedResultsController;
-@synthesize tableView = _tableView;
-
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) 
-    {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
@@ -33,14 +15,6 @@
 	
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-}
-
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-            
-    self.tableView = nil;
 }
 
 - (void)setFetchedResultsController:(NSFetchedResultsController *)fetchedResultsController

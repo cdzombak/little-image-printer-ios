@@ -7,9 +7,9 @@
 //
 
 #import "DPZAppDelegate.h"
-
-#import "DPZViewController.h"
 #import "Reachability.h"
+
+#import "DPZRootViewController.h"
 
 @interface DPZAppDelegate ()
 
@@ -25,13 +25,12 @@
 {
     NSAssert([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone, @"Only iPhone is supported.");
     
-    DPZViewController *vc = [[DPZViewController alloc] initWithNibName:@"DPZViewController_iPhone" bundle:nil];
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:vc];
-    
     [self setupStyles];
-
+    
+    UINavigationController *vc = [[UINavigationController alloc] initWithRootViewController:[[DPZRootViewController alloc] init]];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = navController;
+    self.window.rootViewController = vc;
     [self.window makeKeyAndVisible];
     
     return YES;
@@ -41,15 +40,15 @@
 
 - (void)setupStyles
 {
+    [[UIView appearance] setTintColor:[UIColor colorWithRed:0.824 green:0.337 blue:0.071 alpha:1]];
     [[UINavigationBar appearance] setBarStyle:UIBarStyleBlack];
-    [[UINavigationBar appearance] setBarTintColor:[UIColor blackColor]];
-    [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:0.824 green:0.337 blue:0.071 alpha:1]];
-    [[UIBarButtonItem appearance] setTintColor:[UIColor colorWithRed:0.824 green:0.337 blue:0.071 alpha:1]];
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithWhite:0.0 alpha:0.9]];
 }
 
 #pragma mark - Reachability
 
-- (Reachability *)reachability {
+- (Reachability *)reachability
+{
     if (!_reachability) {
         _reachability = [Reachability reachabilityWithHostname:@"remote.bergcloud.com"];
     }
