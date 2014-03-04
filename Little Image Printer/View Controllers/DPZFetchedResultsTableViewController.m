@@ -19,13 +19,15 @@
 
 - (void)setFetchedResultsController:(NSFetchedResultsController *)fetchedResultsController
 {
-    _fetchedResultsController.delegate = nil;
-    _fetchedResultsController = fetchedResultsController;
-    _fetchedResultsController.delegate = self;
-    [_fetchedResultsController performFetch:nil];  // TODO Error handling
+    if (_fetchedResultsController != fetchedResultsController) {
+        _fetchedResultsController.delegate = nil;
+        _fetchedResultsController = fetchedResultsController;
+        _fetchedResultsController.delegate = self;
+        [_fetchedResultsController performFetch:nil];  // TODO Error handling
+    }
 }
 
-#pragma mark - Table view data source
+#pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -41,9 +43,9 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *cellIdentifier = @"FetchedCell";
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    if (cell == nil)
-    {
+    if (!cell) {
         cell = [self newCellWithReuseIdentifier:(NSString *)cellIdentifier];
     }
     
@@ -58,12 +60,10 @@
 
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // The table view should not be re-orderable.
     return NO;
 }
 
-
-#pragma mark - Fetched results controller
+#pragma mark - NSFetchedResultsControllerDelegate
 
 - (void)controllerWillChangeContent:(NSFetchedResultsController *)controller
 {
@@ -127,13 +127,13 @@
 
 - (UITableViewCell *)newCellWithReuseIdentifier:(NSString *)cellIdentifier
 {
-    // override this
-    return [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
+    NSAssert(NO, @"%s is abstract and must be overridden.", __PRETTY_FUNCTION__);
+    return [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
 }
 
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
-    // override this
+    NSAssert(NO, @"%s is abstract and must be overridden.", __PRETTY_FUNCTION__);
 }
 
 

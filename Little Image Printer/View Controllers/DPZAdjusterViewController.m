@@ -6,15 +6,19 @@
 //  Copyright (c) 2013 David Wilkinson. All rights reserved.
 //
 
+#import "DPZAdjusterViewController.h"
+
 #import <QuartzCore/QuartzCore.h>
 #import <GPUImage/GPUImage.h>
+#import <SVProgressHUD/SVProgressHUD.h>
+#import <WYPopoverController/WYPopoverController.h>
 
-#import "DPZAdjusterViewController.h"
-#import "DPZImageProcessor.h"
-#import "DPZPrinterManager.h"
 #import "DPZAppDelegate.h"
+#import "DPZImageProcessor.h"
+#import "DPZPrinterSelectionViewController.h"
+#import "DPZPrinter+Printing.h"
 
-#define LPWIDTH 384.0
+static const CGFloat LittlePrinterWidth = 384.0f;
 
 @interface DPZAdjusterViewController ()
 
@@ -35,16 +39,18 @@
 @property (nonatomic, readonly) UIImage *sourceImage;
 @property (nonatomic, strong) UIImage *adjustedImage;
 
-@property (nonatomic, strong) UIView *busyView;
-@property (nonatomic, strong) UIBarButtonItem *printButton;
+@property (nonatomic, readonly) UIBarButtonItem *printButtonItem;
+@property (nonatomic, strong) WYPopoverController *printPopover;
 
-- (IBAction)print;
+@property (nonatomic) BOOL didSaveImage;
+
 - (IBAction)adjusted;
-- (IBAction)cancel;
 
 @end
 
 @implementation DPZAdjusterViewController
+
+@synthesize printButtonItem = _printButtonItem;
 
 - (instancetype)initWithSourceImage:(UIImage *)image {
     if (self = [super initWithNibName:@"DPZAdjusterViewController" bundle:nil]) {
@@ -58,7 +64,7 @@
 {
     [super viewDidLoad];
     
-    self.navigationItem.rightBarButtonItem = self.printButton;
+    self.navigationItem.rightBarButtonItem = self.printButtonItem;
     
     self.adjustedImage = [self rotateAndScaleImage:self.sourceImage];
     
@@ -92,13 +98,6 @@
     self.imageView.frame = [self frameForImageView];
 }
 
-- (UIBarButtonItem *)printButton {
-    if (!_printButton) {
-        _printButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Print", nil) style:UIBarButtonItemStyleBordered target:self action:@selector(print)];
-    }
-    return _printButton;
-}
-
 - (CGRect)frameForImageView
 {
     CGRect imageViewHolderFrame = self.imageViewHolder.frame;
@@ -118,60 +117,55 @@
 
 - (IBAction)adjusted
 {
+    self.didSaveImage = NO;
     [self.brightnessFilter setBrightness:self.brightness.value];
     [self.contrastFilter setContrast:self.contrast.value];
     [self.sourcePicture processImage];
 }
 
-- (IBAction)print
+- (void)print
 {
     DPZAppDelegate *appDelegate = (DPZAppDelegate *)[UIApplication sharedApplication].delegate;
     if (!appDelegate.isCloudReachable)
     {
-        [self unreachable];
+        [self showUnreachableAlert];
         return;
     }
     
-    [self showBusy];
-    self.printButton.enabled = NO;
     UIImage *image = [self.grayscaleFilter imageFromCurrentlyProcessedOutput];
-    [[DPZPrinterManager sharedPrinterManager] printImage:image withCompletionBlock:^(BOOL success)
-    {
-        [self hideBusy];
-        self.printButton.enabled = YES;
+    
+    UIViewController *printVC = [[DPZPrinterSelectionViewController alloc] initWithCompletionBlock:^(DPZPrinter *printerSelected) {
+        [self.printPopover dismissPopoverAnimated:YES options:WYPopoverAnimationOptionFadeWithScale];
         
-        if (!success)
-        {
-            NSError *error = [DPZPrinterManager sharedPrinterManager].error;
-            UIAlertView *alert = [[UIAlertView alloc]
-                                  initWithTitle:@"Error"
-                                  message:[NSString stringWithFormat:@"%@", error.localizedDescription]
-                                  delegate:nil
-                                  cancelButtonTitle:@"OK"
-                                  otherButtonTitles: nil];
-            [alert show];
+        if (!printerSelected) {
+            return;
         }
+        
+        [SVProgressHUD showWithStatus:NSLocalizedString(@"Printing…", nil) maskType:SVProgressHUDMaskTypeGradient];
+        
+        [printerSelected printImage:image context:nil withCompletionBlock:^(BOOL success, NSError *error, id context) {
+            if (success) {
+                [SVProgressHUD showSuccessWithStatus:nil];
+                [self.navigationController popToRootViewControllerAnimated:YES];
+            } else {
+                [SVProgressHUD showErrorWithStatus:nil];
+                NSLog(@"Print error: %@", error);
+            }
+        }];
     }];
-    [[self presentingViewController] dismissViewControllerAnimated:YES completion:nil];
+    
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:printVC];
+    self.printPopover = [[WYPopoverController alloc] initWithContentViewController:navController];
+    self.printPopover.popoverContentSize = CGSizeMake(0.9f*CGRectGetWidth(self.view.bounds), 0.5f*CGRectGetHeight(self.view.bounds));
+    [self.printPopover presentPopoverFromBarButtonItem:self.printButtonItem permittedArrowDirections:WYPopoverArrowDirectionAny animated:YES options:WYPopoverAnimationOptionFadeWithScale];
+    
+    if (!self.didSaveImage) {
+        self.didSaveImage = YES;
+        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
+    }
 }
 
-- (IBAction)cancel
-{
-    [[self presentingViewController] dismissViewControllerAnimated:YES completion:nil];    
-}
-
-- (void)unreachable
-{
-    UIAlertView *alert = [[UIAlertView alloc]
-                          initWithTitle:@"Network Error"
-                          message:@"You are not connected to the Internet right now. Please check your network settings and try again later."
-                          delegate:nil
-                          cancelButtonTitle:@"OK"
-                          otherButtonTitles: nil];
-    [alert show];
-}
-
-// Rotate image to correct orientation and scale to fit on Little Printer
+/// Rotate image to correct orientation and scale to fit on Little Printer
 - (UIImage *)rotateAndScaleImage:(UIImage *)image
 {
     CGFloat angle = 0.0;
@@ -200,7 +194,7 @@
     }
 
     CGSize originalSize = [self.sourceImage size];
-    CGFloat scale = (CGFloat) MIN(LPWIDTH/originalSize.width, 1.0); // Don't scale small images up
+    CGFloat scale = (CGFloat) MIN(LittlePrinterWidth/originalSize.width, 1.0); // Don't scale small images up
     
     CIImage *img = [[CIImage alloc] initWithCGImage:[image CGImage]];;
     CGAffineTransform t = CGAffineTransformMakeScale(scale, scale);
@@ -221,42 +215,24 @@
     return adjustedImage;
 }
 
-- (void)showBusy
-{
-    CGSize imageViewHolderSize = self.imageViewHolder.frame.size;
-    CGFloat overlayWidth = 100.0;
-    CGFloat overlayHeight = 100.0;
-    CGFloat overlayX = (imageViewHolderSize.width - overlayWidth)/2;
-    CGFloat overlayY = (imageViewHolderSize.height - overlayHeight)/2;
-    
-    UIView *overlay = [[UIView alloc] initWithFrame:CGRectMake(overlayX, overlayY, overlayWidth, overlayHeight)];
-    overlay.backgroundColor = [UIColor blackColor];
-    overlay.alpha = 0.7;
-    overlay.layer.cornerRadius = 10.0;
-    
-    UIActivityIndicatorView *activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+#pragma mark - UI Helpers
 
-    CGRect activityIndicatorFrame = activityIndicator.frame;
-    CGSize activityIndicatorSize = activityIndicatorFrame.size;
-    CGFloat activityIndicatorX = (overlayWidth - activityIndicatorSize.width)/2;
-    CGFloat activityIndicatorY = (overlayHeight - activityIndicatorSize.height)/2;
-    activityIndicatorFrame.origin.x = activityIndicatorX;
-    activityIndicatorFrame.origin.y = activityIndicatorY;
-    activityIndicator.frame = activityIndicatorFrame;
-    activityIndicator.alpha = 1.0;
-    
-    [overlay addSubview:activityIndicator];
-    [self.imageViewHolder addSubview:overlay];
-    
-    [activityIndicator startAnimating];
-    
-    self.busyView = overlay;
+- (void)showUnreachableAlert
+{
+    [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Network Error", nil)
+                                message:NSLocalizedString(@"We can't reach the Berg Cloud right now. Please try again later.", nil)
+                               delegate:nil
+                      cancelButtonTitle:@"😢"
+                      otherButtonTitles:nil]
+     show];
 }
 
-- (void)hideBusy
+- (UIBarButtonItem *)printButtonItem
 {
-    [self.busyView removeFromSuperview];
-    self.busyView = nil;
+    if (!_printButtonItem) {
+        _printButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Print", nil) style:UIBarButtonItemStyleBordered target:self action:@selector(print)];
+    }
+    return _printButtonItem;
 }
 
 @end

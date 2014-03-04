@@ -36,11 +36,14 @@
 		4FA26A2016E56B2C00C08B5A /* DPZFetchedResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA26A1A16E56B2C00C08B5A /* DPZFetchedResultsTableViewController.m */; };
 		4FA26A2116E56B2C00C08B5A /* DPZAdjusterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA26A1C16E56B2C00C08B5A /* DPZAdjusterViewController.m */; };
 		4FA26A2C16E56B5800C08B5A /* DPZImageProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA26A2616E56B5800C08B5A /* DPZImageProcessor.m */; };
-		4FA26A2D16E56B5800C08B5A /* DPZDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA26A2916E56B5800C08B5A /* DPZDataManager.m */; };
-		4FA26A2E16E56B5800C08B5A /* DPZPrinterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA26A2B16E56B5800C08B5A /* DPZPrinterManager.m */; };
 		4FA26A3016E5733700C08B5A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4FA26A2F16E5733700C08B5A /* README.md */; };
 		A225988C18C57E2E001396DF /* DPZBergRemoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A225988A18C57E2E001396DF /* DPZBergRemoteViewController.m */; };
 		A225988D18C57E2E001396DF /* DPZBergRemoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A225988B18C57E2E001396DF /* DPZBergRemoteViewController.xib */; };
+		A225989418C585B9001396DF /* DPZDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A225989118C585B9001396DF /* DPZDataManager.m */; };
+		A225989518C585B9001396DF /* DPZPrinterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A225989318C585B9001396DF /* DPZPrinterManager.m */; };
+		A225989818C5866E001396DF /* DPZPrinter+Printing.m in Sources */ = {isa = PBXBuildFile; fileRef = A225989718C5866E001396DF /* DPZPrinter+Printing.m */; };
+		A225989B18C58CFD001396DF /* DPZPrinterSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A225989A18C58CFD001396DF /* DPZPrinterSelectionViewController.m */; };
+		A225989E18C59808001396DF /* DPZColor.m in Sources */ = {isa = PBXBuildFile; fileRef = A225989D18C59808001396DF /* DPZColor.m */; };
 		A28656C718C446BB00198130 /* DPZRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A28656C618C446BB00198130 /* DPZRootViewController.m */; };
 		A28656CC18C446E100198130 /* DPZAboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A28656C818C446E100198130 /* DPZAboutViewController.xib */; };
 		A28656CD18C446E100198130 /* DPZAdjusterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A28656C918C446E100198130 /* DPZAdjusterViewController.xib */; };
@@ -99,14 +102,21 @@
 		4FA26A1C16E56B2C00C08B5A /* DPZAdjusterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DPZAdjusterViewController.m; path = "View Controllers/DPZAdjusterViewController.m"; sourceTree = "<group>"; };
 		4FA26A2516E56B5800C08B5A /* DPZImageProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPZImageProcessor.h; sourceTree = "<group>"; };
 		4FA26A2616E56B5800C08B5A /* DPZImageProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPZImageProcessor.m; sourceTree = "<group>"; };
-		4FA26A2816E56B5800C08B5A /* DPZDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPZDataManager.h; sourceTree = "<group>"; };
-		4FA26A2916E56B5800C08B5A /* DPZDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPZDataManager.m; sourceTree = "<group>"; };
-		4FA26A2A16E56B5800C08B5A /* DPZPrinterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPZPrinterManager.h; sourceTree = "<group>"; };
-		4FA26A2B16E56B5800C08B5A /* DPZPrinterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPZPrinterManager.m; sourceTree = "<group>"; };
 		4FA26A2F16E5733700C08B5A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		A225988918C57E2E001396DF /* DPZBergRemoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DPZBergRemoteViewController.h; path = "View Controllers/DPZBergRemoteViewController.h"; sourceTree = "<group>"; };
 		A225988A18C57E2E001396DF /* DPZBergRemoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DPZBergRemoteViewController.m; path = "View Controllers/DPZBergRemoteViewController.m"; sourceTree = "<group>"; };
 		A225988B18C57E2E001396DF /* DPZBergRemoteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DPZBergRemoteViewController.xib; path = "View Controllers/DPZBergRemoteViewController.xib"; sourceTree = "<group>"; };
+		A225988F18C583EE001396DF /* LittleImagePrinter 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LittleImagePrinter 3.xcdatamodel"; sourceTree = "<group>"; };
+		A225989018C585B9001396DF /* DPZDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DPZDataManager.h; path = "Little Image Printer/Data Managers/DPZDataManager.h"; sourceTree = SOURCE_ROOT; };
+		A225989118C585B9001396DF /* DPZDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DPZDataManager.m; path = "Little Image Printer/Data Managers/DPZDataManager.m"; sourceTree = SOURCE_ROOT; };
+		A225989218C585B9001396DF /* DPZPrinterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DPZPrinterManager.h; path = "Little Image Printer/Data Managers/DPZPrinterManager.h"; sourceTree = SOURCE_ROOT; };
+		A225989318C585B9001396DF /* DPZPrinterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DPZPrinterManager.m; path = "Little Image Printer/Data Managers/DPZPrinterManager.m"; sourceTree = SOURCE_ROOT; };
+		A225989618C5866E001396DF /* DPZPrinter+Printing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "DPZPrinter+Printing.h"; path = "Little Image Printer/Data Managers/DPZPrinter+Printing.h"; sourceTree = SOURCE_ROOT; };
+		A225989718C5866E001396DF /* DPZPrinter+Printing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "DPZPrinter+Printing.m"; path = "Little Image Printer/Data Managers/DPZPrinter+Printing.m"; sourceTree = SOURCE_ROOT; };
+		A225989918C58CFD001396DF /* DPZPrinterSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DPZPrinterSelectionViewController.h; path = "View Controllers/DPZPrinterSelectionViewController.h"; sourceTree = "<group>"; };
+		A225989A18C58CFD001396DF /* DPZPrinterSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DPZPrinterSelectionViewController.m; path = "View Controllers/DPZPrinterSelectionViewController.m"; sourceTree = "<group>"; };
+		A225989C18C59808001396DF /* DPZColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPZColor.h; sourceTree = "<group>"; };
+		A225989D18C59808001396DF /* DPZColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPZColor.m; sourceTree = "<group>"; };
 		A28656C518C446BB00198130 /* DPZRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DPZRootViewController.h; path = "View Controllers/DPZRootViewController.h"; sourceTree = "<group>"; };
 		A28656C618C446BB00198130 /* DPZRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DPZRootViewController.m; path = "View Controllers/DPZRootViewController.m"; sourceTree = "<group>"; };
 		A28656C818C446E100198130 /* DPZAboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DPZAboutViewController.xib; path = Views/DPZAboutViewController.xib; sourceTree = "<group>"; };
@@ -222,9 +232,11 @@
 			children = (
 				4F5FAFC816E217C5007797D1 /* DPZAppDelegate.h */,
 				4F5FAFC916E217C5007797D1 /* DPZAppDelegate.m */,
+				A225989C18C59808001396DF /* DPZColor.h */,
+				A225989D18C59808001396DF /* DPZColor.m */,
 				A28656AE18C415F300198130 /* Categories */,
+				4FA26A2716E56B5800C08B5A /* Data Management */,
 				4FA26A2416E56B5800C08B5A /* Image Processing */,
-				4FA26A2716E56B5800C08B5A /* Managers */,
 				4F5FAFE016E2180F007797D1 /* Model */,
 				A28656C218C445FB00198130 /* Views */,
 				4F5FAFF416E21C84007797D1 /* View Controllers */,
@@ -273,6 +285,8 @@
 				4F5FAFF016E21C7D007797D1 /* DPZManagePrinterViewController.m */,
 				4F2E95E416EB9CF0004CA9B3 /* DPZPrintCodeViewController.h */,
 				4F2E95E516EB9CF0004CA9B3 /* DPZPrintCodeViewController.m */,
+				A225989918C58CFD001396DF /* DPZPrinterSelectionViewController.h */,
+				A225989A18C58CFD001396DF /* DPZPrinterSelectionViewController.m */,
 				A28656C518C446BB00198130 /* DPZRootViewController.h */,
 				A28656C618C446BB00198130 /* DPZRootViewController.m */,
 			);
@@ -299,14 +313,17 @@
 			path = "Image Processing";
 			sourceTree = "<group>";
 		};
-		4FA26A2716E56B5800C08B5A /* Managers */ = {
+		4FA26A2716E56B5800C08B5A /* Data Management */ = {
 			isa = PBXGroup;
 			children = (
-				4FA26A2816E56B5800C08B5A /* DPZDataManager.h */,
-				4FA26A2916E56B5800C08B5A /* DPZDataManager.m */,
-				4FA26A2A16E56B5800C08B5A /* DPZPrinterManager.h */,
-				4FA26A2B16E56B5800C08B5A /* DPZPrinterManager.m */,
+				A225989018C585B9001396DF /* DPZDataManager.h */,
+				A225989118C585B9001396DF /* DPZDataManager.m */,
+				A225989218C585B9001396DF /* DPZPrinterManager.h */,
+				A225989318C585B9001396DF /* DPZPrinterManager.m */,
+				A225989618C5866E001396DF /* DPZPrinter+Printing.h */,
+				A225989718C5866E001396DF /* DPZPrinter+Printing.m */,
 			);
+			name = "Data Management";
 			path = Managers;
 			sourceTree = "<group>";
 		};
@@ -472,15 +489,18 @@
 				4FA26A2016E56B2C00C08B5A /* DPZFetchedResultsTableViewController.m in Sources */,
 				4FA26A2116E56B2C00C08B5A /* DPZAdjusterViewController.m in Sources */,
 				4FA26A2C16E56B5800C08B5A /* DPZImageProcessor.m in Sources */,
-				4FA26A2D16E56B5800C08B5A /* DPZDataManager.m in Sources */,
 				A28656C718C446BB00198130 /* DPZRootViewController.m in Sources */,
-				4FA26A2E16E56B5800C08B5A /* DPZPrinterManager.m in Sources */,
+				A225989B18C58CFD001396DF /* DPZPrinterSelectionViewController.m in Sources */,
 				A28656FC18C451B900198130 /* UIView+DPZFirstResponder.m in Sources */,
 				4F2E95E216EB9319004CA9B3 /* DPZAboutViewController.m in Sources */,
 				A225988C18C57E2E001396DF /* DPZBergRemoteViewController.m in Sources */,
 				A28656FB18C451B900198130 /* NSString+DPZURLEncode.m in Sources */,
 				A28656FF18C451D500198130 /* Reachability.m in Sources */,
+				A225989818C5866E001396DF /* DPZPrinter+Printing.m in Sources */,
+				A225989418C585B9001396DF /* DPZDataManager.m in Sources */,
 				4F2E95E716EB9CF0004CA9B3 /* DPZPrintCodeViewController.m in Sources */,
+				A225989E18C59808001396DF /* DPZColor.m in Sources */,
+				A225989518C585B9001396DF /* DPZPrinterManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -715,10 +735,11 @@
 		4F9E777216E55E0E0036803A /* LittleImagePrinter.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				A225988F18C583EE001396DF /* LittleImagePrinter 3.xcdatamodel */,
 				4F9E777316E55E0E0036803A /* LittleImagePrinter 2.xcdatamodel */,
 				4F9E777416E55E0E0036803A /* LittleImagePrinter.xcdatamodel */,
 			);
-			currentVersion = 4F9E777316E55E0E0036803A /* LittleImagePrinter 2.xcdatamodel */;
+			currentVersion = A225988F18C583EE001396DF /* LittleImagePrinter 3.xcdatamodel */;
 			name = LittleImagePrinter.xcdatamodeld;
 			path = Model/LittleImagePrinter.xcdatamodeld;
 			sourceTree = "<group>";

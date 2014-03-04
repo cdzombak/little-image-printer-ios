@@ -6,39 +6,32 @@
 //  Copyright (c) 2013 David Wilkinson. All rights reserved.
 //
 
+// This is far, far from a robust Core Data stack. I don't have time to redo the whole thing, and luckily this class is good enough for this application. --CDZ Mar 3, 2014
+
 #import "DPZDataManager.h"
 
-static DPZDataManager *_sharedManager = nil;
+@interface DPZDataManager ()
+
+@property (nonatomic, readwrite, strong) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, readwrite, strong) NSManagedObjectModel *managedObjectModel;
+@property (nonatomic, readwrite, strong) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+
+@end
 
 @implementation DPZDataManager
-
-@synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
-@synthesize managedObjectModel = _managedObjectModel;
-@synthesize managedObjectContext = _managedObjectContext;
-
-+ (DPZDataManager *)sharedManager
-{
-    if (_sharedManager == nil)
-    {
-        _sharedManager = [[DPZDataManager alloc] init];
-    }
-    return _sharedManager;
-}
 
 #pragma mark - Core Data
 
 - (id)getAllFromFetchRequest:(NSFetchRequest *)fetchRequest
 {
     NSArray *matches = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
-    
     return matches;
 }
 
 - (id)getOneFromFetchRequest:(NSFetchRequest *)fetchRequest
 {
     NSArray *matches = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
-    
-    return ([matches count] >= 1) ? matches[0] : nil;
+    return [matches firstObject];
 }
 
 - (id)insertNewObjectForEntityForName:(NSString *)name
@@ -133,18 +126,18 @@ static DPZDataManager *_sharedManager = nil;
     return _managedObjectContext;
 }
 
--(NSURL *)applicationDocumentsDirectory
+- (NSURL *)applicationDocumentsDirectory
 {
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 
--(void)saveContext
+- (void)saveContext
 {
     NSManagedObjectContext *managedObjectContext = self.managedObjectContext;
     [self saveContext:managedObjectContext];
 }
 
--(void)saveContext:(NSManagedObjectContext *)managedObjectContext
+- (void)saveContext:(NSManagedObjectContext *)managedObjectContext
 {
     NSError *error = nil;
     
@@ -157,24 +150,24 @@ static DPZDataManager *_sharedManager = nil;
     }
 }
 
+#pragma mark - Error Handling (or not)
 
--(void)fatalError:(NSError *)error
+- (void)fatalError:(NSError *)error
 {
-    [self alertWithTitle:@"Error" message:@"A serious error occured and Little Image Printer cannot continue. Please close the application by pressing the Home button."];
+    [self errorAlertWithTitle:@"Error" message:NSLocalizedString(@"A serious error occured and Little Photo Printer cannot continue.", nil)];
     NSLog(@"Fatal error %@, %@", error, [error userInfo]);
     abort();
 }
 
--(void)alertWithTitle:(NSString *)title message:(NSString *)message
+- (void)errorAlertWithTitle:(NSString *)title message:(NSString *)message
 {
     dispatch_async(dispatch_get_main_queue(), ^{
-        UIAlertView *alert = [[UIAlertView alloc]
-                              initWithTitle:title
-                              message: message
-                              delegate: nil
-                              cancelButtonTitle:@"OK"
-                              otherButtonTitles:nil];
-        [alert show];
+        [[[UIAlertView alloc] initWithTitle:title
+                                    message:message
+                                   delegate:nil
+                          cancelButtonTitle:@"Okay. 😢"
+                          otherButtonTitles:nil]
+         show];
     });
 }
 

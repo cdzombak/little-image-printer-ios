@@ -12,6 +12,10 @@
 
 @dynamic code;
 @dynamic name;
-@dynamic active;
+
++ (NSString *)entityName
+{
+    return @"Printer";
+}
 
 @end

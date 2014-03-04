@@ -8,8 +8,9 @@
 
 @interface DPZPrinter : NSManagedObject
 
-@property (nonatomic, retain) NSString * code;
-@property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) NSNumber * active;
+@property (nonatomic, retain) NSString *code;
+@property (nonatomic, retain) NSString *name;
+
++ (NSString *)entityName;
 
 @end

@@ -1,13 +1,19 @@
 PODS:
   - GPUImage (0.1.2)
   - JMStaticContentTableViewController (0.3.1)
+  - SVProgressHUD (1.0)
+  - WYPopoverController (0.2.2)
 
 DEPENDENCIES:
   - GPUImage (~> 0.1.2)
   - JMStaticContentTableViewController (~> 0.3.1)
+  - SVProgressHUD (~> 1.0)
+  - WYPopoverController (~> 0.2.2)
 
 SPEC CHECKSUMS:
   GPUImage: 007145faa0e27f1ddbcab93e07f026c9776e2fa2
   JMStaticContentTableViewController: 6d477d7c4b900bedb29937090c1473672feff95a
+  SVProgressHUD: 5e10939a296debf5fe5a5895eda9539b8b2114f1
+  WYPopoverController: bc21a6897fe41524508649c628587ab577b9ef73
 
 COCOAPODS: 0.29.0

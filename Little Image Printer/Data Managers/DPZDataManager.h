@@ -6,9 +6,13 @@
 //  Copyright (c) 2013 David Wilkinson. All rights reserved.
 //
 
+// This is far, far from a robust Core Data stack. I don't have time to redo the whole thing, and luckily this class is good enough for this application. --CDZ Mar 3, 2014
+
 @interface DPZDataManager : NSObject
 
-+ (DPZDataManager *)sharedManager;
+@property (nonatomic, readonly) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, readonly) NSManagedObjectModel *managedObjectModel;
+@property (nonatomic, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
 - (id)getAllFromFetchRequest:(NSFetchRequest *)fetchRequest;
 - (id)getOneFromFetchRequest:(NSFetchRequest *)fetchRequest;
@@ -19,9 +23,5 @@
 - (NSManagedObject *)loadObjectWithId:(NSManagedObjectID *)moId;
 - (void)deleteObject:(NSManagedObject *)object;
 - (void)saveContext;
-
-@property (nonatomic, retain, readonly) NSManagedObjectContext *managedObjectContext;
-@property (nonatomic, retain, readonly) NSManagedObjectModel *managedObjectModel;
-@property (nonatomic, retain, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
 @end

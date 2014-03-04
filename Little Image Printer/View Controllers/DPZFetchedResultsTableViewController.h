@@ -8,9 +8,11 @@
 
 @interface DPZFetchedResultsTableViewController : UITableViewController <NSFetchedResultsControllerDelegate, UITableViewDelegate, UITableViewDataSource>
 
+@property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
+
+#pragma mark Abstract Methods
+
 - (UITableViewCell *)newCellWithReuseIdentifier:(NSString *)cellIdentifier;
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
-
-@property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 
 @end

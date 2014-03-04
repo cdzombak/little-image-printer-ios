@@ -6,10 +6,7 @@
 //  Copyright (c) 2013 David Wilkinson. All rights reserved.
 //
 
-#import <GPUImage/GPUImage.h>
-
 @interface DPZImageProcessor : NSObject
-
 
 - (id)initWithSourceImageURL:(NSURL *)sourceImageURL;
 - (id)initWithSourceImage:(UIImage *)sourceImage;

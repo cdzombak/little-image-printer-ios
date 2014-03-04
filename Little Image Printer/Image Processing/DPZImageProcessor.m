@@ -6,11 +6,12 @@
 //  Copyright (c) 2013 David Wilkinson. All rights reserved.
 //
 
-#import <QuartzCore/QuartzCore.h>
 #import "DPZImageProcessor.h"
 
-#define LPWIDTH 384.0
+#import <QuartzCore/QuartzCore.h>
+#import <GPUImage/GPUImage.h>
 
+static const CGFloat LittlePrinterWidth = 384.0f;
 
 @interface DPZImageProcessor ()
 
@@ -97,8 +98,8 @@
     }
     
     self.originalSize = [self.sourceImage size];
-    CGFloat scale = (CGFloat) LPWIDTH/self.originalSize.width;
-    self.baseSize = CGSizeMake(LPWIDTH, self.originalSize.height * scale);
+    CGFloat scale = (CGFloat) LittlePrinterWidth/self.originalSize.width;
+    self.baseSize = CGSizeMake(LittlePrinterWidth, self.originalSize.height * scale);
     
     CIImage *img = [[CIImage alloc] initWithCGImage:[self.sourceImage CGImage]];;
     CGAffineTransform t = CGAffineTransformMakeScale(scale, scale);

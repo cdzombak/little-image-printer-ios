@@ -105,20 +105,20 @@
 
 - (void)save
 {
-    DPZDataManager *dm = [DPZDataManager sharedManager];
+//    DPZDataManager *dm = [DPZDataManager sharedManager];
     if (self.printer == nil)
     {
         self.printer = [[DPZPrinterManager sharedPrinterManager] createPrinter];
     }
     self.printer.name = self.name.text;
     self.printer.code = self.code.text;
-    [dm saveContext];
+//    [dm saveContext];
     
     DPZPrinterManager *pm = [DPZPrinterManager sharedPrinterManager];
     if ([pm.printers count] == 1)
     {
         // We only have one printer, let's auto select it
-        pm.activePrinter = self.printer;
+//        pm.activePrinter = self.printer;
     }
     [self.navigationController popViewControllerAnimated:YES];
 }

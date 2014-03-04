@@ -66,25 +66,6 @@
     
     cell.textLabel.text = printer.name;
     cell.detailTextLabel.text = printer.code;
-    cell.accessoryType = printer.active ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
 }
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    DPZPrinter *printer = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    [DPZPrinterManager sharedPrinterManager].activePrinter = printer;
-    
-    UITableViewCell *thisCell = [tableView cellForRowAtIndexPath:indexPath];
-    thisCell.accessoryType = UITableViewCellAccessoryCheckmark;
-    
-    for (UITableViewCell *cell in tableView.visibleCells) {
-        if (cell != thisCell) {
-            cell.accessoryType = UITableViewCellAccessoryNone;
-        }
-    }
-    
-    [self.navigationController popViewControllerAnimated:YES];
-}
-
 
 @end
