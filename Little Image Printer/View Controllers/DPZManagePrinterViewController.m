@@ -53,6 +53,33 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
+#pragma mark - UITableViewDataSource
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        DPZPrinter *printer = [self.fetchedResultsController objectAtIndexPath:indexPath];
+        [[DPZPrinterManager sharedPrinterManager] deletePrinter:printer];
+    }
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
+}
+
+#pragma mark - UITableViewDelegate
+
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return UITableViewCellEditingStyleDelete;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return NSLocalizedString(@"Forget", nil);
+}
+
 #pragma mark - DPZFetchedResultsTableViewController
 
 - (UITableViewCell *)newCellWithReuseIdentifier:(NSString *)cellIdentifier
