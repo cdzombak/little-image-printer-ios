@@ -14,6 +14,7 @@
 @interface DPZAppDelegate ()
 
 @property (nonatomic, readonly) Reachability *reachability;
+@property (atomic) NSInteger networkRequestCount;
 
 @end
 
@@ -34,6 +35,19 @@
     [self.window makeKeyAndVisible];
     
     return YES;
+}
+
+- (void)setNetworkActivityIndicatorVisible:(BOOL)setVisible
+{
+    if (setVisible) {
+        self.networkRequestCount++;
+    } else {
+        self.networkRequestCount--;
+    }
+    
+    self.networkRequestCount = MAX(0, self.networkRequestCount);
+    
+    [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:(self.networkRequestCount > 0)];
 }
 
 #pragma mark - App Setup

@@ -13,4 +13,6 @@
 @property (nonatomic, strong) UIWindow *window;
 @property (nonatomic, readonly) BOOL isCloudReachable;
 
+- (void)setNetworkActivityIndicatorVisible:(BOOL)visible;
+
 @end

@@ -39,6 +39,8 @@
 		4FA26A2D16E56B5800C08B5A /* DPZDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA26A2916E56B5800C08B5A /* DPZDataManager.m */; };
 		4FA26A2E16E56B5800C08B5A /* DPZPrinterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA26A2B16E56B5800C08B5A /* DPZPrinterManager.m */; };
 		4FA26A3016E5733700C08B5A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4FA26A2F16E5733700C08B5A /* README.md */; };
+		A225988C18C57E2E001396DF /* DPZBergRemoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A225988A18C57E2E001396DF /* DPZBergRemoteViewController.m */; };
+		A225988D18C57E2E001396DF /* DPZBergRemoteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A225988B18C57E2E001396DF /* DPZBergRemoteViewController.xib */; };
 		A28656C718C446BB00198130 /* DPZRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A28656C618C446BB00198130 /* DPZRootViewController.m */; };
 		A28656CC18C446E100198130 /* DPZAboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A28656C818C446E100198130 /* DPZAboutViewController.xib */; };
 		A28656CD18C446E100198130 /* DPZAdjusterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A28656C918C446E100198130 /* DPZAdjusterViewController.xib */; };
@@ -102,6 +104,9 @@
 		4FA26A2A16E56B5800C08B5A /* DPZPrinterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPZPrinterManager.h; sourceTree = "<group>"; };
 		4FA26A2B16E56B5800C08B5A /* DPZPrinterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPZPrinterManager.m; sourceTree = "<group>"; };
 		4FA26A2F16E5733700C08B5A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		A225988918C57E2E001396DF /* DPZBergRemoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DPZBergRemoteViewController.h; path = "View Controllers/DPZBergRemoteViewController.h"; sourceTree = "<group>"; };
+		A225988A18C57E2E001396DF /* DPZBergRemoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DPZBergRemoteViewController.m; path = "View Controllers/DPZBergRemoteViewController.m"; sourceTree = "<group>"; };
+		A225988B18C57E2E001396DF /* DPZBergRemoteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DPZBergRemoteViewController.xib; path = "View Controllers/DPZBergRemoteViewController.xib"; sourceTree = "<group>"; };
 		A28656C518C446BB00198130 /* DPZRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DPZRootViewController.h; path = "View Controllers/DPZRootViewController.h"; sourceTree = "<group>"; };
 		A28656C618C446BB00198130 /* DPZRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DPZRootViewController.m; path = "View Controllers/DPZRootViewController.m"; sourceTree = "<group>"; };
 		A28656C818C446E100198130 /* DPZAboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DPZAboutViewController.xib; path = Views/DPZAboutViewController.xib; sourceTree = "<group>"; };
@@ -258,6 +263,8 @@
 				4F2E95E016EB9319004CA9B3 /* DPZAboutViewController.m */,
 				4FA26A1B16E56B2C00C08B5A /* DPZAdjusterViewController.h */,
 				4FA26A1C16E56B2C00C08B5A /* DPZAdjusterViewController.m */,
+				A225988918C57E2E001396DF /* DPZBergRemoteViewController.h */,
+				A225988A18C57E2E001396DF /* DPZBergRemoteViewController.m */,
 				4FA1225416E3C71F00FE27C2 /* DPZEditPrinterViewController.h */,
 				4FA1225516E3C71F00FE27C2 /* DPZEditPrinterViewController.m */,
 				4FA26A1916E56B2C00C08B5A /* DPZFetchedResultsTableViewController.h */,
@@ -317,12 +324,13 @@
 		A28656C218C445FB00198130 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A28656C818C446E100198130 /* DPZAboutViewController.xib */,
-				A28656C918C446E100198130 /* DPZAdjusterViewController.xib */,
-				A28656CA18C446E100198130 /* DPZEditPrinterViewController.xib */,
-				A28656CB18C446E100198130 /* DPZPrintCodeViewController.xib */,
 				A28656F418C44A7800198130 /* DTCustomColoredAccessory.h */,
 				A28656F518C44A7800198130 /* DTCustomColoredAccessory.m */,
+				A28656C818C446E100198130 /* DPZAboutViewController.xib */,
+				A28656C918C446E100198130 /* DPZAdjusterViewController.xib */,
+				A225988B18C57E2E001396DF /* DPZBergRemoteViewController.xib */,
+				A28656CA18C446E100198130 /* DPZEditPrinterViewController.xib */,
+				A28656CB18C446E100198130 /* DPZPrintCodeViewController.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -396,6 +404,7 @@
 				4F2E95DA16EB8BA7004CA9B3 /* about.html in Resources */,
 				A28656CD18C446E100198130 /* DPZAdjusterViewController.xib in Resources */,
 				4F2E95EA16EB9D99004CA9B3 /* print-code.html in Resources */,
+				A225988D18C57E2E001396DF /* DPZBergRemoteViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -468,6 +477,7 @@
 				4FA26A2E16E56B5800C08B5A /* DPZPrinterManager.m in Sources */,
 				A28656FC18C451B900198130 /* UIView+DPZFirstResponder.m in Sources */,
 				4F2E95E216EB9319004CA9B3 /* DPZAboutViewController.m in Sources */,
+				A225988C18C57E2E001396DF /* DPZBergRemoteViewController.m in Sources */,
 				A28656FB18C451B900198130 /* NSString+DPZURLEncode.m in Sources */,
 				A28656FF18C451D500198130 /* Reachability.m in Sources */,
 				4F2E95E716EB9CF0004CA9B3 /* DPZPrintCodeViewController.m in Sources */,

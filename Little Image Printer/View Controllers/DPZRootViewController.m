@@ -10,11 +10,11 @@
 #import "DPZAdjusterViewController.h"
 #import "DPZManagePrinterViewController.h"
 #import "DPZAboutViewController.h"
+#import "DPZBergRemoteViewController.h"
 #import "DTCustomColoredAccessory.h"
 
 @interface DPZRootViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
-@property (nonatomic, assign) BOOL hasAppeared;
 @property (nonatomic, readonly) BOOL canUseCamera;
 
 @property (nonatomic, strong) UIImagePickerController *libraryPickerController;
@@ -26,7 +26,6 @@
 
 - (instancetype)init {
     if (self = [super initWithStyle:UITableViewStyleGrouped]) {
-        self.hasAppeared = NO;
         self.title = NSLocalizedString(@"Little Photo Printer", nil);
     }
     return self;
@@ -53,6 +52,8 @@
             imagePicker;
         });
     }
+    
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Home", nil) style:UIBarButtonItemStyleBordered target:nil action:nil];
     
     static NSString * const defaultStyleReuseIdentifier = @"Cell";
     self.tableView.rowHeight = 50;
@@ -89,6 +90,17 @@
             staticContentCell.cellStyle = UITableViewCellStyleDefault;
             staticContentCell.reuseIdentifier = defaultStyleReuseIdentifier;
             
+            cell.textLabel.text = NSLocalizedString(@"Berg Remote", nil);
+            cell.imageView.image = [UIImage imageNamed:@"Remote"];
+            cell.accessoryView = [DTCustomColoredAccessory accessory];
+        } whenSelected:^(NSIndexPath *indexPath) {
+            [wSelf showBergRemote];
+        }];
+        
+        [section addCell:^(JMStaticContentTableViewCell *staticContentCell, UITableViewCell *cell, NSIndexPath *indexPath) {
+            staticContentCell.cellStyle = UITableViewCellStyleDefault;
+            staticContentCell.reuseIdentifier = defaultStyleReuseIdentifier;
+            
             cell.textLabel.text = NSLocalizedString(@"Printers", nil);
             cell.imageView.image = [UIImage imageNamed:@"Settings"];
             cell.accessoryView = [DTCustomColoredAccessory accessory];
@@ -106,7 +118,7 @@
             cell.imageView.image = [UIImage imageNamed:@"About"];
             cell.accessoryView = [DTCustomColoredAccessory accessory];
         } whenSelected:^(NSIndexPath *indexPath) {
-            [wSelf about];
+            [wSelf showAbout];
         }];
     }];
 }
@@ -115,17 +127,6 @@
 {
     [super viewWillAppear:animated];
     [self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:animated];
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    
-    if (!self.hasAppeared) {
-        [self pickPhoto];
-    }
-    
-    self.hasAppeared = YES;
 }
 
 #pragma mark - UI Events
@@ -140,12 +141,17 @@
     [self presentViewController:self.libraryPickerController animated:YES completion:nil];
 }
 
+- (void)showBergRemote
+{
+    [self.navigationController pushViewController:[[DPZBergRemoteViewController alloc] init] animated:YES];
+}
+
 - (void)managePrinters
 {
     [self.navigationController pushViewController:[[DPZManagePrinterViewController alloc] init] animated:YES];
 }
 
-- (void)about
+- (void)showAbout
 {
     [self.navigationController pushViewController:[[DPZAboutViewController alloc] init] animated:YES];
 }
