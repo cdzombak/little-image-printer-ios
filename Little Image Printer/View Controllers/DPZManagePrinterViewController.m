@@ -33,8 +33,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    self.fetchedResultsController = [DPZPrinterManager sharedPrinterManager].printersFetchedResultsController;
+    
     self.navigationItem.rightBarButtonItem = self.addButton;
 }
 
@@ -95,6 +94,11 @@
 }
 
 #pragma mark - DPZFetchedResultsTableViewController
+
+- (void)resetFetchedResultsController
+{
+    self.fetchedResultsController = [DPZPrinterManager sharedPrinterManager].printersFetchedResultsController;
+}
 
 - (UITableViewCell *)newCellWithReuseIdentifier:(NSString *)cellIdentifier
 {

@@ -30,14 +30,12 @@
     return self;
 }
 
-- (void)viewDidLoad
+#pragma mark - DPZFetchedResultsTableViewController
+
+- (void)resetFetchedResultsController
 {
-    [super viewDidLoad];
-    
     self.fetchedResultsController = [DPZPrinterManager sharedPrinterManager].printersFetchedResultsController;
 }
-
-#pragma mark - DPZFetchedResultsTableViewController
 
 - (UITableViewCell *)newCellWithReuseIdentifier:(NSString *)cellIdentifier
 {

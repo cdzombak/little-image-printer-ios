@@ -17,6 +17,20 @@
     self.tableView.dataSource = self;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self resetFetchedResultsController];
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    
+    self.fetchedResultsController = nil;
+}
+
 - (void)setFetchedResultsController:(NSFetchedResultsController *)fetchedResultsController
 {
     if (_fetchedResultsController != fetchedResultsController) {
@@ -24,7 +38,16 @@
         _fetchedResultsController = fetchedResultsController;
         _fetchedResultsController.delegate = self;
         [_fetchedResultsController performFetch:nil];  // TODO Error handling
+        
+        if (self.isViewLoaded) {
+            [self.tableView reloadData];
+        }
     }
+}
+
+- (void)resetFetchedResultsController
+{
+    NSAssert(NO, @"%s is abstract and must be overridden.", __PRETTY_FUNCTION__);
 }
 
 #pragma mark - UITableViewDataSource
@@ -135,6 +158,5 @@
 {
     NSAssert(NO, @"%s is abstract and must be overridden.", __PRETTY_FUNCTION__);
 }
-
 
 @end

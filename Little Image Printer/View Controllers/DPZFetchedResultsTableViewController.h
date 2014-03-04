@@ -15,4 +15,6 @@
 - (UITableViewCell *)newCellWithReuseIdentifier:(NSString *)cellIdentifier;
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
 
+- (void)resetFetchedResultsController;
+
 @end
