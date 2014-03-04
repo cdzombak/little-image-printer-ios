@@ -161,7 +161,7 @@
             contentType = @"image/jpg";
         }
         
-        NSString *dataUri = [NSString stringWithFormat:@"data:%@;base64,%@", contentType, [imageData base64EncodedDataWithOptions:(NSDataBase64EncodingOptions)0]];
+        NSString *dataUri = [NSString stringWithFormat:@"data:%@;base64,%@", contentType, [imageData base64EncodedStringWithOptions:(NSDataBase64EncodingOptions)0]];
         NSString *ditherClass = @"dither";
         
         NSString *finalHTML = [[html stringByReplacingOccurrencesOfString:@"_IMAGECLASS_" withString:ditherClass]
