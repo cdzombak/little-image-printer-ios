@@ -10,6 +10,7 @@
 #import "DPZEditPrinterViewController.h"
 #import "DPZPrinterManager.h"
 #import "DPZPrinter.h"
+#import "DTCustomColoredAccessory.h"
 
 @interface DPZManagePrinterViewController ()
 
@@ -37,6 +38,12 @@
     self.navigationItem.rightBarButtonItem = self.addButton;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:animated];
+}
+
 - (UIBarButtonItem *)addButton
 {
     if (!_addButton) {
@@ -49,7 +56,7 @@
 
 - (void)addPrinter:(id)sender
 {
-    DPZEditPrinterViewController *vc = [[DPZEditPrinterViewController alloc] initWithNibName:@"DPZEditPrinterViewController" bundle:nil];
+    DPZEditPrinterViewController *vc = [[DPZEditPrinterViewController alloc] initWithPrinter:nil];
     [self.navigationController pushViewController:vc animated:YES];
 }
 
@@ -80,6 +87,13 @@
     return NSLocalizedString(@"Forget", nil);
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    DPZPrinter *printer = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    DPZEditPrinterViewController *editPrinterVC = [[DPZEditPrinterViewController alloc] initWithPrinter:printer];
+    [self.navigationController pushViewController:editPrinterVC animated:YES];
+}
+
 #pragma mark - DPZFetchedResultsTableViewController
 
 - (UITableViewCell *)newCellWithReuseIdentifier:(NSString *)cellIdentifier
@@ -93,6 +107,7 @@
     
     cell.textLabel.text = printer.name;
     cell.detailTextLabel.text = printer.code;
+    cell.accessoryView = [DTCustomColoredAccessory accessory];
 }
 
 @end

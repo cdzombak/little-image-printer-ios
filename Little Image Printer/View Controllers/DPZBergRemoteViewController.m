@@ -14,16 +14,19 @@
 @property (nonatomic, weak) IBOutlet UIWebView *webView;
 @property (nonatomic, readonly) UIBarButtonItem *refreshButtonItem;
 
+@property (nonatomic, readonly) NSURL *url;
+
 @end
 
 @implementation DPZBergRemoteViewController
 
 @synthesize refreshButtonItem = _refreshButtonItem;
 
-- (instancetype)init
+- (instancetype)initWithURL:(NSURL *)urlOrNil
 {
     if (self = [super initWithNibName:@"DPZBergRemoteViewController" bundle:nil]) {
         self.title = @"Berg Remote";
+        _url = urlOrNil ? urlOrNil : [NSURL URLWithString:@"http://remote.bergcloud.com"];
     }
     return self;
 }
@@ -37,7 +40,7 @@
 {
     [super viewDidLoad];
 
-    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://remote.bergcloud.com"]]];
+    [self.webView loadRequest:[NSURLRequest requestWithURL:self.url]];
     self.navigationItem.rightBarButtonItem = self.refreshButtonItem;
 }
 

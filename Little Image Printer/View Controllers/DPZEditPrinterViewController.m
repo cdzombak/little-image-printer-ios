@@ -7,26 +7,39 @@
 //
 
 #import "DPZEditPrinterViewController.h"
-#import "DPZDataManager.h"
+
 #import "DPZPrinterManager.h"
 #import "DPZPrinter.h"
+
+#import "DPZColor.h"
 #import "DPZPrintCodeViewController.h"
 #import "UIView+DPZFirstResponder.h"
 
-@interface DPZEditPrinterViewController ()
+@interface DPZEditPrinterViewController () <UITextFieldDelegate>
 
+@property (nonatomic, readwrite, strong) DPZPrinter *printer;
+
+@property (nonatomic, weak) IBOutlet UITextField *name;
+@property (nonatomic, weak) IBOutlet UITextField *code;
+
+@property (nonatomic, weak) IBOutlet UIView *containerView;
+@property (nonatomic, weak) IBOutlet UIButton *printerCodeButton;
+
+@property (nonatomic, strong) UIBarButtonItem *saveButton;
 @property (nonatomic, assign) BOOL keyboardIsShowing;
+
+- (IBAction)textChanged:(id)sender;
+- (IBAction)findPrinterCode:(id)sender;
 
 @end
 
 @implementation DPZEditPrinterViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithPrinter:(DPZPrinter *)printerOrNil
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self)
+    if (self = [super initWithNibName:@"DPZEditPrinterViewController" bundle:nil])
     {
-        // Custom initialization
+        _printer = printerOrNil;
     }
     return self;
 }
@@ -36,17 +49,15 @@
     [super viewDidLoad];
     
     self.saveButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(save)];
-
     self.navigationItem.rightBarButtonItem = self.saveButton;
     
-    if (self.printer)
-    {
+    [self.printerCodeButton setTitleColor:[DPZColor dpz_tintColor] forState:UIControlStateNormal];
+    
+    if (self.printer) {
         self.name.text = self.printer.name;
         self.code.text = self.printer.code;
         self.title = @"Edit Printer";
-    }
-    else
-    {
+    } else {
         self.title = @"Add Printer";
     }
     
@@ -78,24 +89,11 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self
                                                     name:UIKeyboardWillHideNotification
                                                   object:nil];
-
 }
 
 - (void)refreshControls
 {
-    if (self.printer == nil)
-    {
-        self.deleteButton.enabled = NO;
-    }
-    
-    if ([self.name.text length] == 0 || [self.code.text length] == 0)
-    {
-        self.saveButton.enabled = NO;
-    }
-    else
-    {
-        self.saveButton.enabled = YES;
-    }
+    self.saveButton.enabled = self.name.text.length != 0 && self.code.text.length != 0;
 }
 
 - (void)textChanged:(id)sender
@@ -105,50 +103,19 @@
 
 - (void)save
 {
-//    DPZDataManager *dm = [DPZDataManager sharedManager];
-    if (self.printer == nil)
-    {
-        self.printer = [[DPZPrinterManager sharedPrinterManager] createPrinter];
+    DPZPrinterManager *pm = [DPZPrinterManager sharedPrinterManager];
+    
+    if (!self.printer) {
+        self.printer = [pm createPrinter];
     }
+    
     self.printer.name = self.name.text;
     self.printer.code = self.code.text;
-//    [dm saveContext];
     
-    DPZPrinterManager *pm = [DPZPrinterManager sharedPrinterManager];
-    if ([pm.printers count] == 1)
-    {
-        // We only have one printer, let's auto select it
-//        pm.activePrinter = self.printer;
-    }
-    [self.navigationController popViewControllerAnimated:YES];
-}
-
-- (void)deletePrinter:(id)sender
-{
-    UIAlertView *alert = [[UIAlertView alloc]
-                          initWithTitle: @"Confirm Delete"
-                          message: [NSString stringWithFormat:@"Are you sure you want to delete %@?", self.printer.name]
-                          delegate: self
-                          cancelButtonTitle: @"Cancel"
-                          otherButtonTitles: @"Delete", nil];
-    [alert show];
-}
-
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    switch (buttonIndex)
-    {
-        case 0:
-            // Cancel
-            break;
-            
-        case 1:
-        {
-            // Delete
-            [[DPZPrinterManager sharedPrinterManager] deletePrinter:self.printer];
-            [self.navigationController popViewControllerAnimated:YES];
-            break;
-        }
+    [pm saveContext];
+    
+    if (self.navigationController.viewControllers.count > 1) {
+        [self.navigationController popViewControllerAnimated:YES];
     }
 }
 
@@ -159,6 +126,21 @@
     [self.navigationController pushViewController:vc animated:YES];
 }
 
+#pragma mark UITextFieldDelegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    if (textField == self.name) {
+        [self.code becomeFirstResponder];
+        return NO;
+    }
+    if (textField == self.code) {
+        [self.code resignFirstResponder];
+        return NO;
+    }
+    return YES;
+}
+
+#pragma mark Keyboard
 
 // Called when the UIKeyboardWillShowNotification is sent.
 - (void)keyboardWillShow:(NSNotification*)notification
@@ -178,7 +160,6 @@
     }
 }
 
-
 // Called when the UIKeyboardWillHideNotification is sent
 - (void)keyboardWillHide:(NSNotification*)notification
 {
@@ -195,7 +176,6 @@
     }];
 }
 
-
 - (NSTimeInterval)keyboardAnimationDurationForNotification:(NSNotification*)notification
 {
     NSDictionary* info = [notification userInfo];
@@ -206,7 +186,7 @@
 }
 
 // Hide the keyboard when the user taps outside of the controls
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     [self.view dpz_findAndResignFirstResponder];
 }

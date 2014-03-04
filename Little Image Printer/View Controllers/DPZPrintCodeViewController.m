@@ -7,14 +7,21 @@
 //
 
 #import "DPZPrintCodeViewController.h"
+#import "DPZBergRemoteViewController.h"
 
 @implementation DPZPrintCodeViewController
+
+- (instancetype)init
+{
+    self = [self initWithNibName:@"DPZPrintCodeViewController" bundle:nil];
+    return self;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    self.title = @"Print Codes";
+    
+    self.title = NSLocalizedString(@"Print Codes", nil);
     
     NSString *path = [[NSBundle mainBundle] pathForResource:@"print-code" ofType:@"html"];
     NSURL *url = [NSURL fileURLWithPath:path isDirectory:NO];
@@ -28,9 +35,9 @@
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
-    if (navigationType == UIWebViewNavigationTypeLinkClicked)
-    {
-        [[UIApplication sharedApplication] openURL:[request URL]];
+    if (navigationType == UIWebViewNavigationTypeLinkClicked) {
+        DPZBergRemoteViewController *remoteVC = [[DPZBergRemoteViewController alloc] initWithURL:request.URL];
+        [self.navigationController pushViewController:remoteVC animated:YES];
         return NO;
     }
     
