@@ -219,12 +219,7 @@ static const CGFloat LittlePrinterWidth = 384.0f;
 
 - (void)showUnreachableAlert
 {
-    [[[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Network Error", nil)
-                                message:NSLocalizedString(@"We can't reach the Berg Cloud right now. Please try again later.", nil)
-                               delegate:nil
-                      cancelButtonTitle:@"😢"
-                      otherButtonTitles:nil]
-     show];
+    [SVProgressHUD showErrorWithStatus:NSLocalizedString(@"Offline", nil)];
 }
 
 - (UIBarButtonItem *)printButtonItem

@@ -12,6 +12,8 @@
 #import "DPZAboutViewController.h"
 #import "DPZBergRemoteViewController.h"
 #import "DTCustomColoredAccessory.h"
+#import "DPZAppDelegate.h"
+#import <SVProgressHUD/SVProgressHUD.h>
 
 @interface DPZRootViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
@@ -68,6 +70,7 @@
             cell.imageView.image = [UIImage imageNamed:@"Photo Library"];
             cell.accessoryView = [DTCustomColoredAccessory accessory];
         } whenSelected:^(NSIndexPath *indexPath) {
+            [wSelf.tableView deselectRowAtIndexPath:indexPath animated:YES];
             [wSelf pickPhoto];
         }];
 
@@ -80,6 +83,7 @@
                 cell.imageView.image = [UIImage imageNamed:@"Camera"];
                 cell.accessoryView = [DTCustomColoredAccessory accessory];
             } whenSelected:^(NSIndexPath *indexPath) {
+                [wSelf.tableView deselectRowAtIndexPath:indexPath animated:YES];
                 [wSelf takePhoto];
             }];
         }
@@ -94,6 +98,7 @@
             cell.imageView.image = [UIImage imageNamed:@"Remote"];
             cell.accessoryView = [DTCustomColoredAccessory accessory];
         } whenSelected:^(NSIndexPath *indexPath) {
+            [wSelf.tableView deselectRowAtIndexPath:indexPath animated:YES];
             [wSelf showBergRemote];
         }];
         
@@ -105,6 +110,7 @@
             cell.imageView.image = [UIImage imageNamed:@"Settings"];
             cell.accessoryView = [DTCustomColoredAccessory accessory];
         } whenSelected:^(NSIndexPath *indexPath) {
+            [wSelf.tableView deselectRowAtIndexPath:indexPath animated:YES];
             [wSelf managePrinters];
         }];
     }];
@@ -118,6 +124,7 @@
             cell.imageView.image = [UIImage imageNamed:@"About"];
             cell.accessoryView = [DTCustomColoredAccessory accessory];
         } whenSelected:^(NSIndexPath *indexPath) {
+            [wSelf.tableView deselectRowAtIndexPath:indexPath animated:YES];
             [wSelf showAbout];
         }];
     }];
@@ -143,7 +150,11 @@
 
 - (void)showBergRemote
 {
-    [self.navigationController pushViewController:[[DPZBergRemoteViewController alloc] init] animated:YES];
+    if (![(DPZAppDelegate *)[UIApplication sharedApplication].delegate isCloudReachable]) {
+        [SVProgressHUD showErrorWithStatus:NSLocalizedString(@"Offline", nil)];
+    } else {
+        [self.navigationController pushViewController:[[DPZBergRemoteViewController alloc] init] animated:YES];
+    }
 }
 
 - (void)managePrinters
