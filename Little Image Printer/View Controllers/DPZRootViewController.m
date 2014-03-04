@@ -7,17 +7,23 @@
 //
 
 #import "DPZRootViewController.h"
-#import "DPZAdjusterViewController.h"
-#import "DPZManagePrinterViewController.h"
-#import "DPZAboutViewController.h"
-#import "DPZBergRemoteViewController.h"
-#import "DTCustomColoredAccessory.h"
+
 #import "DPZAppDelegate.h"
+#import "DPZPrinterManager.h"
+
+#import "DPZAboutViewController.h"
+#import "DPZAdjusterViewController.h"
+#import "DPZBergRemoteViewController.h"
+#import "DPZEditPrinterViewController.h"
+#import "DPZManagePrinterViewController.h"
+
+#import "DTCustomColoredAccessory.h"
 #import <SVProgressHUD/SVProgressHUD.h>
 
 @interface DPZRootViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @property (nonatomic, readonly) BOOL canUseCamera;
+@property (nonatomic, assign) BOOL hasCheckedAndPresentedAddView;
 
 @property (nonatomic, strong) UIImagePickerController *libraryPickerController;
 @property (nonatomic, strong) UIImagePickerController *cameraPickerController;
@@ -133,7 +139,20 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
     [self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:animated];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    if (!self.hasCheckedAndPresentedAddView && ![DPZPrinterManager sharedPrinterManager].printers.count) {
+        DPZEditPrinterViewController *editPrinterVC = [[DPZEditPrinterViewController alloc] initWithPrinter:nil];
+        [self.navigationController pushViewController:editPrinterVC animated:YES];
+    }
+    
+    self.hasCheckedAndPresentedAddView = YES;
 }
 
 #pragma mark - UI Events

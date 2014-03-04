@@ -9,6 +9,12 @@
 #import "DPZPrintCodeViewController.h"
 #import "DPZBergRemoteViewController.h"
 
+@interface DPZPrintCodeViewController ()  <UIWebViewDelegate>
+
+@property (nonatomic, weak) IBOutlet UIWebView *webView;
+
+@end
+
 @implementation DPZPrintCodeViewController
 
 - (instancetype)init

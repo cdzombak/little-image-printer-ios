@@ -16,7 +16,9 @@
 #import "DPZAppDelegate.h"
 #import "DPZImageProcessor.h"
 #import "DPZPrinterSelectionViewController.h"
+#import "DPZPrinterManager.h"
 #import "DPZPrinter+Printing.h"
+#import "DPZEditPrinterViewController.h"
 
 static const CGFloat LittlePrinterWidth = 384.0f;
 
@@ -24,10 +26,10 @@ static const CGFloat LittlePrinterWidth = 384.0f;
 
 @property (nonatomic, strong) DPZImageProcessor *imageProcessor;
 
-@property (nonatomic, strong) IBOutlet UISlider *brightness;
-@property (nonatomic, strong) IBOutlet UISlider *contrast;
-@property (nonatomic, strong) IBOutlet UIView *imageViewHolder;
-@property (nonatomic, strong) IBOutlet UIView *adjustmentsViewHolder;
+@property (nonatomic, weak) IBOutlet UISlider *brightness;
+@property (nonatomic, weak) IBOutlet UISlider *contrast;
+@property (nonatomic, weak) IBOutlet UIView *imageViewHolder;
+@property (nonatomic, weak) IBOutlet UIView *adjustmentsViewHolder;
 
 @property (nonatomic, strong) GPUImageView *imageView;
 @property (nonatomic, strong) GPUImageBrightnessFilter *brightnessFilter;
@@ -125,6 +127,12 @@ static const CGFloat LittlePrinterWidth = 384.0f;
 
 - (void)print
 {
+    if (![DPZPrinterManager sharedPrinterManager].printers.count) {
+        DPZEditPrinterViewController *editPrinterVC = [[DPZEditPrinterViewController alloc] initWithPrinter:nil];
+        [self.navigationController pushViewController:editPrinterVC animated:YES];
+        return;
+    }
+    
     DPZAppDelegate *appDelegate = (DPZAppDelegate *)[UIApplication sharedApplication].delegate;
     if (!appDelegate.isCloudReachable)
     {

@@ -10,8 +10,6 @@
 
 @interface DPZEditPrinterViewController : UIViewController
 
-@property (nonatomic, readonly) DPZPrinter *printer;
-
 - (id)initWithPrinter:(DPZPrinter *)printerOrNil;
 
 @end

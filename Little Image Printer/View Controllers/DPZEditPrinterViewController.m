@@ -17,7 +17,7 @@
 
 @interface DPZEditPrinterViewController () <UITextFieldDelegate>
 
-@property (nonatomic, readwrite, strong) DPZPrinter *printer;
+@property (nonatomic, strong) DPZPrinter *printer;
 
 @property (nonatomic, weak) IBOutlet UITextField *name;
 @property (nonatomic, weak) IBOutlet UITextField *code;

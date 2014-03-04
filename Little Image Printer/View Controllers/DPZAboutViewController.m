@@ -10,7 +10,7 @@
 
 @interface DPZAboutViewController () <UIWebViewDelegate>
 
-@property (nonatomic, strong) IBOutlet UIWebView *webView;
+@property (nonatomic, weak) IBOutlet UIWebView *webView;
 
 @end
 
