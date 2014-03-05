@@ -11,7 +11,7 @@
 #import "Reachability.h"
 #import "DPZRootViewController.h"
 #import "DPZColor.h"
-#import <WYPopoverController/WYPopoverController.h>
+#import "UIFont+SourceSansPro.h"
 
 @interface DPZAppDelegate ()
 
@@ -57,6 +57,10 @@
 - (void)setupStyles
 {
     [[UIView appearance] setTintColor:[DPZColor dpz_tintColor]];
+    
+    [[UINavigationBar appearance] setTitleTextAttributes:@{ NSFontAttributeName: [UIFont dpz_sourceSansProLightFontOfSize:22] }];
+    [[UIBarButtonItem appearance] setTitleTextAttributes:@{ NSFontAttributeName: [UIFont dpz_sourceSansProRegularFontOfSize:18] } forState:UIControlStateNormal];
+    
 }
 
 #pragma mark - Reachability

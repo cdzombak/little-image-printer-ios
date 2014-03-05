@@ -55,6 +55,9 @@
 		A28656FB18C451B900198130 /* NSString+DPZURLEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = A28656F818C451B900198130 /* NSString+DPZURLEncode.m */; };
 		A28656FC18C451B900198130 /* UIView+DPZFirstResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = A28656FA18C451B900198130 /* UIView+DPZFirstResponder.m */; };
 		A28656FF18C451D500198130 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = A28656FE18C451D500198130 /* Reachability.m */; };
+		A292867F18C6D7F400C1CB17 /* SourceSansPro-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = A292867E18C6D7F400C1CB17 /* SourceSansPro-Light.otf */; };
+		A292868318C6D88300C1CB17 /* UIFont+SourceSansPro.m in Sources */ = {isa = PBXBuildFile; fileRef = A292868218C6D88300C1CB17 /* UIFont+SourceSansPro.m */; };
+		A292868518C6DB0500C1CB17 /* SourceSansPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A292868418C6DB0500C1CB17 /* SourceSansPro-Bold.otf */; };
 		DDC1C54A4E0A4ADD8B68A98F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F292AA2A8FCA41789B3DCD9B /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -106,7 +109,7 @@
 		A225988918C57E2E001396DF /* DPZBergRemoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DPZBergRemoteViewController.h; path = "View Controllers/DPZBergRemoteViewController.h"; sourceTree = "<group>"; };
 		A225988A18C57E2E001396DF /* DPZBergRemoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DPZBergRemoteViewController.m; path = "View Controllers/DPZBergRemoteViewController.m"; sourceTree = "<group>"; };
 		A225988B18C57E2E001396DF /* DPZBergRemoteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DPZBergRemoteViewController.xib; path = "View Controllers/DPZBergRemoteViewController.xib"; sourceTree = "<group>"; };
-		A225988F18C583EE001396DF /* LittleImagePrinter 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LittleImagePrinter 3.xcdatamodel"; sourceTree = "<group>"; };
+		A225988F18C583EE001396DF /* LittleImagePrinter 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "LittleImagePrinter 3.xcdatamodel"; sourceTree = "<group>"; };
 		A225989018C585B9001396DF /* DPZDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DPZDataManager.h; path = "Little Image Printer/Data Managers/DPZDataManager.h"; sourceTree = SOURCE_ROOT; };
 		A225989118C585B9001396DF /* DPZDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DPZDataManager.m; path = "Little Image Printer/Data Managers/DPZDataManager.m"; sourceTree = SOURCE_ROOT; };
 		A225989218C585B9001396DF /* DPZPrinterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DPZPrinterManager.h; path = "Little Image Printer/Data Managers/DPZPrinterManager.h"; sourceTree = SOURCE_ROOT; };
@@ -133,6 +136,10 @@
 		A28656FA18C451B900198130 /* UIView+DPZFirstResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+DPZFirstResponder.m"; path = "Categories/UIView+DPZFirstResponder.m"; sourceTree = "<group>"; };
 		A28656FD18C451D500198130 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = "Little Image Printer/Reachability/Reachability.h"; sourceTree = SOURCE_ROOT; };
 		A28656FE18C451D500198130 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = "Little Image Printer/Reachability/Reachability.m"; sourceTree = SOURCE_ROOT; };
+		A292867E18C6D7F400C1CB17 /* SourceSansPro-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Light.otf"; sourceTree = "<group>"; };
+		A292868118C6D88300C1CB17 /* UIFont+SourceSansPro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIFont+SourceSansPro.h"; path = "Categories/UIFont+SourceSansPro.h"; sourceTree = "<group>"; };
+		A292868218C6D88300C1CB17 /* UIFont+SourceSansPro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIFont+SourceSansPro.m"; path = "Categories/UIFont+SourceSansPro.m"; sourceTree = "<group>"; };
+		A292868418C6DB0500C1CB17 /* SourceSansPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Bold.otf"; sourceTree = "<group>"; };
 		F292AA2A8FCA41789B3DCD9B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -297,6 +304,8 @@
 			isa = PBXGroup;
 			children = (
 				A28656F218C4474000198130 /* Images.xcassets */,
+				A292867E18C6D7F400C1CB17 /* SourceSansPro-Light.otf */,
+				A292868418C6DB0500C1CB17 /* SourceSansPro-Bold.otf */,
 				4F5FAFFC16E22637007797D1 /* print.html */,
 				4F2E95D916EB8BA7004CA9B3 /* about.html */,
 				4F2E95E916EB9D99004CA9B3 /* print-code.html */,
@@ -334,6 +343,8 @@
 				A28656F818C451B900198130 /* NSString+DPZURLEncode.m */,
 				A28656F918C451B900198130 /* UIView+DPZFirstResponder.h */,
 				A28656FA18C451B900198130 /* UIView+DPZFirstResponder.m */,
+				A292868118C6D88300C1CB17 /* UIFont+SourceSansPro.h */,
+				A292868218C6D88300C1CB17 /* UIFont+SourceSansPro.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -417,6 +428,8 @@
 				A28656D118C4471400198130 /* Podfile in Resources */,
 				A28656CF18C446E100198130 /* DPZPrintCodeViewController.xib in Resources */,
 				4F2E95D716EB8B79004CA9B3 /* HISTORY.md in Resources */,
+				A292867F18C6D7F400C1CB17 /* SourceSansPro-Light.otf in Resources */,
+				A292868518C6DB0500C1CB17 /* SourceSansPro-Bold.otf in Resources */,
 				4F2E95D816EB8B79004CA9B3 /* LICENCE.md in Resources */,
 				4F2E95DA16EB8BA7004CA9B3 /* about.html in Resources */,
 				A28656CD18C446E100198130 /* DPZAdjusterViewController.xib in Resources */,
@@ -484,6 +497,7 @@
 				A28656F618C44A7800198130 /* DTCustomColoredAccessory.m in Sources */,
 				4F5FAFF216E21C7D007797D1 /* DPZManagePrinterViewController.m in Sources */,
 				4FA1225716E3C71F00FE27C2 /* DPZEditPrinterViewController.m in Sources */,
+				A292868318C6D88300C1CB17 /* UIFont+SourceSansPro.m in Sources */,
 				4F9E777716E55E0E0036803A /* LittleImagePrinter.xcdatamodeld in Sources */,
 				4F9E777B16E55E650036803A /* DPZPrinter.m in Sources */,
 				4FA26A2016E56B2C00C08B5A /* DPZFetchedResultsTableViewController.m in Sources */,
