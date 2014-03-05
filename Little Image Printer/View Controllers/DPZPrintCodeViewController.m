@@ -8,6 +8,8 @@
 
 #import "DPZPrintCodeViewController.h"
 #import "DPZBergRemoteViewController.h"
+#import "DPZAppDelegate.h"
+#import <SVProgressHUD/SVProgressHUD.h>
 
 @interface DPZPrintCodeViewController ()  <UIWebViewDelegate>
 
@@ -42,8 +44,13 @@
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
     if (navigationType == UIWebViewNavigationTypeLinkClicked) {
-        DPZBergRemoteViewController *remoteVC = [[DPZBergRemoteViewController alloc] initWithURL:request.URL];
-        [self.navigationController pushViewController:remoteVC animated:YES];
+        DPZAppDelegate *appDelegate = (DPZAppDelegate *)[UIApplication sharedApplication].delegate;
+        if (appDelegate.isCloudReachable) {
+            DPZBergRemoteViewController *remoteVC = [[DPZBergRemoteViewController alloc] initWithURL:request.URL];
+            [self.navigationController pushViewController:remoteVC animated:YES];
+        } else {
+            [SVProgressHUD showErrorWithStatus:NSLocalizedString(@"Offline", nil)];
+        }
         return NO;
     }
     
