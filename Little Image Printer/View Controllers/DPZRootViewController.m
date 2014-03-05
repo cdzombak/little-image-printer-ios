@@ -28,6 +28,8 @@
 @property (nonatomic, strong) UIImagePickerController *libraryPickerController;
 @property (nonatomic, strong) UIImagePickerController *cameraPickerController;
 
+@property (nonatomic, strong) UIImage *chosenImage;
+
 @end
 
 @implementation DPZRootViewController
@@ -196,16 +198,31 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    UIImage *selectedImage = info[UIImagePickerControllerEditedImage] ?: info[UIImagePickerControllerOriginalImage];
-    if (!selectedImage ) {
+    BOOL isFirstChosenImage = (self.chosenImage == nil);
+    
+    self.chosenImage = info[UIImagePickerControllerEditedImage] ?: info[UIImagePickerControllerOriginalImage];
+    if (!self.chosenImage ) {
         return;
     }
     
-    [self pushAdjusterViewControllerForImage:selectedImage];
+    [self pushAdjusterViewControllerForImage:self.chosenImage];
     [self dismissViewControllerAnimated:YES completion:nil];
     
     if (picker == self.cameraPickerController) {
-        UIImageWriteToSavedPhotosAlbum(selectedImage, nil, nil, nil);
+        UIImageWriteToSavedPhotosAlbum(self.chosenImage, nil, nil, nil);
+    }
+    
+    if (isFirstChosenImage) {
+        [self insertCell:^(JMStaticContentTableViewCell *staticContentCell, UITableViewCell *cell, NSIndexPath *indexPath) {
+            staticContentCell.cellStyle = UITableViewCellStyleDefault;
+            staticContentCell.reuseIdentifier = @"Cell";
+            
+            cell.textLabel.text = NSLocalizedString(@"Last Chosen Image", nil);
+            cell.imageView.image = [UIImage imageNamed:@"Last Chosen"];
+            cell.accessoryView = [DTCustomColoredAccessory accessory];
+        } whenSelected:^(NSIndexPath *indexPath) {
+            [self pushAdjusterViewControllerForImage:self.chosenImage];
+        } atIndexPath:[NSIndexPath indexPathForRow:2 inSection:0] animated:YES];
     }
 }
 
