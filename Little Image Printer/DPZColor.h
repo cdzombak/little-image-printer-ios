@@ -8,7 +8,7 @@
 
 @interface DPZColor : UIColor
 
-+ (UIColor *)dpz_barTintColor;
++ (UIColor *)dpz_darkBarTintColor;
 + (UIColor *)dpz_tintColor;
 
 @end

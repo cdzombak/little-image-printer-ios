@@ -10,7 +10,7 @@
 
 @implementation DPZColor
 
-+ (UIColor *)dpz_barTintColor
++ (UIColor *)dpz_darkBarTintColor
 {
     return [UIColor colorWithWhite:0.0 alpha:0.9f];
 }

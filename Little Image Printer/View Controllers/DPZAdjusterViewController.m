@@ -19,6 +19,7 @@
 #import "DPZPrinterManager.h"
 #import "DPZPrinter+Printing.h"
 #import "DPZEditPrinterViewController.h"
+#import "DPZColor.h"
 
 static const CGFloat LittlePrinterWidth = 384.0f;
 
@@ -98,6 +99,28 @@ static const CGFloat LittlePrinterWidth = 384.0f;
 
     // We need to adjust the frame for the image view - the correct size for the imageViewHolder isn't set until viewWillAppear
     self.imageView.frame = [self frameForImageView];
+    
+    WYPopoverTheme *theme = [WYPopoverTheme themeForIOS7];
+    [WYPopoverController setDefaultTheme:theme];
+    
+    [[WYPopoverBackgroundView appearance] setBorderWidth:4.f];
+    [[WYPopoverBackgroundView appearance] setFillTopColor:[DPZColor dpz_darkBarTintColor]];
+    [[WYPopoverBackgroundView appearance] setFillBottomColor:[UIColor blackColor]];
+    
+    UINavigationBar *navBar = self.navigationController.navigationBar;
+    UINavigationBar *navBarsInPopover = [UINavigationBar appearanceWhenContainedIn:[UINavigationController class], [WYPopoverBackgroundView class], nil];
+    for (UINavigationBar *bars in @[navBar, navBarsInPopover]) {
+        [bars setBarStyle:UIBarStyleBlack];
+        [bars setBarTintColor:[DPZColor dpz_darkBarTintColor]];
+    }
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    [self.navigationController.navigationBar setBarStyle:UIBarStyleDefault];
+    [self.navigationController.navigationBar setBarTintColor:nil];
 }
 
 - (CGRect)frameForImageView

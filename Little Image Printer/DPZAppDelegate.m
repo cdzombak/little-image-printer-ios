@@ -57,20 +57,6 @@
 - (void)setupStyles
 {
     [[UIView appearance] setTintColor:[DPZColor dpz_tintColor]];
-    
-    WYPopoverTheme *theme = [WYPopoverTheme themeForIOS7];
-    [WYPopoverController setDefaultTheme:theme];
-    
-    [[WYPopoverBackgroundView appearance] setBorderWidth:4.f];
-    [[WYPopoverBackgroundView appearance] setFillTopColor:[DPZColor dpz_barTintColor]];
-    [[WYPopoverBackgroundView appearance] setFillBottomColor:[UIColor blackColor]];
-    
-    UINavigationBar *navBars = [UINavigationBar appearance];
-    UINavigationBar *navBarsInPopover = [UINavigationBar appearanceWhenContainedIn:[UINavigationController class], [WYPopoverBackgroundView class], nil];
-    for (UINavigationBar *bars in @[navBars, navBarsInPopover]) {
-        [bars setBarStyle:UIBarStyleBlack];
-        [bars setBarTintColor:[DPZColor dpz_barTintColor]];
-    }
 }
 
 #pragma mark - Reachability
