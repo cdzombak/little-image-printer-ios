@@ -34,6 +34,7 @@
 - (void)dealloc
 {
     self.webView.delegate = nil;
+    [(DPZAppDelegate *)[UIApplication sharedApplication].delegate setNetworkActivityIndicatorVisible:NO];
 }
 
 - (void)viewDidLoad
