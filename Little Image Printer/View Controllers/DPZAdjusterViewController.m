@@ -19,7 +19,7 @@
 #import "DPZPrinterManager.h"
 #import "DPZPrinter+Printing.h"
 #import "DPZEditPrinterViewController.h"
-#import "DPZColor.h"
+#import "UIColor+DPZColors.h"
 
 static const CGFloat LittlePrinterWidth = 384.0f;
 
@@ -104,15 +104,18 @@ static const CGFloat LittlePrinterWidth = 384.0f;
     [WYPopoverController setDefaultTheme:theme];
     
     [[WYPopoverBackgroundView appearance] setBorderWidth:4.f];
-    [[WYPopoverBackgroundView appearance] setFillTopColor:[DPZColor dpz_darkBarTintColor]];
+    [[WYPopoverBackgroundView appearance] setFillTopColor:[UIColor dpz_darkBarTintColor]];
     [[WYPopoverBackgroundView appearance] setFillBottomColor:[UIColor blackColor]];
     
     UINavigationBar *navBar = self.navigationController.navigationBar;
     UINavigationBar *navBarsInPopover = [UINavigationBar appearanceWhenContainedIn:[UINavigationController class], [WYPopoverBackgroundView class], nil];
     for (UINavigationBar *bars in @[navBar, navBarsInPopover]) {
         [bars setBarStyle:UIBarStyleBlack];
-        [bars setBarTintColor:[DPZColor dpz_darkBarTintColor]];
+        [bars setBarTintColor:[UIColor dpz_darkBarTintColor]];
     }
+    
+    UITableView *printerSelectorTableView = [UITableView appearanceWhenContainedIn:[UINavigationController class], [WYPopoverBackgroundView class], nil];
+    [printerSelectorTableView setBackgroundColor:[UIColor whiteColor]];
 }
 
 - (void)viewWillDisappear:(BOOL)animated

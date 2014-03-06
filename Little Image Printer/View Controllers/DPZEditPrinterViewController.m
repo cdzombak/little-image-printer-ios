@@ -11,7 +11,7 @@
 #import "DPZPrinterManager.h"
 #import "DPZPrinter.h"
 
-#import "DPZColor.h"
+#import "UIColor+DPZColors.h"
 #import "DPZPrintCodeViewController.h"
 #import "UIView+DPZFirstResponder.h"
 
@@ -51,7 +51,7 @@
     self.saveButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(save)];
     self.navigationItem.rightBarButtonItem = self.saveButton;
     
-    [self.printerCodeButton setTitleColor:[DPZColor dpz_tintColor] forState:UIControlStateNormal];
+    [self.printerCodeButton setTitleColor:[UIColor dpz_tintColor] forState:UIControlStateNormal];
     
     if (self.printer) {
         self.name.text = self.printer.name;

@@ -43,7 +43,6 @@
 		A225989518C585B9001396DF /* DPZPrinterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A225989318C585B9001396DF /* DPZPrinterManager.m */; };
 		A225989818C5866E001396DF /* DPZPrinter+Printing.m in Sources */ = {isa = PBXBuildFile; fileRef = A225989718C5866E001396DF /* DPZPrinter+Printing.m */; };
 		A225989B18C58CFD001396DF /* DPZPrinterSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A225989A18C58CFD001396DF /* DPZPrinterSelectionViewController.m */; };
-		A225989E18C59808001396DF /* DPZColor.m in Sources */ = {isa = PBXBuildFile; fileRef = A225989D18C59808001396DF /* DPZColor.m */; };
 		A28656C718C446BB00198130 /* DPZRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A28656C618C446BB00198130 /* DPZRootViewController.m */; };
 		A28656CC18C446E100198130 /* DPZAboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A28656C818C446E100198130 /* DPZAboutViewController.xib */; };
 		A28656CD18C446E100198130 /* DPZAdjusterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A28656C918C446E100198130 /* DPZAdjusterViewController.xib */; };
@@ -58,6 +57,7 @@
 		A292867F18C6D7F400C1CB17 /* SourceSansPro-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = A292867E18C6D7F400C1CB17 /* SourceSansPro-Light.otf */; };
 		A292868318C6D88300C1CB17 /* UIFont+SourceSansPro.m in Sources */ = {isa = PBXBuildFile; fileRef = A292868218C6D88300C1CB17 /* UIFont+SourceSansPro.m */; };
 		A292868518C6DB0500C1CB17 /* SourceSansPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A292868418C6DB0500C1CB17 /* SourceSansPro-Bold.otf */; };
+		A2EDABA218C82D1200A6769B /* UIColor+DPZColors.m in Sources */ = {isa = PBXBuildFile; fileRef = A2EDABA118C82D1200A6769B /* UIColor+DPZColors.m */; };
 		DDC1C54A4E0A4ADD8B68A98F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F292AA2A8FCA41789B3DCD9B /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -118,8 +118,6 @@
 		A225989718C5866E001396DF /* DPZPrinter+Printing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "DPZPrinter+Printing.m"; path = "Little Image Printer/Data Managers/DPZPrinter+Printing.m"; sourceTree = SOURCE_ROOT; };
 		A225989918C58CFD001396DF /* DPZPrinterSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DPZPrinterSelectionViewController.h; path = "View Controllers/DPZPrinterSelectionViewController.h"; sourceTree = "<group>"; };
 		A225989A18C58CFD001396DF /* DPZPrinterSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DPZPrinterSelectionViewController.m; path = "View Controllers/DPZPrinterSelectionViewController.m"; sourceTree = "<group>"; };
-		A225989C18C59808001396DF /* DPZColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPZColor.h; sourceTree = "<group>"; };
-		A225989D18C59808001396DF /* DPZColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPZColor.m; sourceTree = "<group>"; };
 		A28656C518C446BB00198130 /* DPZRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DPZRootViewController.h; path = "View Controllers/DPZRootViewController.h"; sourceTree = "<group>"; };
 		A28656C618C446BB00198130 /* DPZRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DPZRootViewController.m; path = "View Controllers/DPZRootViewController.m"; sourceTree = "<group>"; };
 		A28656C818C446E100198130 /* DPZAboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DPZAboutViewController.xib; path = Views/DPZAboutViewController.xib; sourceTree = "<group>"; };
@@ -140,6 +138,8 @@
 		A292868118C6D88300C1CB17 /* UIFont+SourceSansPro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIFont+SourceSansPro.h"; path = "Categories/UIFont+SourceSansPro.h"; sourceTree = "<group>"; };
 		A292868218C6D88300C1CB17 /* UIFont+SourceSansPro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIFont+SourceSansPro.m"; path = "Categories/UIFont+SourceSansPro.m"; sourceTree = "<group>"; };
 		A292868418C6DB0500C1CB17 /* SourceSansPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Bold.otf"; sourceTree = "<group>"; };
+		A2EDABA018C82D1200A6769B /* UIColor+DPZColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+DPZColors.h"; path = "Categories/UIColor+DPZColors.h"; sourceTree = "<group>"; };
+		A2EDABA118C82D1200A6769B /* UIColor+DPZColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+DPZColors.m"; path = "Categories/UIColor+DPZColors.m"; sourceTree = "<group>"; };
 		F292AA2A8FCA41789B3DCD9B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -239,8 +239,6 @@
 			children = (
 				4F5FAFC816E217C5007797D1 /* DPZAppDelegate.h */,
 				4F5FAFC916E217C5007797D1 /* DPZAppDelegate.m */,
-				A225989C18C59808001396DF /* DPZColor.h */,
-				A225989D18C59808001396DF /* DPZColor.m */,
 				A28656AE18C415F300198130 /* Categories */,
 				4FA26A2716E56B5800C08B5A /* Data Management */,
 				4FA26A2416E56B5800C08B5A /* Image Processing */,
@@ -345,6 +343,8 @@
 				A28656FA18C451B900198130 /* UIView+DPZFirstResponder.m */,
 				A292868118C6D88300C1CB17 /* UIFont+SourceSansPro.h */,
 				A292868218C6D88300C1CB17 /* UIFont+SourceSansPro.m */,
+				A2EDABA018C82D1200A6769B /* UIColor+DPZColors.h */,
+				A2EDABA118C82D1200A6769B /* UIColor+DPZColors.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -506,6 +506,7 @@
 				A28656C718C446BB00198130 /* DPZRootViewController.m in Sources */,
 				A225989B18C58CFD001396DF /* DPZPrinterSelectionViewController.m in Sources */,
 				A28656FC18C451B900198130 /* UIView+DPZFirstResponder.m in Sources */,
+				A2EDABA218C82D1200A6769B /* UIColor+DPZColors.m in Sources */,
 				4F2E95E216EB9319004CA9B3 /* DPZAboutViewController.m in Sources */,
 				A225988C18C57E2E001396DF /* DPZBergRemoteViewController.m in Sources */,
 				A28656FB18C451B900198130 /* NSString+DPZURLEncode.m in Sources */,
@@ -513,7 +514,6 @@
 				A225989818C5866E001396DF /* DPZPrinter+Printing.m in Sources */,
 				A225989418C585B9001396DF /* DPZDataManager.m in Sources */,
 				4F2E95E716EB9CF0004CA9B3 /* DPZPrintCodeViewController.m in Sources */,
-				A225989E18C59808001396DF /* DPZColor.m in Sources */,
 				A225989518C585B9001396DF /* DPZPrinterManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
