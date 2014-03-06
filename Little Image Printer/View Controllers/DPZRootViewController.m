@@ -217,7 +217,7 @@
             staticContentCell.cellStyle = UITableViewCellStyleDefault;
             staticContentCell.reuseIdentifier = @"Cell";
             
-            cell.textLabel.text = NSLocalizedString(@"Last Chosen Image", nil);
+            cell.textLabel.text = NSLocalizedString(@"Last Photo", nil);
             cell.imageView.image = [UIImage imageNamed:@"Last Chosen"];
             cell.accessoryView = [DTCustomColoredAccessory accessory];
         } whenSelected:^(NSIndexPath *indexPath) {
