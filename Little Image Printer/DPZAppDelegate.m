@@ -60,9 +60,6 @@
     
     [[UINavigationBar appearance] setTitleTextAttributes:@{ NSFontAttributeName: [UIFont dpz_sourceSansProLightFontOfSize:22] }];
     [[UIBarButtonItem appearance] setTitleTextAttributes:@{ NSFontAttributeName: [UIFont dpz_sourceSansProRegularFontOfSize:18] } forState:UIControlStateNormal];
-    
-    [[UITableView appearance] setBackgroundColor:[UIColor dpz_backgroundColor]];
-    [[UITableView appearance] setSeparatorColor:[UIColor dpz_separatorColor]];
 }
 
 #pragma mark - Reachability

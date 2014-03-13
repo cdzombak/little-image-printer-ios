@@ -17,6 +17,7 @@
 #import "DPZEditPrinterViewController.h"
 #import "DPZManagePrinterViewController.h"
 
+#import "UIColor+DPZColors.h"
 #import "DTCustomColoredAccessory.h"
 #import <SVProgressHUD/SVProgressHUD.h>
 
@@ -37,6 +38,10 @@
 - (instancetype)init {
     if (self = [super initWithStyle:UITableViewStyleGrouped]) {
         self.title = NSLocalizedString(@"Little Photo Printer", nil);
+        
+        [[UITableView appearanceWhenContainedIn:[self class], nil] setBackgroundColor:[UIColor dpz_backgroundColor]];
+        [[UITableView appearanceWhenContainedIn:[self class], nil] setSeparatorColor:[UIColor dpz_separatorColor]];
+        [[UITableViewCell appearanceWhenContainedIn:[self class], nil] setBackgroundColor:[UIColor colorWithWhite:1.0 alpha:0.8f]];
     }
     return self;
 }

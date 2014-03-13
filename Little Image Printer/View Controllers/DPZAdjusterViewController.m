@@ -113,9 +113,6 @@ static const CGFloat LittlePrinterWidth = 384.0f;
         [bars setBarStyle:UIBarStyleBlack];
         [bars setBarTintColor:[UIColor dpz_darkBarTintColor]];
     }
-    
-    UITableView *printerSelectorTableView = [UITableView appearanceWhenContainedIn:[UINavigationController class], [WYPopoverBackgroundView class], nil];
-    [printerSelectorTableView setBackgroundColor:[UIColor whiteColor]];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -168,8 +165,10 @@ static const CGFloat LittlePrinterWidth = 384.0f;
     
     UIImage *image = [self.grayscaleFilter imageFromCurrentlyProcessedOutput];
     
+    __weak __typeof(self) wSelf = self;
+    
     UIViewController *printVC = [[DPZPrinterSelectionViewController alloc] initWithCompletionBlock:^(DPZPrinter *printerSelected) {
-        [self.printPopover dismissPopoverAnimated:YES options:WYPopoverAnimationOptionFadeWithScale];
+        [wSelf.printPopover dismissPopoverAnimated:YES options:WYPopoverAnimationOptionFadeWithScale];
         
         if (!printerSelected) {
             return;
@@ -180,7 +179,7 @@ static const CGFloat LittlePrinterWidth = 384.0f;
         [printerSelected printImage:image context:nil withCompletionBlock:^(BOOL success, NSError *error, id context) {
             if (success) {
                 [SVProgressHUD showSuccessWithStatus:nil];
-                [self.navigationController popToRootViewControllerAnimated:YES];
+                [wSelf.navigationController popToRootViewControllerAnimated:YES];
             } else {
                 [SVProgressHUD showErrorWithStatus:nil];
                 NSLog(@"Print error: %@", error);
