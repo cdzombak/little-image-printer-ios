@@ -73,14 +73,14 @@
 		4F2E95E516EB9CF0004CA9B3 /* DPZPrintCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DPZPrintCodeViewController.m; path = "View Controllers/DPZPrintCodeViewController.m"; sourceTree = "<group>"; };
 		4F2E95E916EB9D99004CA9B3 /* print-code.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "print-code.html"; sourceTree = "<group>"; };
 		4F4C3F7D16ECA11900765DE1 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		4F5FAFB616E217C5007797D1 /* Little Image Printer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Little Image Printer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F5FAFB616E217C5007797D1 /* Little Photo Printer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Little Photo Printer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F5FAFB916E217C5007797D1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4F5FAFBB16E217C5007797D1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4F5FAFBD16E217C5007797D1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		4F5FAFC116E217C5007797D1 /* Little Image Printer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Little Image Printer-Info.plist"; sourceTree = "<group>"; };
+		4F5FAFC116E217C5007797D1 /* Little Photo Printer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Little Photo Printer-Info.plist"; sourceTree = "<group>"; };
 		4F5FAFC316E217C5007797D1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4F5FAFC516E217C5007797D1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		4F5FAFC716E217C5007797D1 /* Little Image Printer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Little Image Printer-Prefix.pch"; sourceTree = "<group>"; };
+		4F5FAFC716E217C5007797D1 /* Little Photo Printer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Little Photo Printer-Prefix.pch"; sourceTree = "<group>"; };
 		4F5FAFC816E217C5007797D1 /* DPZAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DPZAppDelegate.h; sourceTree = "<group>"; };
 		4F5FAFC916E217C5007797D1 /* DPZAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DPZAppDelegate.m; sourceTree = "<group>"; };
 		4F5FAFEA16E21B5B007797D1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -197,7 +197,7 @@
 		4F5FAFAD16E217C5007797D1 = {
 			isa = PBXGroup;
 			children = (
-				4F5FAFBF16E217C5007797D1 /* Little Image Printer */,
+				4F5FAFBF16E217C5007797D1 /* Little Photo Printer */,
 				4F5FAFB816E217C5007797D1 /* Frameworks */,
 				4F1CBA4A16E603500023C118 /* Scripts */,
 				4F1CBA4816E603130023C118 /* Docs */,
@@ -210,7 +210,7 @@
 		4F5FAFB716E217C5007797D1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4F5FAFB616E217C5007797D1 /* Little Image Printer.app */,
+				4F5FAFB616E217C5007797D1 /* Little Photo Printer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -234,7 +234,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		4F5FAFBF16E217C5007797D1 /* Little Image Printer */ = {
+		4F5FAFBF16E217C5007797D1 /* Little Photo Printer */ = {
 			isa = PBXGroup;
 			children = (
 				4F5FAFC816E217C5007797D1 /* DPZAppDelegate.h */,
@@ -249,16 +249,17 @@
 				4F5FAFFB16E22637007797D1 /* Resources */,
 				4F5FAFC016E217C5007797D1 /* Supporting Files */,
 			);
+			name = "Little Photo Printer";
 			path = "Little Image Printer";
 			sourceTree = "<group>";
 		};
 		4F5FAFC016E217C5007797D1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				4F5FAFC116E217C5007797D1 /* Little Image Printer-Info.plist */,
+				4F5FAFC116E217C5007797D1 /* Little Photo Printer-Info.plist */,
 				4F5FAFC216E217C5007797D1 /* InfoPlist.strings */,
 				4F5FAFC516E217C5007797D1 /* main.m */,
-				4F5FAFC716E217C5007797D1 /* Little Image Printer-Prefix.pch */,
+				4F5FAFC716E217C5007797D1 /* Little Photo Printer-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -366,9 +367,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4F5FAFB516E217C5007797D1 /* Little Image Printer */ = {
+		4F5FAFB516E217C5007797D1 /* Little Photo Printer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4F5FAFDC16E217C5007797D1 /* Build configuration list for PBXNativeTarget "Little Image Printer" */;
+			buildConfigurationList = 4F5FAFDC16E217C5007797D1 /* Build configuration list for PBXNativeTarget "Little Photo Printer" */;
 			buildPhases = (
 				A814F3B568AD4CD2ADC94367 /* Check Pods Manifest.lock */,
 				4F5FAFB216E217C5007797D1 /* Sources */,
@@ -381,9 +382,9 @@
 			);
 			dependencies = (
 			);
-			name = "Little Image Printer";
+			name = "Little Photo Printer";
 			productName = "Little Image Printer";
-			productReference = 4F5FAFB616E217C5007797D1 /* Little Image Printer.app */;
+			productReference = 4F5FAFB616E217C5007797D1 /* Little Photo Printer.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -396,7 +397,7 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "David Wilkinson";
 			};
-			buildConfigurationList = 4F5FAFB116E217C5007797D1 /* Build configuration list for PBXProject "Little Image Printer" */;
+			buildConfigurationList = 4F5FAFB116E217C5007797D1 /* Build configuration list for PBXProject "Little Photo Printer" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -408,7 +409,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4F5FAFB516E217C5007797D1 /* Little Image Printer */,
+				4F5FAFB516E217C5007797D1 /* Little Photo Printer */,
 			);
 		};
 /* End PBXProject section */
@@ -584,11 +585,11 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Little Image Printer/Little Image Printer-Prefix.pch";
-				INFOPLIST_FILE = "Little Image Printer/Little Image Printer-Info.plist";
+				GCC_PREFIX_HEADER = "Little Image Printer/Little Photo Printer-Prefix.pch";
+				INFOPLIST_FILE = "Little Image Printer/Little Photo Printer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Little Photo Printer";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -692,11 +693,11 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Little Image Printer/Little Image Printer-Prefix.pch";
-				INFOPLIST_FILE = "Little Image Printer/Little Image Printer-Info.plist";
+				GCC_PREFIX_HEADER = "Little Image Printer/Little Photo Printer-Prefix.pch";
+				INFOPLIST_FILE = "Little Image Printer/Little Photo Printer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Little Photo Printer";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -710,11 +711,11 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Little Image Printer/Little Image Printer-Prefix.pch";
-				INFOPLIST_FILE = "Little Image Printer/Little Image Printer-Info.plist";
+				GCC_PREFIX_HEADER = "Little Image Printer/Little Photo Printer-Prefix.pch";
+				INFOPLIST_FILE = "Little Image Printer/Little Photo Printer-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Little Photo Printer";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -723,7 +724,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4F5FAFB116E217C5007797D1 /* Build configuration list for PBXProject "Little Image Printer" */ = {
+		4F5FAFB116E217C5007797D1 /* Build configuration list for PBXProject "Little Photo Printer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4F5FAFDA16E217C5007797D1 /* Debug */,
@@ -733,7 +734,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4F5FAFDC16E217C5007797D1 /* Build configuration list for PBXNativeTarget "Little Image Printer" */ = {
+		4F5FAFDC16E217C5007797D1 /* Build configuration list for PBXNativeTarget "Little Photo Printer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4F5FAFDD16E217C5007797D1 /* Debug */,
