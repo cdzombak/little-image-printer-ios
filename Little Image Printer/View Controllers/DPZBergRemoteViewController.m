@@ -8,6 +8,7 @@
 
 #import "DPZBergRemoteViewController.h"
 #import "DPZAppDelegate.h"
+#import <SVProgressHUD/SVProgressHUD.h>
 
 @interface DPZBergRemoteViewController () <UIWebViewDelegate>
 
@@ -41,8 +42,15 @@
 {
     [super viewDidLoad];
 
+    [SVProgressHUD show];
     [self.webView loadRequest:[NSURLRequest requestWithURL:self.url]];
     self.navigationItem.rightBarButtonItem = self.refreshButtonItem;
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [SVProgressHUD dismiss];
 }
 
 #pragma mark - UIWebViewDelegate
@@ -54,6 +62,7 @@
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
+    [SVProgressHUD dismiss];
     [(DPZAppDelegate *)[UIApplication sharedApplication].delegate setNetworkActivityIndicatorVisible:NO];
 }
 
@@ -61,6 +70,7 @@
 
 - (void)refreshWebView:(id)sender
 {
+    [SVProgressHUD show];
     [self.webView reload];
 }
 
