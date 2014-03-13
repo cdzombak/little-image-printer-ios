@@ -227,7 +227,7 @@
             cell.accessoryView = [DTCustomColoredAccessory accessory];
         } whenSelected:^(NSIndexPath *indexPath) {
             [self pushAdjusterViewControllerForImage:self.chosenImage];
-        } atIndexPath:[NSIndexPath indexPathForRow:2 inSection:0] animated:YES];
+        } atIndexPath:[NSIndexPath indexPathForRow:[self.tableView.dataSource tableView:self.tableView numberOfRowsInSection:0] inSection:0] animated:YES];
     }
 }
 
