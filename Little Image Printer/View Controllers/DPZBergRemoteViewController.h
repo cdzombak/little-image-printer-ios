@@ -8,6 +8,6 @@
 
 @interface DPZBergRemoteViewController : UIViewController
 
-- (instancetype)initWithURL:(NSURL *)urlOrNil;
+- (instancetype)initWithURL:(NSURL *)urlOrNil title:(NSString *)titleOrNil;
 
 @end

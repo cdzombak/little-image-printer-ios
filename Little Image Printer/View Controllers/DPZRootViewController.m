@@ -179,7 +179,7 @@
     if (![(DPZAppDelegate *)[UIApplication sharedApplication].delegate isCloudReachable]) {
         [SVProgressHUD showErrorWithStatus:NSLocalizedString(@"Offline", nil)];
     } else {
-        [self.navigationController pushViewController:[[DPZBergRemoteViewController alloc] initWithURL:nil] animated:YES];
+        [self.navigationController pushViewController:[[DPZBergRemoteViewController alloc] initWithURL:nil title:nil] animated:YES];
     }
 }
 

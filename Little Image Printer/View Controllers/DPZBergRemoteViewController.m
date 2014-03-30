@@ -23,11 +23,11 @@
 
 @synthesize refreshButtonItem = _refreshButtonItem;
 
-- (instancetype)initWithURL:(NSURL *)urlOrNil
+- (instancetype)initWithURL:(NSURL *)urlOrNil title:(NSString *)titleOrNil
 {
     if (self = [super initWithNibName:@"DPZBergRemoteViewController" bundle:nil]) {
-        self.title = @"Berg Remote";
-        _url = urlOrNil ? urlOrNil : [NSURL URLWithString:@"http://remote.bergcloud.com"];
+        self.title = titleOrNil ?: NSLocalizedString(@"Berg Remote", nil);
+        _url = urlOrNil ?: [NSURL URLWithString:@"http://remote.bergcloud.com"];
     }
     return self;
 }

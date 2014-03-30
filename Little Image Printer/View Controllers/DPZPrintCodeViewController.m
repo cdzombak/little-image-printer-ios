@@ -46,7 +46,7 @@
     if (navigationType == UIWebViewNavigationTypeLinkClicked) {
         DPZAppDelegate *appDelegate = (DPZAppDelegate *)[UIApplication sharedApplication].delegate;
         if (appDelegate.isCloudReachable) {
-            DPZBergRemoteViewController *remoteVC = [[DPZBergRemoteViewController alloc] initWithURL:request.URL];
+            DPZBergRemoteViewController *remoteVC = [[DPZBergRemoteViewController alloc] initWithURL:request.URL title:nil];
             [self.navigationController pushViewController:remoteVC animated:YES];
         } else {
             [SVProgressHUD showErrorWithStatus:NSLocalizedString(@"Offline", nil)];
