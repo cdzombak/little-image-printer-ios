@@ -133,6 +133,18 @@
             staticContentCell.cellStyle = UITableViewCellStyleDefault;
             staticContentCell.reuseIdentifier = defaultStyleReuseIdentifier;
             
+            cell.textLabel.text = @"@LittlePrinter";
+            cell.imageView.image = [UIImage imageNamed:@"Social"];
+            cell.accessoryView = [DTCustomColoredAccessory accessory];
+        } whenSelected:^(NSIndexPath *indexPath) {
+            [wSelf.tableView deselectRowAtIndexPath:indexPath animated:YES];
+            [wSelf showTwitter];
+        }];
+        
+        [section addCell:^(JMStaticContentTableViewCell *staticContentCell, UITableViewCell *cell, NSIndexPath *indexPath) {
+            staticContentCell.cellStyle = UITableViewCellStyleDefault;
+            staticContentCell.reuseIdentifier = defaultStyleReuseIdentifier;
+            
             cell.textLabel.text = NSLocalizedString(@"About", nil);
             cell.imageView.image = [UIImage imageNamed:@"About"];
             cell.accessoryView = [DTCustomColoredAccessory accessory];
@@ -180,6 +192,15 @@
         [SVProgressHUD showErrorWithStatus:NSLocalizedString(@"Offline", nil)];
     } else {
         [self.navigationController pushViewController:[[DPZBergRemoteViewController alloc] initWithURL:nil title:nil] animated:YES];
+    }
+}
+
+- (void)showTwitter
+{
+    if (![(DPZAppDelegate *)[UIApplication sharedApplication].delegate isCloudReachable]) {
+        [SVProgressHUD showErrorWithStatus:NSLocalizedString(@"Offline", nil)];
+    } else {
+        [self.navigationController pushViewController:[[DPZBergRemoteViewController alloc] initWithURL:[NSURL URLWithString:@"https://twitter.com/littleprinter"] title:@"@LittlePrinter"] animated:YES];
     }
 }
 
