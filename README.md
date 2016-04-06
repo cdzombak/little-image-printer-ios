@@ -1,5 +1,7 @@
 # Little Image Printer for iOS
 
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
+
 (original) Author: David Wilkinson
 Web: http://dopiaza.org/
 Twitter: @dopiaza
